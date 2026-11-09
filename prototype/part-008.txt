@@ -1,0 +1,393 @@
+副标题</th><th>面向人群</th><th>跳转</th><th>排序</th><th>投放时间</th><th>状态</th><th>操作</th></tr>
+                <tr>
+                  <td>1</td>
+                  <td><div class="banner-thumb bt-1">净颜焕亮 · 测评进行中</div></td>
+                  <td><b>净颜焕亮 · 测评进行中</b><br><span style="color:var(--ink-3);font-size:11.5px;">喷雾+精华+卸妆水 免费试用</span></td>
+                  <td>门店用户</td><td>项目活动页：净颜焕亮产品体验</td><td>1</td><td>07.01~07.31</td>
+                  <td><span class="shelf-chip chip g">上架中</span></td>
+                  <td><span class="link" onclick="openBannerModal('编辑Banner')">编辑</span><span class="link" onclick="toggleShelf(this)">下架</span><span class="link warn" onclick="delBanner(this)">删除</span></td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td><div class="banner-thumb bt-2">保湿精华28天测试</div></td>
+                  <td><b>保湿精华28天测试</b><br><span style="color:var(--ink-3);font-size:11.5px;">07.20 开测 · 精华+乳液+面膜</span></td>
+                  <td>门店用户</td><td>项目活动页：保湿精华28天测试</td><td>2</td><td>07.05~07.20</td>
+                  <td><span class="shelf-chip chip g">上架中</span></td>
+                  <td><span class="link" onclick="openBannerModal('编辑Banner')">编辑</span><span class="link" onclick="toggleShelf(this)">下架</span><span class="link warn" onclick="delBanner(this)">删除</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td><div class="banner-thumb bt-3">总部体验招募 · 类型2</div></td>
+                  <td><b>总部体验招募 · 类型2</b><br><span style="color:var(--ink-3);font-size:11.5px;">总部自取产品 · 打卡测评</span></td>
+                  <td>总部用户</td><td>外链 H5：活动说明页</td><td>3</td><td>长期</td>
+                  <td><span class="shelf-chip chip gray">已下架</span></td>
+                  <td><span class="link" onclick="openBannerModal('编辑Banner')">编辑</span><span class="link" onclick="toggleShelf(this)">上架</span><span class="link warn" onclick="delBanner(this)">删除</span></td>
+                </tr>
+              </table>
+              </div>
+              <div class="legend">
+                <span><i style="background:var(--brand)"></i>「新建Banner」：上传图片（建议 750×300px）+ 主/副标题 + 跳转（项目活动页 / 外链 / 不跳转）+ 排序 + 投放时间</span>
+                <span><i style="background:var(--blue)"></i>首页 Banner 按总部/门店受众分别展示，跳转项目须与受众一致</span>
+                <span><i style="background:var(--red)"></i>同一时间最多展示 5 个上架Banner；到期自动下架并从轮播移除</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- 后台：新建推送弹层（运营手动/定时推送） -->
+<div class="amask" id="pushMask">
+  <div class="amodal">
+    <h3><span>新建推送</span><span class="x" onclick="closePushModal()">✕</span></h3>
+    <div class="tmpl-note">运营手动推送（企微应用消息）：① 定内容 → ② 定人群（导名单/圈人）→ ③ 立即或定时下推。推送完成后写入「消息推送日志」。</div>
+    <div class="aform">
+      <div class="fw"><label>任务名称<span class="req">*</span></label><input id="np-name" placeholder="如：D3问卷催填（净颜焕亮）"></div>
+      <div><label>消息模板<span class="req">*</span></label><select id="np-tpl"><option>选择已有模板…</option><option>打卡提醒</option><option>问卷催填（通用）</option><option>发货通知</option><option>自建内容（下方输入）</option></select></div>
+      <div><label>所属项目</label><select><option>净颜焕亮产品体验</option><option>舒缓修护面霜测评</option><option>眼周紧致精华测评</option><option>全部项目</option></select></div>
+      <div class="fw"><label>消息内容<span class="req">*</span></label><textarea id="np-content" placeholder="支持变量：{项目名}、{快递号}、{截止时间} 等；选择「自建内容」时在此输入"></textarea></div>
+      <div class="fw"><label>推送对象 · 导入手机号名单（每行一个）</label><textarea id="np-phones" placeholder="13800006789&#10;13900001234"></textarea>
+        <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+          <button class="btn btn-o" onclick="importNpPhones()">导入名单</button>
+          <span class="cnt">已导入 <b id="np-cnt">0</b> 人</span>
+        </div>
+      </div>
+      <div class="fw"><label>或按条件圈人（与导入名单合并去重）</label>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <select style="flex:1;"><option>入组状态：全部</option><option>已入组</option><option>待筛选</option></select>
+          <select style="flex:1;"><option>问卷节点：不限</option><option>第3天问卷未填</option><option>第7天问卷未填</option><option>结题问卷未填</option></select>
+          <select style="flex:1;"><option>打卡状态：不限</option><option>今日未打卡</option></select>
+        </div>
+        <div class="tip2">预估圈人 36 人（企微应用消息通道）</div>
+      </div>
+      <div><label>推送时机<span class="req">*</span></label><select id="np-mode"><option>定时推送</option><option>立即推送</option></select></div>
+      <div><label>定时下推时间</label><input id="np-time" placeholder="如：2026-10-25 09:00"></div>
+    </div>
+    <div class="ops">
+      <button class="btn btn-o" onclick="closePushModal()">取消</button>
+      <button class="btn btn-p" onclick="savePush()">保存推送任务</button>
+    </div>
+  </div>
+</div>
+
+<!-- 后台：导入发货信息弹层 -->
+<div class="amask" id="shipMask" data-page-node-id="txNH2CYAYHOYGZPG41XDMB">
+  <div class="amodal" data-page-node-id="dTKtxeT1eQHe3nkBbuvYm9">
+    <h3 data-page-node-id="MCFHpscTvz4RtdoKoEJGnl"><span data-page-node-id="KRDeeTMZEN2NiTyG6Gq9rA">导入发货信息</span><span class="x" onclick="closeShipImport()" data-page-node-id="ubyS2JZrJJKsVErz0vj7qg">✕</span></h3>
+    <div class="tmpl-note" data-page-node-id="Dv6kXDaSChKFowMUuSnwIT">按手机号匹配志愿者：导入后该条报名信息状态更新为<b data-page-node-id="OnvxX0FCeTiYDGLFprRpdA">「已发货」</b>，并向用户推送发货通知（含快递公司与物流单号）。格式：手机号,快递公司,物流单号（每行一条）。</div>
+    <div class="aform" data-page-node-id="vAm4jWH0R4IhX1PtPIuRK5">
+      <div class="fw" data-page-node-id="lNIhNXDzJzc9mDLhVYYFeJ"><label data-page-node-id="G3dqIgZZyDaAHTxmPo5xxT">发货数据（粘贴或上传Excel）</label><textarea id="shipData" rows="6" placeholder="13800006789,顺丰速运,SF1383227777888&#10;13900001234,中通快递,7856223410992"></textarea></div>
+    </div>
+    <div class="ops" data-page-node-id="O2XOAS97az7aVH1icvINB9">
+      <button class="btn btn-o" onclick="closeShipImport()" data-page-node-id="cOliWDMDjBZRFjwACHrqyb">取消</button>
+      <button class="btn btn-p" onclick="doShipImport()" data-page-node-id="Wqxaa6GtzYx7SG2Mmfvzz3">导入并更新状态</button>
+    </div>
+  </div>
+</div>
+
+<!-- 后台：打卡记录详情弹层 -->
+<div class="amask" id="ckMask" data-page-node-id="GN9PcizUOdWA6kVn76PCx6">
+  <div class="amodal" data-page-node-id="8aYvBQmrNeZtFZ9eEEPDc9">
+    <h3 data-page-node-id="IOxli4NeVb86b846sANKMR"><span id="ckd-name" data-page-node-id="DP0b2aRDsLeplkZYwLnqEs">打卡记录</span><span class="x" onclick="closeCkDetail()" data-page-node-id="OBHcVcHQZIi2YN2AeQXg9P">✕</span></h3>
+    <div class="tmpl-note" id="ckd-sub" data-page-node-id="69xKIhQtbXAra6euTHg2Ae">净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13</div>
+    <div class="ck-detail-grid" id="ckd-grid" data-page-node-id="9lSoHphQHPznb34wQ8br8Z"></div>
+    <div class="legend" style="margin-top:14px;" data-page-node-id="wGyKz4W31TTGP6gqRlVipg">
+      <span data-page-node-id="BBU9EHTLkrtQAPZP2TJrkI"><i style="background:var(--brand)" data-page-node-id="wMEeB5U1zenpd5W9TixwiZ"></i>已打卡（显示打卡时间）</span>
+      <span data-page-node-id="1vommhVXjWslf1B8M7dnys"><i style="background:var(--red)" data-page-node-id="ME44jxb2265JCMrWFLLjQ3"></i>漏打卡</span>
+      <span data-page-node-id="rbKCr9R8vFqPI9XMeWGZwO"><i style="background:#EDEFF2" data-page-node-id="kqEyZIuHJjfODwzNaR9KW1"></i>未到日期</span>
+    </div>
+  </div>
+</div>
+
+<!-- 后台：项目推广弹层（链接 + 二维码） -->
+<div class="amask" id="promoMask">
+  <div class="amodal">
+    <h3><span id="promo-title">项目推广</span><span class="x" onclick="closePromoModal()">✕</span></h3>
+    <div class="tmpl-note">针对单个活动生成推广链接与二维码：志愿者扫码/点击直达该活动介绍页（含报名资格校验），支持运营在企微、朋友圈分享引流。</div>
+    <div class="promo-body">
+      <div class="promo-qr" id="promo-qr"></div>
+      <div class="promo-info">
+        <div class="promo-link-box">
+          <input id="promo-link" readonly>
+          <button class="btn btn-o" onclick="copyPromoLink()">复制链接</button>
+        </div>
+        <ul class="promo-ch">
+          <li>扫码直达该项目「项目介绍页」，自动带推广来源参数</li>
+          <li>报名数据可按推广来源统计（渠道效果分析）</li>
+          <li>仅「审核通过且上架」的项目可生成推广二维码</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ops">
+      <button class="btn btn-o" onclick="closePromoModal()">关闭</button>
+      <button class="btn btn-p" onclick="downloadQR()">下载二维码</button>
+    </div>
+  </div>
+</div>
+
+<!-- 后台：新建/编辑Banner弹层 -->
+<div class="amask" id="bannerMask">
+  <div class="amodal">
+    <h3><span id="bm-title">新建Banner</span><span class="x" onclick="closeBannerModal()">✕</span></h3>
+    <div class="aform">
+      <div class="fw"><label>Banner图片<span class="req">*</span></label><input type="file" accept="image/*" id="bm-image"><div class="tip2">上传图片，建议尺寸 750×300px</div></div>
+      <div><label>主标题<span class="req">*</span></label><input placeholder="如：净颜焕亮 · 测评进行中"></div>
+      <div><label>副标题</label><input placeholder="如：喷雾+精华+卸妆水 免费试用"></div>
+      <div><label>面向人群<span class="req">*</span></label><select id="bm-audience"><option value="store">门店用户</option><option value="hq">总部用户</option></select><div class="tip2">首页只向对应用户身份展示该Banner</div></div>
+      <div><label>跳转类型<span class="req">*</span></label><select><option>项目活动页（关联项目）</option><option>外链 H5</option><option>不跳转（纯展示）</option></select></div>
+      <div><label>关联项目 / 链接地址</label><input placeholder="选择项目或填写 https:// 链接"></div>
+      <div><label>排序（数字越小越靠前）</label><input placeholder="如：1"></div>
+      <div><label>投放时间</label><input placeholder="如：2026-07-01 ~ 2026-07-31（不填=长期）"></div>
+      <div><label>状态<span class="req">*</span></label><select><option>上架</option><option>下架（暂不展示）</option></select></div>
+      <div class="fw"><div class="tip2">按受众身份向对应用户展示；到投放结束时间自动下架。</div></div>
+    </div>
+    <div class="ops">
+      <button class="btn btn-o" onclick="closeBannerModal()">取消</button>
+      <button class="btn btn-p" onclick="saveBanner()">保存</button>
+    </div>
+  </div>
+</div>
+
+<!-- 后台：审核不通过弹层（平铺快速原因 + 补充备注） -->
+<div class="amask" id="rejectMask">
+  <div class="amodal" style="width:520px;">
+    <h3><span id="rj-title">审核不通过</span><span class="x" onclick="closeRejectMask()">✕</span></h3>
+    <div class="tmpl-note">选择不通过原因（可多选）并填写补充备注，确认后志愿者将收到未入选通知（含原因）。</div>
+    <div class="aform">
+      <div class="fw">
+        <label>快速选择原因<span class="req">*</span></label>
+        <div class="rj-opts">
+          <span class="rj-opt" onclick="toggleRjOpt(this)">肤质不匹配</span>
+          <span class="rj-opt" onclick="toggleRjOpt(this)">黑名单</span>
+          <span class="rj-opt" onclick="toggleRjOpt(this)">未拍美图</span>
+          <span class="rj-opt" onclick="toggleRjOpt(this)">重复报名</span>
+        </div>
+      </div>
+      <div class="fw"><label>补充备注（非必填）</label><textarea id="rj-note" placeholder="如：目前肤质偏油，与本项目干皮要求不符，可关注后续油皮项目…"></textarea></div>
+    </div>
+    <div class="ops">
+      <button class="btn btn-o" onclick="closeRejectMask()">取消</button>
+      <button class="btn btn-p" onclick="saveReject()">确认不通过</button>
+    </div>
+  </div>
+</div>
+
+<div class="amask" id="audienceNotice"><div class="amodal" style="width:440px;max-width:90vw;"><h3><span>当前项目暂不可见</span><span class="x" onclick="closeAudienceNotice()">✕</span></h3><div id="audienceNoticeText" class="tmpl-note">该项目面向另一类志愿者开放，请返回首页查看当前身份可参与的项目。</div><div class="ops"><button class="btn btn-p" onclick="closeAudienceNotice()">返回项目列表</button></div></div></div>
+<script>
+/* 视图切换 */
+function switchView(v){
+  document.getElementById('btn-h5').classList.toggle('on',v==='h5');
+  document.getElementById('btn-wecom').classList.toggle('on',v==='wecom');
+  document.getElementById('btn-admin').classList.toggle('on',v==='admin');
+  document.getElementById('h5Wrap').classList.toggle('hide',v!=='h5');
+  document.getElementById('wecomWrap').classList.toggle('show',v==='wecom');
+  document.getElementById('adminWrap').classList.toggle('show',v==='admin');
+  document.getElementById('notesH5').style.display = (v==='h5') ? '' : 'none';
+}
+
+/* H5 Tab 切换 */
+const pageNotes = {
+  'pg-login':{t:'登录 · 企微授权（唯一入口）',n:[
+    '<b>唯一登录入口：</b>仅支持企业微信授权登录，无手机号注册等其他入口，保证志愿者真实身份。',
+    '<b>授权即注册：</b>首次授权自动创建志愿者档案，姓名、电话自动带出并锁定。',
+    '<b>登录权限范围：</b>樊文花总部、分公司、店铺层的员工拥有登录注册权限。',
+    '<b>权限统一管理：</b>本系统功能权限将使用新权限管理平台进行配置维护（角色/菜单/按钮级）。',
+    '<b>信息不可改：</b>登录后个人中心隐藏「修改信息」入口，个人信息由企微授权维护。',
+    '<b>H5内嵌：</b>由宿主小程序（企微/微信）唤起，登录态通过授权参数传入H5。']},
+  'pg-home':{t:'首页 · 项目列表',n:[
+    '<b>白底顶栏：</b>顶部导航常规白底样式 + 品牌小标识，弱化绿色块的视觉强度。',
+    '<b>轮播Banner：</b>顶栏下广告图轮播，自动切换 + 指示点；内容由后台「Banner配置」模块维护（图片/标题/跳转/排序/上下架）。',
+    '<b>名额不展示：</b>剩余名额等数量信息不在前端展示（业务要求），报满自动关闭入口。',
+    '<b>项目介绍页入口：</b>点击项目卡片进入「项目介绍页」，查看项目介绍与测评规则后再报名。',
+    '<b>用户类型隔离：</b>企微档案区分总部用户与门店用户，首页只展示对应类型项目；顶部身份页签仅用于本原型演示。',
+    '<b>活动筛选：</b>全部 / 未报名 / 已报名；已报名卡片直达活动详情。',
+    '<b>资格置底：</b>项目受众决定首页可见性与报名范围；跨受众直达链接只提示无资格，不显示项目内容。']},
+  'pg-intro':{t:'项目介绍 · 报名前置页',n:[
+    '<b>内容结构：</b>项目信息 / 活动时间 / 测评流程（模块化，节点可配置）/ 招募要求 / 项目介绍（图文富文本，后台配置）。',
+    '<b>名额信息：</b>招募名额和报名人数仅供后台运营查看，前端不展示数量；达到上限后报名入口关闭。',
+    '<b>无底栏：</b>跳转页隐藏一级Tab，底部仅保留「返回 / 立即报名」操作区。',
+    '<b>报名动作：</b>看完介绍后点击「立即报名」进入报名表单。']},
+  'pg-signup':{t:'报名 · 填写信息（含草稿）',n:[
+    '<b>草稿缓存：</b>所有填写内容实时保存草稿；跳转简道云签署后返回自动恢复，顶部提示可「清除重填」；提交成功后草稿清空。',
+    '<b>报名项可配置：</b>固定项（姓名/电话授权带出、美图手机号、肤质、敏感、地址）+ 后台可配自定义单选题，展示顺序=后台配置排序。',
+    '<b>美图手机号校验：</b>输入失焦校验 11 位手机号格式（1开头，第二位3-9），格式错误行内红字提示，提交时强校验。',
+    '<b>同意书按项目配置：</b>门店项目可设为必填；总部项目可设为非必填，不需要签署时报名页不显示同意书。',
+    '<b>收货地址：</b>仅快递发货项目要求从地址库选择；无需发货项目不要求填写；过敏史由运营后台维护。']},
+  'pg-mine':{t:'我的 · 活动列表',n:[
+    '<b>一级页面只做列表：</b>进行中/近期活动卡片（名称、状态、进度摘要），点击下钻详情页操作。',
+    '<b>归档折叠：</b>已结束且距项目结束时间超过半年的项目自动收起，列表底部仅保留一个「已结束项目」折叠入口，点击弹窗查看全部归档项目（名称/时间/完成状态/积分）。',
+    '<b>地址入口：</b>个人中心右上角「📍 地址」小入口，进入地址管理。',
+    '<b>个人信息：</b>企微授权维护，不提供修改入口。']},
+  'pg-detail':{t:'活动详情 · 下钻页',n:[
+    '<b>今日打卡（两种方式）：</b>① 点击打卡：点按钮即完成；② 拍照打卡：点击按钮弹出上传页，拍照/相册选图上传使用照片（≤3张）提交完成。方式由运营在项目配置中指定。',
+    '<b>产品领取：</b>快递项目确认已领取产品后开启打卡；自行领取项目无需物流，按项目流程到访或领取产品。',
+    '<b>联系运营：</b>报名成功页提供「联系运营」按钮，弹窗展示该项目运营企微二维码（后台按项目配置，可更换）。',
+    '<b>产品物流：</b>快递项目展示快递公司与物流单号，支持复制；自行领取项目不展示物流信息。',
+    '<b>项目追踪：</b>门店使用通用流程；总部项目按类型1（D0来访、D7回访）或类型2（自行领取、不来访）展示流程。']},
+  'pg-address':{t:'地址管理 · 地址库',n:[
+    '<b>地址库：</b>维护常用收货地址（名称/地区/详细地址），可设默认、编辑、删除。',
+    '<b>报名联动：</b>报名时弹窗选择地址库地址；此处保存后即可选用。',
+    '<b>联系人信息：</b>电话由企微授权带出，地址内容用户可自行维护。']},
+};
+let curPage='pg-home';
+function goTab(t){
+  const map={home:'pg-home',mine:'pg-mine'};
+  showPage(map[t]);
+}
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('show'));
+  document.getElementById(id).classList.add('show');
+  curPage=id; renderNotes();
+}
+function openSignup(proj){
+  showPage('pg-signup'); updateSignupProjectOptions();
+  const sel=document.getElementById('f-proj');
+  for(const o of sel.options){ if(o.value===proj||o.text.indexOf(proj)>-1) sel.value=o.value; }
+  updateSignupConfig(); restoreDraft();
+}
+let currentAudience='store';
+function audienceLabel(){return currentAudience==='hq'?'总部用户':'门店用户';}
+function applyAudienceVisibility(){
+  const current=document.getElementById('audienceCurrent'); if(current)current.textContent='当前：'+audienceLabel();
+  const hqTab=document.getElementById('audienceTabHq'),storeTab=document.getElementById('audienceTabStore');
+  if(hqTab){hqTab.classList.toggle('on',currentAudience==='hq');hqTab.setAttribute('aria-selected',currentAudience==='hq'?'true':'false');}
+  if(storeTab){storeTab.classList.toggle('on',currentAudience==='store');storeTab.setAttribute('aria-selected',currentAudience==='store'?'true':'false');}
+  document.querySelectorAll('.h-list .pcard').forEach(c=>c.style.display=(c.dataset.audience||'store')===currentAudience?'':'none');
+  updateSignupProjectOptions(); applyBannerAudience(); filterHome(document.querySelector('#fchips span.on')||document.querySelector('#fchips span'),'all');
+}
+function selectAudience(audience){currentAudience=audience==='hq'?'hq':'store';document.querySelectorAll('#fchips span').forEach((x,i)=>x.classList.toggle('on',i===0));applyAudienceVisibility();if(!document.getElementById('pg-login').classList.contains('show'))showPage('pg-home');}
+function closeAudienceNotice(){document.getElementById('audienceNotice').classList.remove('show');showPage('pg-home');}
+function updateSignupProjectOptions(){
+  const sel=document.getElementById('f-proj'); if(!sel)return;
+  Array.from(sel.options).forEach(o=>{const ok=o.dataset.audience===currentAudience;o.hidden=!ok;o.disabled=!ok;});
+  if(sel.selectedOptions.length&&sel.selectedOptions[0].disabled){const first=Array.from(sel.options).find(o=>!o.disabled);if(first)sel.value=first.value;}
+}
+function updateSignupConfig(){
+  const sel=document.getElementById('f-proj'); if(!sel)return; const d=introData[sel.value]||{};
+  document.getElementById('addressGroup').style.display=d.fulfillment==='pickup'?'none':'';
+  document.getElementById('consentGroup').style.display=d.consentRequired===false?'none':'';
+}
+function syncConsentMark(){document.getElementById('pm-consent-req').style.display=document.getElementById('pm-consent').value==='required'?'':'none';}
+function refreshProjectFlowPreview(){
+  const flow=document.getElementById('pm-flow-type').value;
+  const preview={store:'门店：招募 → 美图筛选 → 入组 → 快递发货 → 打卡/问卷 → 结题美图',hq1:'总部类型1：招募 → 筛选照片 → 入组 → D0来访领取 → 回家打卡 → D7回访 → D14/D28问卷',hq2:'总部类型2：招募 → 筛选肤质 → 入组 → 指定地点自行领取 → 打卡 → 填写问卷'};
+  document.getElementById('pm-flow-preview').textContent=preview[flow];
+}
+function syncFlowDefaults(){
+  const flow=document.getElementById('pm-flow-type').value;
+  const hq=flow!=='store';
+  document.getElementById('pm-audience').value=hq?'hq':'store';
+  document.getElementById('pm-consent').value=hq?'optional':'required';
+  document.getElementById('pm-fulfillment').value=hq?'pickup':'ship';
+  document.getElementById('pm-visit').value=flow==='hq1'?'d0d7':'none';
+  document.getElementById('pm-visit-note').value=flow==='hq1'?'D0到访领取产品，回家打卡；D7回访。':(flow==='hq2'?'无需来访，在指定地点自行领取产品。':'');
+  syncConsentMark(); refreshProjectFlowPreview();
+}
+function syncProjectDefaults(){
+  const hq=document.getElementById('pm-audience').value==='hq';document.getElementById('pm-flow-type').value=hq?'hq1':'store';
+  document.getElementById('pm-consent').value=hq?'optional':'required';syncFlowDefaults();syncConsentMark();
+}
+function backHome(){ showPage('pg-home'); }
+
+/* ===== 报名草稿（防止跳转简道云签署后丢失） ===== */
+const draft={proj:null,mt:null,skin:null,sens:null};
+function saveDraft(){
+  draft.proj=document.getElementById('f-proj').value;
+  draft.mt=document.getElementById('f-mt').value;
+  const s=document.querySelector('#skinGrid span.on'); draft.skin=s?s.textContent:null;
+  const n=document.querySelector('#sensGrid span.on'); draft.sens=n?n.textContent:null;
+}
+function restoreDraft(){
+  const has=draft.proj||draft.mt||draft.skin||draft.sens;
+  const tip=document.getElementById('draftTip');
+  tip.style.display=has?'flex':'none';
+  if(!has)return;
+  if(draft.proj){
+    const sel=document.getElementById('f-proj');
+    for(const o of sel.options){ if(o.value===draft.proj||o.text===draft.proj) sel.value=o.value; }
+  }
+  if(draft.mt) document.getElementById('f-mt').value=draft.mt;
+  if(draft.skin) document.querySelectorAll('#skinGrid span').forEach(s=>{ if(s.textContent===draft.skin) s.classList.add('on'); });
+  if(draft.sens) document.querySelectorAll('#sensGrid span').forEach(s=>{ if(s.textContent===draft.sens) s.classList.add('on'); });
+}
+function clearDraft(){
+  draft.proj=null;draft.mt=null;draft.skin=null;draft.sens=null;
+  document.getElementById('f-mt').value='';
+  document.querySelectorAll('#skinGrid span,#sensGrid span').forEach(s=>s.classList.remove('on'));
+  document.getElementById('draftTip').style.display='none';
+}
+
+/* ===== 项目介绍页 ===== */
+const introData = {
+  '总部到访体验·类型1':{meta:'总部用户项目 ｜ D0到访 · 回家试用 · D7回访',audience:'hq',flowType:'hq1',consentRequired:false,fulfillment:'pickup',visitNote:'D0到访领取产品，回家打卡；D7回访；D14、D28填写问卷。',state:'open',info:[],flow:['招募','筛选照片','入组','D0来访领取产品','回家打卡','D7回访','D14/D28问卷'],time:'报名筛选完成后入组；D0到访领取产品，回家按计划打卡，D7回访，D14与D28填写问卷。',rules:'仅总部用户可报名；需完成照片筛选，并按流程完成D0到访、居家打卡、D7回访与问卷。',desc:'<p>总部用户体验项目。入组后无需快递：D0到访领取产品，回家开始打卡，D7回访，D14与D28完成问卷。</p>'},
+  '总部自取体验·类型2':{meta:'总部用户项目 ｜ 肤质筛选 · 自行领取 · 居家试用',audience:'hq',flowType:'hq2',consentRequired:false,fulfillment:'pickup',visitNote:'无需到访，在指定领取点（如保安室）自行领取产品。',state:'open',info:[],flow:['招募','筛选肤质','入组','自行领取产品','打卡','填写问卷'],time:'报名后由运营筛选肤质；入组后到指定领取点自行领取产品，再按计划打卡并填写问卷。',rules:'仅总部用户可报名；按项目要求完成肤质筛选、指定地点领取、打卡与问卷。',desc:'<p>总部用户居家试用项目。项目不安排来访与快递发货，入组后到指定领取点自行领取产品。</p>'},
+  '净颜焕亮产品体验':{meta:'周期: 07.17~07.31 ｜ 喷雾+精华+卸妆水 ｜ 面部 · 14天',quota:['招募名额 40','已报名 25','允许最大报名 50'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'joined',
+    info:[['肤质要求','中性 / 干性 / 偏干'],['试用周期','14 天 · 线上试用']],
+    flow:['拍摄美图','报名','审核入组','问卷','拍摄美图'],
+    time:'报名时间：07.03 ~ 07.14（截止 07-14 17:00）；试用周期 14 天，正式试用开始日以发货后首位用户打开确认为准。',
+    rules:'① 报名前需完成美图测肤拍摄；② 每日使用产品并打卡，漏打2天取消资格；③ 不能正在参加其他面部产品测评项目；④ 结题前完成第二次美图拍摄（效果对比）。',
+    desc:'<p>净颜焕亮系列新品体验：含焕亮喷雾、焕亮精华、温和卸妆水三件产品，每日基础护理流程中使用，感受肤色提亮与肤质改善。</p><div class="img-ph">产品图文介绍图（后台配置：支持文字 + 图片）</div><p>正式入组后产品免费寄送到家，按测评流程完成打卡与分阶段问卷，结题后完成第二次美图测肤拍摄，生成前后对比报告。</p>'},
+  '保湿洁面乳试用':{meta:'肤质要求: 干皮/偏干 ｜ 试用3次 · 无需停留 ｜ 40积分 ｜ 门店用户项目',quota:['招募名额 10','已报名 4','允许最大报名 12'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'deny',
+    info:[['肤质要求','干皮 / 偏干'],['试用方式','试用 3 次 · 无需停留']],
+    flow:['拍摄美图','报名','审核入组','试用反馈','拍摄美图'],
+    time:'报名截止后统一发货；按试用节奏分 3 次使用，正式开始日以发货后首位用户打开确认为准。',
+    rules:'① 肤质需为干皮/偏干；② 无需到店停留，按说明完成 3 次试用；③ 不能正在参加面部产品测评项目；④ 黑名单用户不可报名。',
+    desc:'<p>氨基酸保湿洁面乳家用体验装：温和清洁不紧绷，适合干皮、偏干肤质日常使用。</p><div class="img-ph">产品图文介绍图（后台配置：支持文字 + 图片）</div><p>无需到店，产品寄送到家，按说明完成 3 次试用，每次试用后提交使用反馈问卷，完成全部任务获得 40 积分。</p>'},
+  '面霜长期测评':{meta:'周期: 07.15~08.12 ｜ 面霜+喷雾 ｜ 全脸 · 28天',quota:['招募名额 30','已报名 12','允许最大报名 30'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'joined',
+    info:[['肤质要求','偏干 / 干性'],['试用周期','28 天 · 线上试用']],
+    flow:['拍摄美图','报名','审核入组','问卷','拍摄美图'],
+    time:'报名时间：06.30 ~ 07.13；试用周期 28 天，正式开始日以发货后首位打开确认为准。',
+    rules:'① 每日使用并打卡；② 按问卷计划分阶段填写反馈；③ 中途退出需提前告知运营。',
+    desc:'<p>修护屏障滋养面霜 + 保湿喷雾组合，评估 4 周使用的稳定性与舒适度。</p><div class="img-ph">产品图文介绍图（后台配置：支持文字 + 图片）</div>'},
+  '保湿精华28天测试':{meta:'周期: 07.20~08.17 ｜ 精华+乳液+面膜 ｜ 全脸 · 28天',quota:['招募名额 40','已报名 32','允许最大报名 40'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'open',
+    info:[['肤质要求','干性 / 偏干'],['试用周期','28 天 · 线上试用']],
+    flow:['拍摄美图','报名','审核入组','问卷','拍摄美图'],
+    time:'报名时间：07.01 ~ 07.17（截止 5 天）；试用周期 28 天。',
+    rules:'① 每日使用并打卡；② 报名前完成美图测肤拍摄，结题前完成第二次拍摄；③ 产品需连续使用不可中断。',
+    desc:'<p>保湿精华 + 乳液 + 面膜组合装，测试持续保湿力与肤感，干燥缺水肌肤优先。</p><div class="img-ph">产品图文介绍图（后台配置：支持文字 + 图片）</div>'},
+  '水油平衡喷雾测评':{meta:'周期: 06.28~07.26 ｜ 喷雾 ｜ 全脸 · 28天',quota:['招募名额 36','已报名 36','允许最大报名 36'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'full',
+    info:[['肤质要求','混合 / 油性'],['试用周期','28 天 · 线上试用']],
+    flow:['拍摄美图','报名','审核入组','问卷','拍摄美图'],
+    time:'报名已截止，测评进行中。',
+    rules:'① 每日使用并打卡；② 结题前完成第二次美图拍摄。',
+    desc:'<p>水油平衡喷雾测评：测试即时控油与补水效果。</p>'},
+  '磨砂膏产品评估':{meta:'周期: 06.20~07.18 ｜ 磨砂膏 ｜ 面部 · 28天',quota:['招募名额 40','已报名 48','允许最大报名 48'],audience:'store',flowType:'store',consentRequired:true,fulfillment:'ship',visitNote:'不来访，产品快递寄送到家。',state:'full',
+    info:[['肤质要求','非高度敏感肌'],['试用周期','28 天 · 线上试用']],
+    flow:['拍摄美图','报名','审核入组','问卷','拍摄美图'],
+    time:'报名已截止，名单筛选中。',
+    rules:'① 每周使用 2-3 次并打卡。',
+    desc:'<p>温和去角质磨砂膏测评。</p>'}
+};
+let curIntro='';
+function openIntro(name){
+  const d=introData[name]; if(!d)return;
+  if((d.audience||'store')!==currentAudience){
+    const expected=d.audience==='hq'?'总部用户':'门店用户';
+    document.getElementById('audienceNoticeText').textContent='该项目仅面向'+expected+'开放。当前演示身份为'+audienceLabel()+'，您无权查看该项目内容；项目内容涉及测评保密信息，请返回当前身份的项目列表。';
+    document.getElementById('audienceNotice').classList.add('show'); return;
+  }
+  curIntro=name;
+  document.getElementById('in-name').textContent=name;
+  document.getElementById('in-meta').textContent=d.meta;
+  document.getElementById('in-quota').innerHTML=''; /* 名额数据不在前端展示（业务要求）*/
+  const introInfo=[['参与对象',d.audience==='hq'?'总部用户':'门店用户'],['产品领取',d.fulfillment==='pickup'?'自行领取 · 无需发货':'快递发货'],['来访安排',d.visitNote||'按项目安排']].concat(d.info||[]);
+  document.getElementById('in-info').innerHTML=introInfo.map(r=>'<div class="k">'+r[0]+'</div><div class="v">'+r[1]+'</div>').join('');
+  document.getElementById('in-time').textContent=d.time;
+  document.getElementById('in-flow').innerHTML=d.flow.map((s,i)=>'<span>'+s+'</span>'+(i<d.flow.length-1?'<i>→</i>':'')).join('');
+  document.getElementById('in-rules').textContent=d.rules;
+  document.getElementById('in-desc').innerHTML=d.desc;
+  const apply=document.getElementById('in-apply');
+  const deny=document.getElementById('in-deny');
+  deny.style.display='none';
+  if(d.state==='joined'){
+    apply.textContent='已报名 · 查看进度';
+    apply.style.background='var(--brand)';
+    apply.disabled=false;
+  }else if(d.state==='deny'){
+    apply.textContent='不符合报名资格';
+    apply.style.background='#C6CBD0';
+    apply.disabled=true;
+    deny.style.display='block';
