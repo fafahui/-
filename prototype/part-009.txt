@@ -1,0 +1,556 @@
+    deny.textContent='很抱歉，您的用户身份不符合本项目参与条件。';
+  }else if(d.state==='full'){
+    apply.textContent='报名已满 · 不允许报名';
+    apply.style.background='#C6CBD0';
+    apply.disabled=true;
+    deny.style.display='block';
+    deny.textContent='报名人数已达允许最大报名数量，报名入口已自动关闭。';
+  }else{
+    apply.textContent='立即报名';
+    apply.style.background='var(--brand)';
+    apply.disabled=false;
+  }
+  showPage('pg-intro');
+}
+function introApply(){
+  const d=introData[curIntro]; if(!d)return;
+  if(d.state==='joined'){ openActDetail(curIntro.indexOf('净颜焕亮')>-1?'act-1':'act-2'); return; }
+  openSignup(curIntro);
+}
+function renderNotes(){
+  const d=pageNotes[curPage]; if(!d)return;
+  document.getElementById('noteCur').textContent=d.t;
+  document.getElementById('noteUl').innerHTML=d.n.map(x=>'<li>'+x+'</li>').join('');
+}
+
+/* 表单交互 */
+function pickSkin(el){
+  document.querySelectorAll('#skinGrid span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  saveDraft();
+}
+function pickSens(el){
+  document.querySelectorAll('#sensGrid span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  saveDraft();
+}
+function pickAddr(el){
+  document.querySelectorAll('.addr-pick').forEach(a=>a.classList.remove('on'));
+  el.classList.add('on');
+}
+/* 地址选择弹层 */
+function openAddrSheet(){ document.getElementById('addrSheet').classList.add('show'); }
+function closeAddrSheet(){ document.getElementById('addrSheet').classList.remove('show'); }
+function confirmAddr(){
+  const on=document.querySelector('#addrSheet .addr-pick.on');
+  if(on){
+    const name=on.querySelector('.p1').textContent;
+    const detail=on.querySelector('.p2').textContent.split('·')[0].trim();
+    document.getElementById('pickedAddr').textContent=name+(on.querySelector('.tag-default')?'（默认）':'')+' · '+detail;
+  }
+  closeAddrSheet();
+}
+let signed=false;
+function doSign(){
+  signed=true;
+  document.getElementById('signBtn').style.display='none';
+  const st=document.getElementById('signSt'); st.style.display='block';
+}
+function submitSignup(){
+  if(!checkMtStrict()){ return; }
+  const skin=document.querySelector('#skinGrid span.on');
+  if(!skin){ alert('请先选择自述肤质'); return; }
+  const sens=document.querySelector('#sensGrid span.on');
+  if(!sens){ alert('请先选择敏感类型'); return; }
+  if(document.getElementById('consentGroup').style.display!=='none'&&!signed){ alert('请先完成知情同意书签署'); return; }
+  document.getElementById('okOverlay').classList.add('show');
+  clearDraftSilent();
+}
+function clearDraftSilent(){
+  draft.proj=null;draft.mt=null;draft.skin=null;draft.sens=null;
+  document.getElementById('draftTip').style.display='none';
+}
+function okGoMine(){
+  document.getElementById('okOverlay').classList.remove('show');
+  showPage('pg-mine');
+}
+
+/* ===== 地址管理 ===== */
+function newAddr(){
+  document.getElementById('addrEditorTitle').innerHTML='新增地址<span class="sub">保存后进入地址库，报名时可直接选用</span>';
+  document.getElementById('addrEditor').classList.add('show');
+  document.getElementById('addrEditor').scrollIntoView({behavior:'smooth'});
+}
+function editAddr(){
+  document.getElementById('addrEditorTitle').innerHTML='编辑地址<span class="sub">修改后保存到地址库</span>';
+  const ed=document.getElementById('addrEditor');
+  ed.classList.add('show');
+  ed.scrollIntoView({behavior:'smooth'});
+}
+function cancelAddr(){ document.getElementById('addrEditor').classList.remove('show'); }
+function saveAddr(){
+  const name=document.getElementById('ad-name').value||'新地址';
+  const p=document.getElementById('ad-p').value, c=document.getElementById('ad-c').value, d=document.getElementById('ad-d').value;
+  const detail=document.getElementById('ad-detail').value||'（详细地址待补充）';
+  const isDef=document.getElementById('ad-default').checked;
+  const card=document.createElement('div');
+  card.className='card addr-card';
+  card.innerHTML='<div class="ad-ops"><span onclick="editAddr()">编辑</span><span class="del" onclick="delAddr(this)">删除</span></div>'
+    +'<div class="ad-name">'+name.replace(/</g,'&lt;')+(isDef?'<span class="chip g">默认</span>':'')+'</div>'
+    +'<div class="ad-tel">樊小花 · 138****6789</div>'
+    +'<div class="ad-detail">'+p+' '+c+' '+d+'<br>'+detail.replace(/</g,'&lt;')+'</div>';
+  const list=document.getElementById('addrList');
+  list.insertBefore(card, document.getElementById('addrEditor'));
+  document.getElementById('addrEditor').classList.remove('show');
+  alert('已保存到地址库，下次报名可直接选用');
+}
+function delAddr(el){
+  if(confirm('确认删除该地址？')) el.closest('.card').remove();
+}
+
+/* ===== 美图手机号格式校验 ===== */
+function checkMt(){
+  const v=document.getElementById('f-mt').value.trim();
+  const ok=/^1[3-9]\d{9}$/.test(v);
+  document.getElementById('mtErr').style.display=(!v||ok)?'none':'block';
+  document.getElementById('f-mt').classList.toggle('err',!(!v||ok));
+  return !v||ok;
+}
+function checkMtStrict(){
+  const v=document.getElementById('f-mt').value.trim();
+  if(!v){ alert('请填写美图手机号'); return false; }
+  if(!/^1[3-9]\d{9}$/.test(v)){ alert('美图手机号格式不正确：请输入1开头的11位手机号'); checkMt(); return false; }
+  return true;
+}
+
+/* ===== 拍照打卡（每日上传使用照片 ≤3张） ===== */
+let photoList=[];
+let photoRecords=[];
+let projectQrData='';
+function previewProjectQr(input){
+ const file=input.files&&input.files[0],box=document.getElementById('pm-qr-preview');if(!file)return;
+ const reader=new FileReader();reader.onload=()=>{projectQrData=reader.result;box.innerHTML='<img src="'+projectQrData+'" alt="运营企微二维码预览" style="max-width:180px;max-height:180px;display:block;border-radius:8px;">';};reader.readAsDataURL(file);
+}
+function openPhotoCk(){
+  photoList=[];
+  renderPhotos();
+  document.getElementById('photoCkMask').classList.add('show');
+}
+function closePhotoCk(){ document.getElementById('photoCkMask').classList.remove('show'); }
+function addPhoto(){
+  if(photoList.length>=3){ alert('一次打卡最多上传 3 张照片'); return; }
+  const input=document.createElement('input');input.type='file';input.accept='image/*';
+  input.onchange=()=>{const file=input.files&&input.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{photoList.push({name:file.name,data:reader.result});renderPhotos();};reader.readAsDataURL(file);};input.click();
+}
+function delPhoto(i){
+  photoList.splice(i,1);
+  renderPhotos();
+}
+function renderPhotos(){
+  const grid=document.getElementById('photoGrid');
+  let html=photoList.map((p,i)=>
+    '<div class="ph-img"><img src="'+p.data+'" alt="打卡图片" style="width:100%;height:100%;object-fit:cover;border-radius:12px;"><span class="ph-del" onclick="delPhoto('+i+')">✕</span></div>'
+  ).join('');
+  if(photoList.length<3){ html+='<div class="ph-add" onclick="addPhoto()">＋<br><span>拍照 / 相册</span></div>'; }
+  grid.innerHTML=html;
+  document.getElementById('photoCnt').textContent='已选 '+photoList.length+' / 3 张';
+}
+function submitPhotoCk(){
+  if(!photoList.length){ alert('请至少上传 1 张产品使用照片后再提交'); return; }
+  closePhotoCk();
+  const btn=document.getElementById('ship1-btn');
+  btn.classList.add('done');
+  btn.disabled=true;
+  btn.style.cursor='not-allowed';
+  btn.innerHTML='<span class="ck-ico">✓</span>今日已打卡';
+  document.getElementById('ship1-ckn').textContent=String(Number(document.getElementById('ship1-ckn').textContent)+1);
+  document.getElementById('ship1-ckn').classList.remove('gray');
+  document.getElementById('ship1-active-count').textContent=String(Number(document.getElementById('ship1-active-count').textContent)+1);
+  photoRecords.push({date:new Date().toLocaleDateString('zh-CN',{month:'2-digit',day:'2-digit'}),photos:photoList.map(p=>({name:p.name,data:p.data}))});
+  document.getElementById('ship1-active-btn').classList.add('done');
+  document.getElementById('ship1-active-btn').innerHTML='<span class="ck-ico">✓</span>今日已打卡';
+  document.getElementById('ship1-active-btn').disabled=true;
+  alert('打卡成功（演示）：已上传 '+photoList.length+' 张使用照片，可在「查看已上传打卡图片」中按日期查看或删除');
+}
+
+/* ===== 确认已领取产品：确认后亮起打卡按钮（拍照打卡） ===== */
+function confirmReceive(){
+  receiveConfirmed=true;
+  const status=document.getElementById('ship1-status'); status.className='st chip g'; status.textContent='已领取产品';
+  document.querySelectorAll('#detail-ship1 > *').forEach(el=>el.style.display='none');
+  document.getElementById('ship1-active').style.display='block';
+  document.getElementById('act4-home-status').className='chip g';document.getElementById('act4-home-status').textContent='已领取产品 · 测评中';
+  document.getElementById('act4-mine-status').className='chip g';document.getElementById('act4-mine-status').textContent='已领取产品 · 测评中';
+  document.getElementById('detailTitle').textContent='眼周紧致精华测评 · 持续打卡';
+  showPage('pg-detail');
+  alert('已确认领取产品（演示）：页面已刷新为测评进行中状态，请按计划持续打卡');
+}
+function openPhotoRecords(){renderPhotoRecords();document.getElementById('photoRecordsMask').classList.add('show');}
+function closePhotoRecords(){document.getElementById('photoRecordsMask').classList.remove('show');}
+function renderPhotoRecords(){
+ const box=document.getElementById('photoRecordsList');
+ if(!photoRecords.length){box.innerHTML='<div class="locked-tip">暂时没有已上传的打卡图片</div>';return;}
+ box.innerHTML=photoRecords.slice().reverse().map((group,ri)=>{const idx=photoRecords.length-1-ri;return '<div class="card"><div class="c-t">'+group.date+' 打卡图片</div><div class="photo-grid">'+group.photos.map((photo,pi)=>'<div class="ph-img"><img src="'+photo.data+'" alt="'+photo.name+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px;"><span class="ph-del" onclick="deletePhotoRecord('+idx+','+pi+')">✕</span></div>').join('')+'</div></div>';}).join('');
+}
+function deletePhotoRecord(dayIndex,photoIndex){photoRecords[dayIndex].photos.splice(photoIndex,1);if(!photoRecords[dayIndex].photos.length)photoRecords.splice(dayIndex,1);renderPhotoRecords();}
+
+/* ===== 联系运营：企微二维码（后台按项目配置） ===== */
+function openContact(){
+  const box=document.getElementById('contactQr');
+  if(!box.innerHTML){ if(projectQrData)box.innerHTML='<img src="'+projectQrData+'" alt="运营企微二维码" style="width:100%;height:100%;object-fit:contain;">';else renderQR('运营企微二维码'); }
+  document.getElementById('contactMask').classList.add('show');
+}
+function closeContact(){ document.getElementById('contactMask').classList.remove('show'); }
+
+/* ===== 已结束项目（超半年归档）弹窗 ===== */
+function openArchSheet(){ document.getElementById('archSheet').classList.add('show'); }
+function closeArchSheet(){ document.getElementById('archSheet').classList.remove('show'); }
+
+/* 企微授权登录（唯一入口） */
+function weworkLogin(){
+  document.getElementById('pg-login').classList.remove('show');
+  applyAudienceVisibility(); showPage('pg-home');
+}
+
+/* 轮播Banner */
+let carIdx=0;
+function applyBannerAudience(){
+ const slides=Array.from(document.querySelectorAll('.car-slide'));slides.forEach(el=>el.style.display=(el.dataset.audience||'store')===currentAudience?'':'none');
+ const count=slides.filter(el=>(el.dataset.audience||'store')===currentAudience).length;carIdx=0;carGo(0);
+ document.querySelectorAll('#carDots i').forEach((d,i)=>{d.style.display=i<count?'':'none';});
+}
+function carGo(i){
+ const slides=Array.from(document.querySelectorAll('.car-slide')).filter(el=>(el.dataset.audience||'store')===currentAudience);if(!slides.length)return;
+ carIdx=i%slides.length;document.getElementById('carTrack').style.transform='translateX(-'+(carIdx*100)+'%)';
+ document.querySelectorAll('#carDots i').forEach((d,idx)=>d.classList.toggle('on',idx===carIdx));
+}
+setInterval(function(){const count=document.querySelectorAll('.car-slide[data-audience="'+currentAudience+'"]').length;carGo((carIdx+1)%Math.max(count,1));},3500);
+
+/* 首页筛选：全部 / 未报名 / 已报名 */
+function filterHome(el,f){
+  document.querySelectorAll('#fchips span').forEach(s=>s.classList.remove('on'));
+  if(el)el.classList.add('on');let vis=0;
+  document.querySelectorAll('.h-list .pcard').forEach(c=>{
+    const match=(c.dataset.audience||'store')===currentAudience&&((f==='all')||(f==='yes'&&c.dataset.enroll==='1')||(f==='no'&&c.dataset.enroll==='0'));
+    c.style.display=match?'':'none';if(match)vis++;
+  });
+  const lbl={all:'全部活动',yes:'已报名活动',no:'未报名（可报名）活动'}[f];
+  const hc=document.getElementById('hCount');
+  if(hc) hc.textContent='• '+lbl+'：'+vis+' 个';
+}
+
+/* 我的 · 下钻到活动参与详情页 */
+const actMeta = {
+  'act-1':{name:'净颜焕亮产品体验',ing:true},
+  'act-2':{name:'面霜长期测评',ing:false},
+  'act-3':{name:'舒缓修护面霜测评',mode:'ship0'},
+  'act-4':{name:'眼周紧致精华测评',mode:'ship1'}
+};
+let receiveConfirmed=false;
+function openActDetail(id){
+  const m=actMeta[id]; if(!m)return;
+  document.getElementById('detailTitle').textContent=m.name;
+  const modes=['detail-ing','detail-wait','detail-ship0','detail-ship1'];
+  const key=m.mode||(m.ing?'ing':'wait');
+  const showMap={ing:'detail-ing',wait:'detail-wait',ship0:'detail-ship0',ship1:'detail-ship1'};
+  modes.forEach(mid=>{
+    document.getElementById(mid).style.display=(mid===showMap[key])?'':'none';
+  });
+  if(key==='ing'){ renderCkRecords(); layoutShip(); }
+  if(id==='act-4'&&receiveConfirmed){document.querySelectorAll('#detail-ship1 > *').forEach(el=>el.style.display='none');document.getElementById('ship1-active').style.display='block';document.getElementById('detailTitle').textContent=m.name+' · 持续打卡';}
+  showPage('pg-detail');
+}
+
+/* 打卡（按活动分别打卡）+ 记录渲染（展开/收起）+ 物流排序 */
+const ckDays=[{d:'07-13',t:'08:32'},{d:'07-14',t:'09:10'},{d:'07-15',t:'08:47'},{d:'07-16',t:'07:55'},{d:'07-17',t:'08:32'},{d:'07-18',t:'09:20'},{d:'07-19',t:'08:05'}]; /* D1-D7 历史 */
+function renderCkRecords(){
+  const list=document.getElementById('cr-list');
+  const total=14;
+  let html='';
+  ckDays.forEach((day,i)=>{
+    if(day){ html+='<div class="cr-day ok"><span class="d1">D'+(i+1)+'</span><span class="d2">✓</span></div>'; }
+    else{ html+='<div class="cr-day miss"><span class="d1">D'+(i+1)+'</span><span class="d2">✗</span></div>'; }
+  });
+  for(let i=ckDays.length;i<total;i++){
+    html+='<div class="cr-day future"><span class="d1">D'+(i+1)+'</span><span class="d2">—</span></div>';
+  }
+  list.innerHTML=html;
+  const done=ckDays.filter(d=>d).length;
+  document.getElementById('cs-count').textContent=done;
+  document.getElementById('cr-sum-inline').textContent='已打卡 '+done+' 天 · 漏打 '+(ckDays.length-done)+' 天';
+}
+function toggleCkRecords(){
+  const box=document.getElementById('ckRecords');
+  const arrow=document.getElementById('ck-toggle-arrow');
+  const open=box.classList.toggle('show');
+  box.style.display=open?'block':'none';
+  arrow.textContent=open?'收起 ▴':'展开 ▾';
+}
+function layoutShip(){
+  /* 有任何打卡记录（含历史）：物流移到 detail-ing 最底部；无记录：紧跟打卡卡下方 */
+  const ing=document.getElementById('detail-ing');
+  const ship=document.getElementById('shipCard');
+  if(!ing||!ship||ship.parentElement!==ing) return;
+  if(ckDays.length>0){ ing.appendChild(ship); }
+  else{ ing.insertBefore(ship, ing.children[1]); }
+}
+function doCheckin(btnId,tId){
+  const b=document.getElementById(btnId);
+  if(b.classList.contains('done'))return;
+  b.classList.add('done');
+  document.getElementById(tId).textContent='已打卡';
+  ckDays.push({d:'07-20',t:'08:45'});
+  renderCkRecords();
+  layoutShip();
+  document.getElementById('act1sub').textContent='D8/14 · ✓ 今日已打卡 · D3/D7问卷待填';
+}
+/* 复制物流单号 */
+function copyTrack(){
+  const no=document.getElementById('track-no').textContent;
+  if(navigator.clipboard){ navigator.clipboard.writeText(no); }
+  alert('已复制物流单号：'+no);
+}
+function copyTrack2(){
+  const no=document.getElementById('track-no2').textContent;
+  if(navigator.clipboard){ navigator.clipboard.writeText(no); }
+  alert('已复制物流单号：'+no);
+}
+
+/* 后台：项目快速跳转（报名数据 → 招募管理 / 打卡数据 → 打卡监控） */
+function jumpTo(modIdx,proj){
+  switchView('admin');
+  const links=document.querySelectorAll('.aside a');
+  switchMod(modIdx,links[modIdx]);
+  if(modIdx===1){ document.getElementById('curProj-1').textContent=proj+' ▾'; }
+  if(modIdx===2){ document.getElementById('curProj-2').textContent=proj+' ▾'; }
+}
+
+/* 消息已读 */
+function markAllRead(){
+  document.querySelectorAll('#msgList .m-item').forEach(m=>m.classList.remove('unread'));
+}
+
+function filterProjectAudience(el,audience){
+ document.querySelectorAll('#projAudienceTabs span').forEach(x=>x.classList.remove('on'));el.classList.add('on');
+ document.querySelectorAll('#proj-tb tr[data-audience]').forEach(row=>row.style.display=(audience==='all'||row.dataset.audience===audience)?'':'none');
+}
+/* 后台模块切换 */
+function switchMod(i,el){
+  document.querySelectorAll('.aside a').forEach(a=>a.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.mod').forEach((m,idx)=>m.classList.toggle('show',idx===i));
+}
+
+/* 后台：消息推送三子模块 */
+function switchMsgTab(el,i){
+  document.querySelectorAll('#msgTabs span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  [0,1,2].forEach(n=>{
+    const sub=document.getElementById('msgsub-'+n);
+    if(sub) sub.style.display=(n===i)?'block':'none';
+  });
+}
+/* 新建推送（运营手动/定时） */
+let npCnt=0;
+function openPushModal(){ npCnt=0; document.getElementById('np-cnt').textContent='0'; document.getElementById('pushMask').classList.add('show'); }
+function closePushModal(){ document.getElementById('pushMask').classList.remove('show'); }
+function importNpPhones(){
+  const txt=document.getElementById('np-phones').value.trim();
+  npCnt=txt?txt.split('\n').filter(s=>s.trim()).length:0;
+  document.getElementById('np-cnt').textContent=npCnt;
+}
+function savePush(){
+  const name=document.getElementById('np-name').value.trim();
+  if(!name){ alert('请填写任务名称'); return; }
+  const mode=document.getElementById('np-mode').value;
+  closePushModal();
+  if(mode==='立即推送'){
+    alert('推送任务「'+name+'」已立即下推（演示）：触达 '+(npCnt||36)+' 人，结果已写入「消息推送日志」');
+  }else{
+    alert('推送任务「'+name+'」已保存为定时推送（演示）：到达设定时间自动下推，状态可在「消息推送管理」查看');
+  }
+}
+
+/* 后台：新建/编辑项目（独立页面视图，非弹窗） */
+function openProjModal(title){
+  document.getElementById('pm-title').textContent=title;
+  document.getElementById('projListView').style.display='none';
+  document.getElementById('projEditView').style.display='';
+  document.querySelector('.dscreen .main').scrollTop=0;
+  window.scrollTo(0,0);
+}
+function closeProjModal(){
+  document.getElementById('projEditView').style.display='none';
+  document.getElementById('projListView').style.display='';
+}
+function saveProject(){
+  closeProjModal();
+  alert('已保存为草稿（演示）：项目仅后台可见；回到列表勾选后可「批量发布」上架前端，上架后也可随时「批量撤回发布」下架');
+}
+function saveAndPublish(){
+  closeProjModal();
+  alert('已保存并发布（演示）：项目即时上架前端并开放报名；如需下架，回到列表勾选后「批量撤回发布」');
+}
+
+/* 后台：项目批量发布 / 撤回发布（列表上方操作） */
+function batchPublish(){
+  const sel=getChecked('proj-tb');
+  if(!sel.length){ alert('请先勾选要发布的项目'); return; }
+  let n=0;
+  sel.forEach(c=>{
+    const chip=c.closest('tr').querySelector('.chip');
+    if(chip&&(chip.textContent==='草稿'||chip.textContent==='已下架')){
+      chip.className='chip g'; chip.textContent='招募中'; n++;
+    }
+  });
+  alert(n?('已发布上架 '+n+' 个项目（演示）：前端实时可见并开放报名'):'勾选的项目均已是上架状态，无需重复发布');
+  sel.forEach(c=>c.checked=false); updateSelCount('proj-tb','selCount-0');
+}
+function batchUnpublish(){
+  const sel=getChecked('proj-tb');
+  if(!sel.length){ alert('请先勾选要撤回发布的项目'); return; }
+  let n=0;
+  sel.forEach(c=>{
+    const chip=c.closest('tr').querySelector('.chip');
+    if(chip&&chip.textContent==='招募中'){
+      chip.className='chip gray'; chip.textContent='已下架'; n++;
+    }
+  });
+  alert(n?('已撤回发布 '+n+' 个项目（演示）：前端立即下架不可见，已报名/入组用户不受影响'):'勾选的项目均未处于上架状态，无需撤回');
+  sel.forEach(c=>c.checked=false); updateSelCount('proj-tb','selCount-0');
+}
+
+/* 后台：勾选 / 批量操作 */
+const SELCNT_MAP={'zu-ju':'selCount-1','lib-tb':'selCount-2','proj-tb':'selCount-0'};
+function toggleAll(src,tableId){
+  document.querySelectorAll('#'+tableId+' input.rowck').forEach(c=>c.checked=src.checked);
+  updateSelCount(tableId, SELCNT_MAP[tableId]||'selCount-2');
+}
+function getChecked(tableId){
+  return Array.from(document.querySelectorAll('#'+tableId+' input.rowck')).filter(c=>c.checked);
+}
+function updateSelCount(tableId,countId){
+  document.getElementById(countId).textContent=getChecked(tableId).length;
+}
+function batchEnroll(tableId){
+  const sel=getChecked(tableId);
+  if(!sel.length){ alert('请先勾选需要入组的志愿者'); return; }
+  alert('已批量审核入组 '+sel.length+' 位志愿者（演示）：志愿者将收到入组通知，状态更新为「已入组」');
+  sel.forEach(c=>c.checked=false); updateSelCount(tableId,'selCount-1');
+}
+/* 批量审核不通过（平铺快速原因 + 补充备注） */
+let rjCount=0, rjNames=[];
+function batchReject(){
+  const sel=getChecked('zu-ju');
+  if(!sel.length){ alert('请先勾选审核不通过的志愿者'); return; }
+  rjCount=sel.length;
+  rjNames=[];
+  sel.forEach(c=>{
+    const tr=c.closest('tr');
+    const nm=tr.querySelectorAll('td')[2];
+    rjNames.push(nm.textContent.split('\n')[0].trim());
+  });
+  document.getElementById('rj-title').textContent='批量审核不通过（已选 '+rjCount+' 人）';
+  document.querySelectorAll('#rejectMask .rj-opt').forEach(o=>o.classList.remove('on'));
+  document.getElementById('rj-note').value='';
+  document.getElementById('rejectMask').classList.add('show');
+}
+function closeRejectMask(){ document.getElementById('rejectMask').classList.remove('show'); }
+function toggleRjOpt(el){ el.classList.toggle('on'); }
+function saveReject(){
+  const reasons=Array.from(document.querySelectorAll('#rejectMask .rj-opt.on')).map(o=>o.textContent);
+  if(!reasons.length){ alert('请至少选择一个不通过原因'); return; }
+  const note=document.getElementById('rj-note').value.trim();
+  closeRejectMask();
+  alert('已批量审核不通过 '+rjCount+' 位志愿者（演示）：\n原因：'+reasons.join('、')
+    +(note?('\n备注：'+note):'')
+    +'\n志愿者收到未入选通知；可在列表行「编辑原因」继续调整');
+  getChecked('zu-ju').forEach(c=>c.checked=false);
+  updateSelCount('zu-ju','selCount-1');
+}
+function editRejectReason(name,cur){
+  rjCount=1; rjNames=[name];
+  document.getElementById('rj-title').textContent='编辑不通过原因 · '+name;
+  document.querySelectorAll('#rejectMask .rj-opt').forEach(o=>{
+    o.classList.toggle('on', cur && o.textContent===cur);
+  });
+  document.getElementById('rj-note').value=cur||'';
+  document.getElementById('rejectMask').classList.add('show');
+}
+/* 名单切换：全部 / 已入组 / 未入组 */
+function switchMList(el,f){
+  document.querySelectorAll('#mlistTabs span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#zu-ju tr[data-st]').forEach(tr=>{
+    const st=tr.dataset.st;
+    const show=(f==='all')||(f==='in'&&st==='in')||(f==='notin'&&st!=='in');
+    tr.style.display=show?'':'none';
+  });
+}
+/* 导出发货 / 导入发货信息 */
+function exportShip(){
+  alert('已按当前筛选导出发货清单（演示）：收货人、手机号、收货地址，共 3 条已入组记录');
+}
+function openShipImport(){ document.getElementById('shipMask').classList.add('show'); }
+function closeShipImport(){ document.getElementById('shipMask').classList.remove('show'); }
+function doShipImport(){
+  const txt=document.getElementById('shipData').value.trim();
+  if(!txt){ alert('请先粘贴发货数据'); return; }
+  const rows=txt.split('\n').filter(s=>s.trim()).length;
+  closeShipImport();
+  alert('导入成功 '+rows+' 条（演示）：对应报名记录状态已更新为「已发货」，用户端展示快递公司与物流单号，并通过企微应用消息收到发货通知');
+}
+/* 打卡监控：项目选择 */
+function pickCkProj(el){
+  document.querySelectorAll('#ckProjTabs span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+}
+/* 打卡监控：搜索历史项目 */
+const ckProjAll=[
+  {name:'净颜焕亮产品体验',sub:'D8 · 14天',ing:true},
+  {name:'水油平衡喷雾测评',sub:'D21 · 28天',ing:true},
+  {name:'面霜长期测评',sub:'D5 · 28天',ing:true},
+  {name:'磨砂膏产品评估',sub:'已完成 · 06.20~07.18',ing:false},
+  {name:'保湿精华28天测试',sub:'已完成 · 07.20~08.17',ing:false},
+  {name:'玻尿酸面膜测评',sub:'已归档 · 05.10~06.08',ing:false}
+];
+function searchCkProj(){
+  const kw=document.getElementById('ckProjSearch').value.trim();
+  let tip=document.getElementById('ppHistoryTip');
+  if(!kw){ if(tip) tip.style.display='none'; alert('请输入项目名称关键词'); return; }
+  const hits=ckProjAll.filter(p=>p.name.indexOf(kw)>-1);
+  if(!tip){
+    tip=document.createElement('div');
+    tip.className='pp-history-tip';
+    tip.id='ppHistoryTip';
+    const picker=document.querySelector('#ckProjTabs').closest('.proj-picker');
+    picker.appendChild(tip);
+  }
+  if(!hits.length){
+    tip.innerHTML='未找到匹配「'+kw.replace(/</g,'&lt;')+'」的项目，请更换关键词';
+    tip.style.display='block';
+    return;
+  }
+  tip.innerHTML='<b>搜索结果（点击切换项目查看打卡数据）：</b>'+hits.map(p=>
+    '<div class="h-item"><span onclick="useCkProj(\''+p.name+'\',\''+p.sub+'\')">'+p.name+' · '+p.sub+'</span></div>').join('');
+  tip.style.display='block';
+}
+function useCkProj(name,sub){
+  const tabs=document.getElementById('ckProjTabs');
+  tabs.querySelectorAll('span').forEach(s=>s.classList.remove('on'));
+  let hit=null;
+  tabs.querySelectorAll('span').forEach(s=>{ if(s.textContent.indexOf(name)>-1){ hit=s; } });
+  if(hit){ hit.classList.add('on'); }
+  else{
+    const sp=document.createElement('span');
+    sp.innerHTML=name+'<span class="pp-sub">'+sub+'</span>';
+    sp.onclick=function(){ pickCkProj(sp); };
+    tabs.appendChild(sp);
+  }
+  document.getElementById('ppHistoryTip').style.display='none';
+}
+/* 打卡记录详情弹窗 */
+const ckMock={
+  '樊小花':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','08:32'],['07-14','09:10'],['07-15','08:47'],['07-16','07:55'],['07-17','08:32'],['07-18','09:20'],['07-19','08:05'],['07-20','08:32']]},
+  '李美丽':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','09:15'],['07-14','08:40'],['07-15','09:15'],['07-16','08:22'],['07-17','09:15'],['07-18','07:58'],['07-19','09:15'],['07-20','09:15']]},
+  '张小草':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','08:50'],['07-14','09:05'],['07-15','08:33'],['07-16','08:12'],['07-17','09
