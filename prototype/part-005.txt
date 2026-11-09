@@ -1,0 +1,238 @@
+--brand);color:#fff;border-radius:12px;padding:11px;font-size:13px;font-weight:700;cursor:pointer;" onclick="saveAddr()" data-page-node-id="6GmHTkalpixDWXZ6xJZuxo">保存到地址库</button>
+                </div>
+              </div>
+
+              <button style="width:100%;border:1.5px dashed #BFE8D4;background:var(--brand-l);color:var(--brand-d);border-radius:14px;padding:13px;font-size:13.5px;font-weight:700;cursor:pointer;" onclick="newAddr()" data-page-node-id="FFRZJbStHnNNrQOjZE346d">＋ 新增地址</button>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 消息在H5中不展示；由顶部独立「企微应用消息」视图承载 -->
+
+        <!-- 地址选择弹层 -->
+        <div class="overlay align-end" id="addrSheet" onclick="if(event.target===this)closeAddrSheet()" data-page-node-id="biDgbLXDJ8HgyvSWKBqOqB">
+          <div class="sheet" data-page-node-id="2e92N4Y9BAsCUtiYMEkK9O">
+            <h4 data-page-node-id="eNmkuEzS90g03GE6b4jWjW">选择收货地址<span class="x" onclick="closeAddrSheet()" data-page-node-id="OxOhzWNZAAZBF4xtW1olUS">✕</span></h4>
+            <div class="addr-pick on" onclick="pickAddr(this)" data-page-node-id="NB8V1Db23LEPMi4oG0imqG">
+              <div class="p1" data-page-node-id="Ax9nlzfYWuj51HI059UNC7">家<span class="tag-default" data-page-node-id="dLR3i7NKQ8JDDNn8IQ5xiH">默认</span></div>
+              <div class="p2" data-page-node-id="Yl5cjSYrxqVPzVMJznjVOj">广东省 广州市 天河区 天河北路88号3栋502室 · 138****6789</div>
+              <div class="radio" data-page-node-id="8AgQevsnsCQakFtQ7cppym"></div>
+            </div>
+            <div class="addr-pick" onclick="pickAddr(this)" data-page-node-id="v4Yu2zLmbnEDyqaCpFXu8W">
+              <div class="p1" data-page-node-id="BBrbrwZMFpTQs9EDiRmI0V">门店</div>
+              <div class="p2" data-page-node-id="ZjZAVXHBSnPJg0VXb4ZWUq">陕西省 西安市 雁塔区 科技路10号 樊文花高新店 · 138****6789</div>
+              <div class="radio" data-page-node-id="gFRwETFSKFIgXSiPCiSmC6"></div>
+            </div>
+            <div style="font-size:12px;color:var(--brand);margin:10px 0 12px;cursor:pointer;" onclick="showPage('pg-address')" data-page-node-id="48b7dH8Aa5iS0THgjDFYbY">＋ 新增地址（保存到地址库）</div>
+            <button style="width:100%;border:0;background:var(--brand);color:#fff;border-radius:12px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;" onclick="confirmAddr()" data-page-node-id="DIouc5HwGEgv3hzA46J2rD">确定</button>
+          </div>
+        </div>
+
+        <!-- 提交成功 -->
+        <div class="overlay" id="okOverlay" data-page-node-id="YVZz5Mk4U887vgvYbkG8em">
+          <div class="ok-box" data-page-node-id="t0MYr11hfLOuWSpxIgTE3P">
+            <div class="cir" data-page-node-id="LGKINPB9kfUzT4EcPfINaU">✓</div>
+            <h4 data-page-node-id="KY270bLfdZVDUwnim1kq8N">报名提交成功</h4>
+            <p data-page-node-id="PgHDub6AGblCGFpwf5LD84">信息已入库，请等待运营审核入组<br data-page-node-id="HJT6sg3ziKeY32LUoCGzjF">审核结果将通过企微应用消息通知你</p>
+            <button class="btn" onclick="okGoMine()" data-page-node-id="tzu4RO0PoT2VcbMrs6Up4J">查看我的</button>
+            <button class="btn" style="background:#fff;color:var(--brand-d);border:1px solid var(--brand);margin-top:8px;" onclick="openContact()">联系运营</button>
+          </div>
+        </div>
+
+        <!-- 已结束项目（超半年归档）弹窗 -->
+        <div class="overlay align-end" id="archSheet" onclick="if(event.target===this)closeArchSheet()">
+          <div class="sheet">
+            <h4>已结束项目 <span style="font-size:11px;color:var(--ink-3);font-weight:400;">结束超半年已归档</span><span class="x" onclick="closeArchSheet()">✕</span></h4>
+            <div class="arch-item">
+              <div class="a-ic" style="background:#F1F2F4;">🧼</div>
+              <div class="a-tx">
+                <div class="a-name">氨基酸洁面慕斯测评<span class="chip gray">已完成</span></div>
+                <div class="a-sub">2026.02.10 ~ 03.15 · 全部任务已完成 · 获得 60 积分</div>
+              </div>
+            </div>
+            <div class="arch-item">
+              <div class="a-ic" style="background:#F1F2F4;">💧</div>
+              <div class="a-tx">
+                <div class="a-name">玻尿酸补水面膜测评<span class="chip gray">已完成</span></div>
+                <div class="a-sub">2025.11.20 ~ 12.25 · 全部任务已完成 · 获得 50 积分</div>
+              </div>
+            </div>
+            <div class="arch-item">
+              <div class="a-ic" style="background:#F1F2F4;">🍊</div>
+              <div class="a-tx">
+                <div class="a-name">维C焕亮精华测评<span class="chip gray">已完成</span></div>
+                <div class="a-sub">2025.10.08 ~ 11.05 · 全部任务已完成 · 获得 50 积分</div>
+              </div>
+            </div>
+            <div class="locked-tip" style="margin-top:10px;">结束时间超过半年的项目自动归档收起，历史通知通过企微应用消息查看</div>
+          </div>
+        </div>
+
+        <!-- 拍照打卡：上传使用照片（≤3张） -->
+        <div class="overlay align-end" id="photoCkMask" onclick="if(event.target===this)closePhotoCk()">
+          <div class="sheet">
+            <h4>拍照打卡 · 上传使用照片<span class="x" onclick="closePhotoCk()">✕</span></h4>
+            <div style="font-size:12px;color:var(--ink-2);margin-bottom:12px;">拍照或从相册选择产品使用照片，最多上传 3 张，上传后提交完成今日打卡</div>
+            <div class="photo-grid" id="photoGrid">
+              <div class="ph-add" onclick="addPhoto()">＋<br><span>拍照 / 相册</span></div>
+            </div>
+            <div style="font-size:11px;color:var(--ink-3);margin-top:8px;" id="photoCnt">已选 0 / 3 张</div>
+            <button style="width:100%;border:0;background:var(--brand);color:#fff;border-radius:12px;padding:12px;font-size:14px;font-weight:700;cursor:pointer;margin-top:12px;" onclick="submitPhotoCk()">提交并完成今日打卡</button>
+          </div>
+        </div>
+
+        <div class="overlay align-end" id="photoRecordsMask" onclick="if(event.target===this)closePhotoRecords()"><div class="sheet"><h4>打卡图片记录<span class="x" onclick="closePhotoRecords()">✕</span></h4><div class="tmpl-note">按打卡日期排列；每张已上传图片均可单独删除。</div><div id="photoRecordsList"></div></div></div>
+
+        <!-- 联系运营：企微二维码（后台按项目配置） -->
+        <div class="overlay" id="contactMask" onclick="if(event.target===this)closeContact()">
+          <div class="ok-box" style="max-width:280px;">
+            <h4 style="margin-bottom:4px;">联系运营</h4>
+            <p style="font-size:11.5px;color:var(--ink-3);margin-bottom:10px;">扫码添加本项目运营企微，咨询测评相关问题</p>
+            <div class="qr-ph" id="contactQr"></div>
+            <div style="font-size:11px;color:var(--ink-3);margin-top:8px;">二维码由运营在后台按项目配置 · 可随时更换</div>
+            <button class="btn" onclick="closeContact()">关闭</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- H5 设计说明 -->
+    <div class="notes" id="notesH5" data-page-node-id="K5s2Cd0sYk2kCl4MReFy1j">
+      <h3 data-page-node-id="gVbpCoSPjVLWtnb1lvSPns">设计说明 <span class="cur-page" id="noteCur" data-page-node-id="vrY26UaiSqrEnwCvCUaQjy">登录 · 企微授权（唯一入口）</span></h3>
+      <ul id="noteUl" data-page-node-id="HHWeprWUj8dot53ZSLhthp">
+        <li data-page-node-id="PWTSVOhKzMXL69ttU0J5qv"><b data-page-node-id="ofyCE1Yfq0AzpkQZb2tK8L">唯一登录入口：</b>仅支持企业微信授权登录，无其他注册方式，保证志愿者真实身份。</li>
+        <li data-page-node-id="Nn2dI66XdUhZEtRMFX1ors"><b data-page-node-id="q6aE2gvNW3Hql8diy6VPUz">授权即注册：</b>首次授权自动创建志愿者档案，姓名、电话自动带出并锁定。</li>
+        <li data-page-node-id="EqtWQuzhapxsJuKgyEJvoV"><b data-page-node-id="RkcB0XTVotyZ95NxR3j5FN">登录权限范围：</b>樊文花总部、分公司、店铺层的员工拥有登录注册权限。</li>
+        <li data-page-node-id="SwsDleL3MAzHT107F9mlfH"><b data-page-node-id="MwtGgwg8xdHtlGdtDB6LsD">权限统一管理：</b>本系统功能权限将使用新权限管理平台进行配置维护（角色/菜单/按钮级）。</li>
+        <li data-page-node-id="SwsDleL3MAzHT107F9mlf2"><b data-page-node-id="MwtGgwg8xdHtlGdtDB6LsD2">信息不可改：</b>登录后个人中心隐藏「修改信息」入口，个人信息由企微授权维护。</li>
+        <li data-page-node-id="SwsDleL3MAzHT107F9mlfH"><b data-page-node-id="MwtGgwg8xdHtlGdtDB6LsD">H5内嵌：</b>由宿主小程序（企微/微信）唤起，登录态通过授权参数传入H5。</li>
+      </ul>
+      <div class="h5-tip" data-page-node-id="oCUtQ4DHQFzpBbrnfGhpuk">H5 适配说明：通过 web-view 内嵌到企微/微信小程序中运行；登录仅支持企微授权（唯一入口），樊文花总部、分公司、店铺层员工拥有登录注册权限，功能权限由新权限管理平台统一配置维护。志愿者身份由企微档案区分为总部/门店，首页只展示同类型项目，跨类型直达链接不展示保密项目内容；门店流程为项目介绍→报名→审核入组→发货/打卡/问卷；总部类型1为招募→筛选照片→入组→D0来访领取→居家打卡→D7回访→D14/D28问卷，类型2为招募→筛选肤质→入组→指定地点自行领取→打卡→问卷；招募名额与允许最大报名数量由后台维护，前端不展示数量；项目面向用户决定可见与报名岗位范围；黑名单用户不可报名。</div>
+    </div>
+  </div>
+
+
+  <div class="wecom-wrap" id="wecomWrap">
+    <div class="wecom-caption">企业微信 · 应用消息预览 <span>此模块由企微承载，不属于 H5 页面</span></div>
+    <div class="phone"><div class="notch"></div><div class="screen">
+        <!-- 企微应用消息独立预览：非H5模块 -->
+        <div class="page show" id="wecomMsgPage" data-page-node-id="2PNmTjhHAJpwGLB4WNm6Ou">
+          <div class="sbar" data-page-node-id="RBX2x515W5MkBYPFLWPiWN"><span data-page-node-id="YvZ8wIH8rHefz8LllXxAwJ">9:41</span><span data-page-node-id="w4sNcDAWQrfcwy5MMuGgBW">●●● ⚡ ▮</span></div>
+          <div class="msg-head" data-page-node-id="jdUtdN9BBNkyPrHCzZO0l5"><div class="t">企微应用消息</div><div class="all-read" onclick="markAllRead()" data-page-node-id="WrnruFD9ZMQu70raUvcPJd">全部已读</div></div>
+          <div class="msg-list" id="msgList" data-page-node-id="oyOw8U0R3U6EahZLnr2I5j">
+            <div class="m-item unread" data-page-node-id="tn8CSEExa93NhpWOcyMtZX">
+              <div class="m-ic" style="background:var(--red);" data-page-node-id="aMckQfbEhYv5NAdR7QMrpT">⏰</div>
+              <div class="m-tx" data-page-node-id="xLYJRmnvZpdYOjA48gNVjs">
+                <div class="m-t" data-page-node-id="u3z2in7hpnoNYMJleGssJD"><span data-page-node-id="BEcPapg9XiCCOB3VtfTaah">【提醒】美图未拍摄</span><span class="tm" data-page-node-id="cpxCWWDEm1ucUMHmuRq1O8">昨天</span></div>
+                <div class="m-c" data-page-node-id="OA6JJomNocNrWdhu3VBxHs">请尽快去美图App拍照，3天内未拍将取消资格</div>
+              </div>
+            </div>
+            <div class="m-item unread" data-page-node-id="9VNGyhWnm6LeIlnyC3DtVI">
+              <div class="m-ic" style="background:var(--blue);" data-page-node-id="CEyxqKRe7YjodGUExs5Pik">📋</div>
+              <div class="m-tx" data-page-node-id="awwQTvfr7OZR3Dfqwa9105">
+                <div class="m-t" data-page-node-id="AAHjAd6nCHxRqPZFM4dUZ6"><span data-page-node-id="EVIfexBDW1XJnGGbPRtQAA">【问卷】D7中期反馈问卷已开放</span><span class="tm" data-page-node-id="Shy8hqP6y1JhuH8P3lqcoO">昨天</span></div>
+                <div class="m-c" data-page-node-id="Tm3X7sHZacVv4YUZKFeCky">问卷节点已到，请到活动详情页点击「去填写」跳转腾讯问卷完成填写</div>
+              </div>
+            </div>
+            <div class="m-item unread" data-page-node-id="OVnEBFx56GjE4Cyx1hYiLv">
+              <div class="m-ic" style="background:var(--brand);" data-page-node-id="QodaSkSWpOnG0MLsLhFvJh">✅</div>
+              <div class="m-tx" data-page-node-id="PjefyB6f678ncCuf4B4r0L">
+                <div class="m-t" data-page-node-id="I97WqreP933CUnjFE9GJKJ"><span data-page-node-id="xNYxamVnJg0jlKNbQxtv60">【打卡】今日打卡</span><span class="tm" data-page-node-id="ZqhnHeMcmA7Wu7QbtVzfPD">今天 09:00</span></div>
+                <div class="m-c" data-page-node-id="fe683JIRmqzGuALHpEfFoa">别忘了今天的产品使用打卡</div>
+              </div>
+            </div>
+            <div class="m-item" data-page-node-id="yFgCNKMJNyqJEGdhnvNeTZ">
+              <div class="m-ic" style="background:var(--brand);" data-page-node-id="NJpNH6uba1lWU1SipH1NWJ">🎉</div>
+              <div class="m-tx" data-page-node-id="uK9INiE9nOt2ZmtsXOFjv7">
+                <div class="m-t" data-page-node-id="ORLV5nHH8usMTHFtXwoqKr"><span data-page-node-id="i4cu27v9RgHg1UZOMa6JgX">【入选】您已入选</span><span class="tm" data-page-node-id="m6Wb5o1fkopOtMBODXsin1">07-14</span></div>
+                <div class="m-c" data-page-node-id="982YZI5Y3SI0j92TEOyUSs">您已入选净颜焕亮产品体验项目</div>
+              </div>
+            </div>
+            <div class="m-item" data-page-node-id="6TYhh1ZXuqVY2aWWZSOI61">
+              <div class="m-ic" style="background:var(--brand);" data-page-node-id="p43rtQHC3deQVF1HXmRbJk">📣</div>
+              <div class="m-tx" data-page-node-id="0ov7v415vN9xh7AHBi3841">
+                <div class="m-t" data-page-node-id="FbLyvoAxFsk4E62sggF5xm"><span data-page-node-id="gVWRPwKd9SqDof96tc3EPR">【新活动】净颜焕亮招募开始</span><span class="tm" data-page-node-id="gclATTlYsDGMAa3Gj1M4Pb">07-12</span></div>
+                <div class="m-c" data-page-node-id="QTnnKfdgAC14pGDh5qKVaN">净颜焕亮产品体验招募开始报名，点击查看详情</div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div></div>
+  </div>
+
+  <!-- ============ 运营后台 ============ -->
+  <div class="admin-wrap" id="adminWrap" data-page-node-id="0YUefXG9UVmLFo1Dn0QgCO">
+    <div class="desk" data-page-node-id="T5DL9FYkFjsy2kBlNwzWZE">
+      <div class="dbar" data-page-node-id="zgsmZGV0pNfVU5vF2BPh3m"><i style="background:#FF5F57" data-page-node-id="oi0kEsuhcNjFq8s6puagt3"></i><i style="background:#FEBC2E" data-page-node-id="BBYuzpLBM3QhM0VnBsHbwV"></i><i style="background:#28C840" data-page-node-id="GL3EfnBIgpaWLWTjFcl1iU"></i><div class="url" data-page-node-id="r96JXH3iq5fZBR8WkvBk1F">volunteer.fanwenhua-admin.cn / 一期 MVP</div></div>
+      <div class="dscreen" data-page-node-id="1lBTLCI8woL5IYgjSE5P3L">
+        <div class="aside" data-page-node-id="4jltxDM7eSe8XLfzdK27ZX">
+          <div class="brand" data-page-node-id="AWrlq5Io96Nyf48OTJ0jsB"><div class="b-ic" data-page-node-id="7kSihxxTNBxypk9YKyUNkp">花</div><div class="b-t" data-page-node-id="jvD2aCIfXuXnxVAwyVWM7Q">志愿者后台<small data-page-node-id="dmOd7AryC92zHuWMAUGVFV">樊文花 · 一期MVP</small></div></div>
+          <a class="on" onclick="switchMod(0,this)" data-page-node-id="ut6KpfznfScgCNGHfunD4l"><span class="ic" data-page-node-id="oPnh9lKg5oEQjmQhmbdrPh">🗂</span>项目管理</a>
+          <a onclick="switchMod(1,this)" data-page-node-id="VDQKAbVIrguIZATTU2a7Pt"><span class="ic" data-page-node-id="2Dvu097IIHduHmBOBip9SF">👥</span>招募管理</a>
+          <a onclick="switchMod(2,this)" data-page-node-id="wauisxNmQVHZcDtYejbPWb"><span class="ic" data-page-node-id="uPLS0gW8ZolZtitjFhsVuC">📅</span>打卡监控</a>
+          <a onclick="switchMod(3,this)" data-page-node-id="JP0TQHbOCjbwGGuFooS33X"><span class="ic" data-page-node-id="JPdq21ghtpi51fBwUxusPr">📣</span>消息推送</a>
+          <a onclick="switchMod(4,this)" data-page-node-id="7qWuoBT9Qv1DyvrOWXZhX8"><span class="ic" data-page-node-id="cxJcPtGkWG1Yi9SIntwd0B">🗃</span>志愿者库</a>
+          <a onclick="switchMod(5,this)"><span class="ic">🖼</span>Banner配置</a>
+          <div class="who" data-page-node-id="ZH1GLO76fQOXjHuivvT1Ai"><div class="d" data-page-node-id="mHG1hRJKAmpqLlyPfbOL14">技</div>管理员 · 技术员</div>
+        </div>
+        <div class="main" data-page-node-id="FI9tyAfLlcaCOHRgvGfYiy">
+
+          <div class="tmpl-note admin-perm-note"><b>🔐 权限说明：</b>志愿者管理后台的登录与操作权限，统一使用<b>新权限管理平台</b>进行配置维护——账号可登录范围、菜单可见性、按钮级操作权限（如审核、发货、推送）均按角色分配，本后台不单独维护权限。</div>
+
+          <!-- 模块1 项目管理（列表视图 + 编辑页视图） -->
+          <div class="mod show" data-page-node-id="Jooldimyd0IIi5zY4NjZdc">
+            <div id="projListView">
+            <div class="crumb"><h2>项目管理</h2><div class="ops"><button class="btn btn-p" onclick="openProjModal('新建项目')">＋ 新建项目</button></div></div>
+            <div class="tmpl-note"><b>交互说明：</b>新建/编辑项目为独立页面；状态为草稿 ⇄ 招募中 ⇄ 已下架；支持列表勾选批量发布与撤回。项目面向总部/门店决定对应用户的可见与报名范围。</div>
+            <div class="panel" data-page-node-id="wT2otVeCBoNSTwalTmtynt">
+              <h3 data-page-node-id="G1z8RqKNoQM7OTExMWlpQI">招募项目列表 <span class="r" data-page-node-id="UuFKzsQo0NEnBoeNAOly4N">双名额：招募名额（内部统计） / 允许最大报名数量（报名上限）</span></h3>
+              <div class="tab-switch" id="projAudienceTabs"><span class="on" onclick="filterProjectAudience(this,'all')">全部</span><span onclick="filterProjectAudience(this,'hq')">面向总部</span><span onclick="filterProjectAudience(this,'store')">面向门店</span></div>
+              <div class="list-ops">
+                <div class="batch-bar" style="margin-left:0;">已选 <b id="selCount-0">0</b> 项</div>
+                <button class="btn btn-p" onclick="batchPublish()">批量发布（上架）</button>
+                <button class="btn btn-o" onclick="batchUnpublish()">批量撤回发布（下架）</button>
+                <span class="tip2" style="margin:0;">发布后前端实时上架开放报名；撤回后前端立即不可见，已报名/入组用户不受影响</span>
+              </div>
+              <div class="tbl-wrap" data-page-node-id="eUEk3rofgrYfOdjQgtpNzg">
+              <table id="proj-tb">
+                <tr><th><input type="checkbox" class="ck" onclick="toggleAll(this,'proj-tb')"></th><th>#</th><th>项目名称</th><th>面向用户</th><th>状态</th><th>报名数/最大报名</th><th>招募名额</th><th>已入组</th><th>项目时间</th><th>允许报名时间</th><th>操作</th></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>1</td><td>净颜焕亮产品体验</td><td>门店用户</td><td><span class="chip g">招募中</span></td><td>25/50</td><td>40</td><td>20</td><td>07.17~07.31</td><td>07.03~07.14</td><td><span class="link" onclick="jumpTo(1,'净颜焕亮产品体验')">报名数据</span><span class="link" onclick="jumpTo(2,'净颜焕亮产品体验')">打卡数据</span><span class="link" onclick="openProjModal('编辑项目 · 净颜焕亮产品体验')">编辑</span><span class="link" onclick="openPromoModal('净颜焕亮产品体验')">推广</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>2</td><td>水油平衡喷雾测评</td><td>门店用户</td><td><span class="chip b">试用中</span></td><td>36/36</td><td>36</td><td>36</td><td>06.28~07.26</td><td>06.10~06.25</td><td><span class="link" onclick="jumpTo(2,'水油平衡喷雾测评')">打卡数据</span><span class="link">导出</span><span class="link" onclick="openProjModal('编辑项目 · 水油平衡喷雾测评')">编辑</span><span class="link" onclick="openPromoModal('水油平衡喷雾测评')">推广</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>3</td><td>磨砂膏产品评估</td><td>门店用户</td><td><span class="chip o">筛选中</span></td><td>48/48 <span class="chip r">已满</span></td><td>40</td><td>32</td><td>06.20~07.18</td><td>06.01~06.15</td><td><span class="link" onclick="jumpTo(1,'磨砂膏产品评估')">报名数据</span><span class="link">筛选</span><span class="link" onclick="openProjModal('编辑项目 · 磨砂膏产品评估')">编辑</span><span class="link" onclick="openPromoModal('磨砂膏产品评估')">推广</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>4</td><td>保湿精华28天测试</td><td>门店用户</td><td><span class="chip gray">已完成</span></td><td>38/40</td><td>40</td><td>38</td><td>07.20~08.17</td><td>07.01~07.17</td><td><span class="link" onclick="jumpTo(1,'保湿精华28天测试')">报名数据</span><span class="link" onclick="jumpTo(2,'保湿精华28天测试')">打卡数据</span><span class="link">归档</span><span class="link" onclick="openPromoModal('保湿精华28天测试')">推广</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>5</td><td>面霜长期测评</td><td>门店用户</td><td><span class="chip g">招募中</span></td><td>12/30</td><td>30</td><td>8</td><td>07.15~08.12</td><td>06.30~07.13</td><td><span class="link" onclick="jumpTo(1,'面霜长期测评')">报名数据</span><span class="link" onclick="openProjModal('编辑项目 · 面霜长期测评')">编辑</span><span class="link" onclick="openPromoModal('面霜长期测评')">推广</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>6</td><td>舒缓修护面霜测评<div class="tip2" style="margin-top:3px;">配置完成待发布 · 仅后台可见</div></td><td>门店用户</td><td><span class="chip gray">草稿</span></td><td>—</td><td>30</td><td>—</td><td>08.01~08.28</td><td>07.10~07.20</td><td><span class="link" onclick="openProjModal('编辑项目 · 舒缓修护面霜测评')">编辑</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>7</td><td>眼周紧致精华测评<div class="tip2" style="margin-top:3px;">已撤回发布 · 前端不可见</div></td><td>门店用户</td><td><span class="chip gray">已下架</span></td><td>—</td><td>28</td><td>—</td><td>07.22~08.18</td><td>07.05~07.15</td><td><span class="link" onclick="openProjModal('编辑项目 · 眼周紧致精华测评')">编辑</span></td></tr>
+                <tr data-audience="store"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>8</td><td>新植萃舒缓系列测评<div class="tip2" style="margin-top:3px;">保存未发布 · 仅后台可见</div></td><td>门店用户</td><td><span class="chip gray">草稿</span></td><td>—</td><td>30</td><td>—</td><td>08.15~09.12</td><td>07.25~08.05</td><td><span class="link" onclick="openProjModal('编辑项目 · 新植萃舒缓系列测评')">编辑</span></td></tr>
+              <tr data-audience="hq"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>9</td><td>总部到访体验 · 类型1<div class="tip2">总部用户 · D0来访 / D7回访</div></td><td>总部用户</td><td><span class="chip g">招募中</span></td><td>8/20</td><td>20</td><td>6</td><td>08.01~08.28</td><td>07.20~07.31</td><td><span class="link" onclick="openProjModal('编辑项目 · 总部到访体验·类型1')">编辑</span></td></tr>
+                <tr data-audience="hq"><td><input type="checkbox" class="ck rowck" onchange="updateSelCount('proj-tb','selCount-0')"></td><td>10</td><td>总部自取体验 · 类型2<div class="tip2">总部用户 · 自行领取 / 不来访</div></td><td>总部用户</td><td><span class="chip g">招募中</span></td><td>12/24</td><td>24</td><td>10</td><td>08.05~09.02</td><td>07.22~08.02</td><td><span class="link" onclick="openProjModal('编辑项目 · 总部自取体验·类型2')">编辑</span></td></tr>
+              </table>
+              </div>
+              <div class="legend" data-page-node-id="jY94HZLQUku4yExdEmp6jt">
+                <span data-page-node-id="z1oFG4ZpnDHmH65SWOBpqF"><i style="background:var(--brand)" data-page-node-id="X4z1TFYsHyqE6GI1H9GB1P"></i>招募名额：内部统计口径（剩余名额不在前端展示，业务要求）</span>
+                <span data-page-node-id="riouwr23ESKN57REJwtWMQ"><i style="background:#fff;border:1px solid var(--line)" data-page-node-id="67HTmz4AftHNLtDgtsCqA0"></i>允许最大报名数量：报名数达到上限自动关闭报名入口，超出不可报</span>
+                <span data-page-node-id="4XgkAfpQmlzaDOgHUFvtVE"><i style="background:var(--blue)" data-page-node-id="5vb8fCjWjc00XtCS0VewwJ"></i>点击「报名数据 / 打卡数据」快速跳转对应模块</span>
+                <span><i style="background:#FFF4E5"></i>项目状态流：<b>草稿</b>（仅后台可见）→「发布」上架前端（<b>招募中</b>）⇄「撤回发布」下架（<b>已下架</b>，前端不可见，已报名/入组用户不受影响）；新建/编辑保存默认为草稿</span>
+                <span><i style="background:var(--red)"></i>「推广」：查看单个项目推广链接 + 生成二维码，支持运营在企微/朋友圈分享引流</span>
+              </div>
+            </div>
+          </div>
+            <!-- 项目编辑页（独立页面，非弹窗） -->
+            <div id="projEditView" style="display:none;">
+              <div class="crumb"><h2><span style="color:var(--brand);cursor:pointer;" onclick="closeProjModal()">‹</span> <span id="pm-title">新建项目</span></h2><div class="ops"><button class="btn btn-o" onclick="closeProjModal()">返回列表</button><button class="btn btn-o" onclick="saveProject()">保存草稿</button><button class="btn btn-p" onclick="saveAndPublish()">保存并发布</button></div></div>
+              <div class="panel">
+                <h3>项目配置 <span class="r">保存为草稿仅后台可见；「保存并发布」即时上架前端开放报名</span></h3>
+                <div class="aform">
+      <div data-page-node-id="77iFAOUpNCay2ZKazvRAwU"><label data-page-node-id="1oaruUfpEsDh5JiK72DbrK">项目名称<span class="req" data-page-node-id="IHzz7XyZMGBckAigwLbnrH">*</span></label><input placeholder="如：净颜焕亮产品体验" data-page-node-id="EJWPzTEKG2pfz6VuOeFWLS"></div>
+      <div data-page-node-id="ywpiH1TjizY3g1zCoHx6SP"><label data-page-node-id="wiOq1R22kgxBj7o2oSflbi">产品组合</label><input placeholder="如：喷雾+精华+卸妆水" data-page-node-id="oMvvBmxiyHkaLF0GSFe92y"></div>
+      <div><label>项目面向用户<span class="req">*</span></label><select id="pm-audience" onchange="syncProjectDefaults()"><option value="store" selected>门店用户</option><option value="hq">总部用户</option></select><div class="tip2">正式系统根据企微档案中的用户类型展示；首页切换按钮仅用于本原型演示</div></div>
+      <div><label>用户流程类型<span class="req">*</span></label><select id="pm-flow-type" onchange="syncFlowDefaults()"><option value="store">门店用户流程</option><option value="hq1">总部用户流程 · 类型1</option><option value="hq2">总部用户流程 · 类型2</option></select></div>
+      <div class="fw"><div id="pm-flow-preview" class="tip2">门店：招募 → 美图筛选 → 入组 → 快递发货 → 打卡/问卷 → 结题美图</div></div>
+      <div><label>产品领取方式<span class="req">*</span></label><select id="pm-fulfillment"><option value="ship">快递发货</option><option value="pickup">自行领取（无需发货）</option></select></div>
+      <div><label>来访安排<span class="req">*</span></label><select id="pm-visit"><option value="none">不来访</option><option value="d0">D0来访领取产品</option><option value="d0d7">D0来访 + D7回访</option><option value="custom">自定义来访安排</option></select></div>
+      <div class="fw"><label>来访说明</label><input id="pm-visit-note" placeholder="如：D0总部到访领取产品，D7回访"></div>
+      <div data-page-node-id="DZh3L9kQA43sNJtHc2pMS4"><label data-page-node-id="bGKgi7ONqfcQjwdaD6qDFa">项目时间（测试周期）<span class="req" data-page-node-id="7UCzXjlFRdrX8321dOxr54">*</span></label><input placeholder="2026-07-17 ~ 2026-07-31" data-page-node-id="20MAris26lfTgvQX3lvhWC"></div>
+      <div data-page-node-id="IDuDcQyfLT5DeS0JQCIyHl"><label data-page-node-id="mOy3D8wH3IrCOmWhCmXCex">允许报名时间<span class="req" data-page-node-id="C3A68QG8PYF1QMZZ18z4x8">*</span></label><input placeholder="2026-07-03 ~ 2026-07-14" data-page-node-id="I3SnwHxGBJPoHRwWt0CFV5"></div>
+      <div data-page-node-id="K9UPjMuGUFju0EKsPldilb"><label data-page-node-id="JAxLLSj9OMnJANK8MF61iw">招募名额（内部统计）<
