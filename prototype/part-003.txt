@@ -1,0 +1,255 @@
+n>
+            <span onclick="filterHome(this,'no')" data-page-node-id="8ChJaUahnMUjP7qDZKsDti">未报名</span>
+            <span onclick="filterHome(this,'yes')" data-page-node-id="FJrGnwGuxM5SNoSuI9Vklj">已报名</span>
+          </div>
+          <div class="h-list" data-page-node-id="Cim72FEH8133YjBV57YPuv">
+
+            <div class="pcard" data-audience="store" data-enroll="1" data-page-node-id="5N69soPAjflvgBcqgjQvX3">
+              <div class="top" data-page-node-id="tLYTqwTioH5yfE8slZZESL"><div class="name" data-page-node-id="ME34MyUgzsBs9eMt0C8GWG">净颜焕亮产品体验<span class="chip b" data-page-node-id="KG94YcYnGklohcMWRxwN4x">测评中</span></div></div>
+              <div class="meta" data-page-node-id="pSTAKG3sa6yH0y6gT8QDZY">周期: 07.17~07.31 ｜ 喷雾+精华+卸妆水</div>
+              <div class="tags" data-page-node-id="J69mA8jaVaG5bDSVYwWyrO"><span data-page-node-id="wE0la8DqgdxFl4qABjhLPH">面部</span><span data-page-node-id="M0SJzW5RR6EaxR6CQ4Qk4i">14天</span><span class="warn" data-page-node-id="SqWMPDHMMmsHxFTib5G522">需拍美图</span></div>
+              <div class="foot" data-page-node-id="ceNjiXdfRjOWL0DnXUqOb9"><span class="ddl" data-page-node-id="ceOcArJtSQLa74XruXHU9K">报名截止：3天12小时</span><button class="btn-apply mine" onclick="openActDetail('act-1')" data-page-node-id="aJGbdS3uFLnf3UEEgxlFsj">去打卡</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="1" data-page-node-id="QcSLeizB3eI3L7jVAJcmpm">
+              <div class="top" data-page-node-id="GOWKskIhGGojfhE8yXeRBC"><div class="name" data-page-node-id="WGBqHlTlPfeqvuTrbva1Ik">舒缓修护面霜测评<span class="chip b" data-page-node-id="zbtqykKDoyoCrtBF3gZxCU">已入组 · 待发货</span></div><div class="left" data-page-node-id="BXZyOf1H9iI8RzjSOY1h9M">入组成功</div></div>
+              <div class="meta" data-page-node-id="OherNalVvTweEIcWD9U4di">周期: 08.01~08.28 ｜ 面霜+面膜 ｜ 全脸 · 28天</div>
+              <div class="tags" data-page-node-id="maYfvS6nMTr6FC2gBNAQko"><span data-page-node-id="kTG89djSDOHgNEwllDx032">全脸</span><span data-page-node-id="tZZrNapsjp88aV5t8hhQGH">28天</span><span data-page-node-id="eNqUqEyj88STGpZyw8NwKN">无需拍图</span></div>
+              <div class="foot" data-page-node-id="CHu6SDSnIVlpoOY4R676vI"><span class="ddl" data-page-node-id="jBZ8LnybGJDX8cwIK1c7cZ">产品待发货 · 发货后可查看物流信息</span><button class="btn-apply mine" onclick="openActDetail('act-3')" data-page-node-id="IYVcJNfGpndA8GAz9eNN45">查看进度</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="1" data-page-node-id="5yopAM2UQ0vPxxHExoHl7N">
+              <div class="top" data-page-node-id="o4GxpWp5y48z9DK8jk7lYy"><div class="name" data-page-node-id="g80n3X3k8awCIq9hNl6A1M">眼周紧致精华测评<span id="act4-home-status" class="chip o" data-page-node-id="XzIy5gwDeEmnCgcha5yJQ4">已入组 · 已发货</span></div><div class="left" data-page-node-id="1pBSDM25hRXaTOGOwDdIzZ">已发货</div></div>
+              <div class="meta" data-page-node-id="3m66oOHEclk2qAiBEg9XIT">周期: 07.22~08.18 ｜ 眼部精华 ｜ 眼周 · 28天</div>
+              <div class="tags" data-page-node-id="WzNLCA7PiZ62ycpLHN4xyc"><span data-page-node-id="VY4bmLaihEPMRQdagmstlJ">眼周</span><span data-page-node-id="pjNMLJE6vqv1ZzVLAjzBy4">28天</span><span class="warn" data-page-node-id="KLnkUHxivlQeAgN2GlGPPN">需拍美图</span></div>
+              <div class="foot" data-page-node-id="KeHXgteLlvuIgLqGFBuWOf"><span class="ddl" data-page-node-id="HhBNzNnR1sDLmPA3ZuHyBz">产品运输中 · 领取产品后开始打卡试用</span><button class="btn-apply mine" onclick="openActDetail('act-4')" data-page-node-id="ZqszoEf2G00BayaWAlCxaN">查看物流</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="0" onclick="openIntro('保湿精华28天测试')" data-page-node-id="Qdhq1S7PtAdkgbetNAsoQK">
+              <div class="top" data-page-node-id="9acTmQEHxW6m4Q2jpNOPBx"><div class="name" data-page-node-id="DIgoEmC2v01vm0nFPBhJnp">保湿精华28天测试<span class="chip g" data-page-node-id="2HyZUbrqzdEwnsgEjYv4T2">招募中</span></div></div>
+              <div class="meta" data-page-node-id="T97pWghu0HpaRGF2TGKDMh">周期: 07.20~08.17 ｜ 精华+乳液+面膜</div>
+              <div class="tags" data-page-node-id="ZzQCcGOwroWvqSnrmPtgnw"><span data-page-node-id="jYdPARDK3mMPZmXybZVqdV">全脸</span><span data-page-node-id="n8sKy5HznINxXszD77H7Ik">28天</span><span class="warn" data-page-node-id="CCwOA87kJRCI2o8VaaexrL">需拍美图</span></div>
+              <div class="foot" data-page-node-id="HyKCNlA5yFLF2qeVDk0EIX"><span class="ddl" data-page-node-id="Cx1oCqPYW9hVqs1MbmEo8D">报名截止：5天</span><button class="btn-apply" data-page-node-id="uIswXLO0UgGDft0WUpxGUs">去报名</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="1" data-page-node-id="0bbnHSyHMg7ONSiFY9WaAA">
+              <div class="top" data-page-node-id="gnEhOukFPETHQwKNJaurH7"><div class="name" data-page-node-id="0A07UtAHt5sYGZSKUr7Su1">面霜长期测评<span class="chip g" data-page-node-id="5Du3dC6GdKG01iTATawa9Q">招募中</span></div></div>
+              <div class="meta" data-page-node-id="7JMFPYKfKz3f9KAUGgPGXs">周期: 07.15~08.12 ｜ 面霜+喷雾</div>
+              <div class="tags" data-page-node-id="QoK7y6HDFAcUddeFNWmSFB"><span data-page-node-id="h7X14HHFZlL0Fn8UptVDrz">全脸</span><span data-page-node-id="q4RiC5y2poYxClB2XYzqK4">28天</span><span data-page-node-id="NA8ZKiOGWV0CdYEtSrmQSz">无需拍图</span></div>
+              <div class="foot" data-page-node-id="eeBU4BRqYb5WWtfS4Yg7kP"><span class="ddl" data-page-node-id="1aUx1ypBNABkZjcppvtlU9">报名截止：2天</span><button class="btn-apply mine" onclick="openActDetail('act-2')" data-page-node-id="0TYmv8yGiFKv8ukkkoAUwa">查看进度</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="0" data-deny="1" onclick="openIntro('保湿洁面乳试用')" data-page-node-id="kDG3h9deAuibmyFgMbNBB2">
+              <div class="top" data-page-node-id="RKcKoXwLoiGOjj4uRLmwDY"><div class="name" data-page-node-id="ndNtLxWZ9qDr4XkrKvUAsm">保湿洁面乳试用<span class="chip g" data-page-node-id="mECfPgLA8eUkWePjZZFIeF">招募中</span><span class="chip r">不符合报名资格</span></div></div>
+              <div class="meta" data-page-node-id="fPkp8eCLHXJAjNAk5zlmLF">肤质要求: 干皮/偏干 ｜ 试用3次 · 无需停留</div>
+              <div class="tags" data-page-node-id="YNfzxlVpFuWd7b28yj6PLD"><span data-page-node-id="CRDH2jvAguEtMPxF5bDojr">洁面</span><span data-page-node-id="K2Cwn278op7asFHtPfx9eT">门店用户项目</span><span data-page-node-id="79vnLAvTlGjGUcVBCAjrAZ">40积分</span></div>
+              <div class="foot" data-page-node-id="PYSJaskfFEPvsqnWjpjpAY"><span class="ddl" data-page-node-id="VfmmNyfYIhTaB0goHUy04X">报名截止：2天</span><button class="btn-apply" data-page-node-id="X7jnJ2qFERJ1gfxpvgmeBK">查看详情</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="0" onclick="openIntro('水油平衡喷雾测评')" data-page-node-id="QClB3H5exKMyVcryvZQZe5">
+              <div class="top" data-page-node-id="H7Gde0bRHFLX23Yw93zo09"><div class="name" data-page-node-id="hl4ct5uL58i8CA1X5HIeAD">水油平衡喷雾测评<span class="chip b" data-page-node-id="JD1mLEPHnBJnUbyu9zIMSP">报名截止 · 测评进行中</span></div></div>
+              <div class="meta" data-page-node-id="ORdp3tZykLyWRhXcW6t4cv">周期: 06.28~07.26 ｜ 喷雾</div>
+              <div class="tags" data-page-node-id="N07eQqber3ZrOicEiklS5h"><span data-page-node-id="lpajmsypTvJVJnuGIeyoax">全脸</span><span data-page-node-id="fCqhM1Ncz8YDV5MgujHC6H">28天</span><span class="warn" data-page-node-id="I7ZWHbpUSw9mnffUFalxcH">需拍美图</span></div>
+              <div class="foot" data-page-node-id="XvifMoyC4gBET1FMnFJU89"><span class="ddl" data-page-node-id="Bx7iHK1COf8NvKBrP4aG5w">测评进行中 · 已报名用户可继续打卡</span><button class="btn-apply off" data-page-node-id="FB7OSpEskzgsGmWCePDJbe">已截止</button></div>
+            </div>
+
+            <div class="pcard" data-audience="store" data-enroll="0" onclick="openIntro('磨砂膏产品评估')" data-page-node-id="xEnHC29EEBfxJjRuGOoA2R">
+              <div class="top" data-page-node-id="Fpg4q770RVK55qCHhQdZG9"><div class="name" data-page-node-id="Umr5D6o1dZYOMCt0JHFJ4r">磨砂膏产品评估<span class="chip o" data-page-node-id="Iq9ComMM5qdcA2ssEXKr8X">报名截止 · 筛选中</span></div></div>
+              <div class="meta" data-page-node-id="1zNX1ctatSq6gTELD3MKDQ">周期: 06.20~07.18 ｜ 磨砂膏</div>
+              <div class="tags" data-page-node-id="0A70E5b0IgEIvC35IW2tEw"><span data-page-node-id="NNHz978Cpwmf8ICdawZUBs">面部</span><span data-page-node-id="OKO9NWV5O1gkcUDtIeFL3o">28天</span><span data-page-node-id="CxQeByQs7ErHMeN1cSfYmG">无需拍图</span></div>
+              <div class="foot" data-page-node-id="xDTRmdA73qpF2jVtfkft0F"><span class="ddl" data-page-node-id="BumgluPC7PVmBTnFYZLTIl">名单筛选中 · 结果将通过企微应用消息通知</span><button class="btn-apply off" data-page-node-id="FQ6SIDDfhUlXAaZminCp6y">已截止</button></div>
+            </div>
+
+            <div class="pcard" data-audience="hq" data-enroll="0" onclick="openIntro('总部到访体验·类型1')"><div class="top"><div class="name">总部到访体验 · 类型1<span class="chip g">总部项目 · 招募中</span></div></div><div class="meta">D0到访领取产品 · 回家打卡 · D7回访 · D14/D28问卷</div><div class="tags"><span>总部用户</span><span>无需快递</span><span>需到访</span></div><div class="foot"><span class="ddl">总部用户流程 · 类型1</span><button class="btn-apply">查看项目</button></div></div>
+            <div class="pcard" data-audience="hq" data-enroll="0" onclick="openIntro('总部自取体验·类型2')"><div class="top"><div class="name">总部自取体验 · 类型2<span class="chip g">总部项目 · 招募中</span></div></div><div class="meta">筛选肤质 · 自行领取产品 · 打卡 · 填问卷</div><div class="tags"><span>总部用户</span><span>无需快递</span><span>不来访</span></div><div class="foot"><span class="ddl">总部用户流程 · 类型2</span><button class="btn-apply">查看项目</button></div></div>
+          </div><!-- /h-list -->
+          </div><!-- /page-scroll -->
+          <div class="tabbar" data-page-node-id="uJEoJ6k0LXK5QH7exauNHG">
+            <div class="t on" data-page-node-id="YqGnI0py65JsPJGwmRYMXE"><span class="ic" data-page-node-id="F2zEFCYHsSfYSkRNWVbHly">🏠</span>首页</div>
+            <div class="t" onclick="goTab('mine')" data-page-node-id="FOA6V55IgPIFOMK7Omr0xG"><span class="ic" data-page-node-id="8QOTBhxmE74fkCvkKUUlQ8">👤</span>我的</div>
+            
+          </div>
+        </div>
+
+        <!-- ===== 页面：项目介绍 ===== -->
+        <div class="page" id="pg-intro" data-page-node-id="C4El1DKNfagPM31P4cOw3B">
+          <div class="sbar" data-page-node-id="9A2eFYz3eItrfRh3tmAASt"><span data-page-node-id="aUYQ80R2P8qqHdJ6F7VsLT">9:41</span><span data-page-node-id="0WpjXqQByvLQsOMGfOLVER">●●● ⚡ ▮</span></div>
+          <div class="sub-nav" data-page-node-id="wI5eMZG717YOoIN3pzw1FY"><span class="back" onclick="backHome()" data-page-node-id="cacup3B3owbW8opYjysxZi">‹</span><span class="t" data-page-node-id="sdvAMBJvZ6fZj8u7bQxkKv">项目介绍</span></div>
+          <div class="page-scroll" data-page-node-id="4KoOs4biHAFfAUYSlddz2Q">
+            <div class="intro-hero" data-page-node-id="EIhrM1tiykYBDklyDr9Row">
+              <div class="i-name" id="in-name" data-page-node-id="mM5bKhkPbhqjffZ0AkQiVD">项目名称</div>
+              <div class="i-meta" id="in-meta" data-page-node-id="Ys8lFRoIxgoiy6NlPugzyJ"></div>
+              <div class="i-quota" id="in-quota" data-page-node-id="r5LQujKDCHyzOrc1UVRs6W"></div>
+            </div>
+            <div class="detail-body" data-page-node-id="95fWHjZ38x3gRogYe1bEaX">
+              <div class="intro-deny" id="in-deny" style="display:none;" data-page-node-id="R2LWaIhVLEyzwGKQKpMv4Z"></div>
+
+              <div class="card rule-sec" data-page-node-id="uN9laACzf1VEspLn2yoJkU">
+                <h4 data-page-node-id="YAAfkLLRooAdjvvFAWXEaw">项目信息</h4>
+                <div class="info-rows" id="in-info" data-page-node-id="HYMwlPp6awFGG76NSShaPd"></div>
+              </div>
+
+              <div class="card rule-sec" data-page-node-id="xFGFoA0azDOaHeQjqtz0sY">
+                <h4 data-page-node-id="vNodhIuZZjcxMGMVuYvzCA">活动时间</h4>
+                <p id="in-time" data-page-node-id="fqDkVmReUPsw0qAhiacD37"></p>
+              </div>
+
+              <div class="card rule-sec" data-page-node-id="NKV3zbNSZQsEShohu8tE5D">
+                <h4 data-page-node-id="maGfAQcZHwFbzleR62ePh6">测评流程</h4>
+                <div class="flow-list" id="in-flow" data-page-node-id="8rg1ifwTSHbxbiHUJDaGzV"></div>
+              </div>
+
+              <div class="card rule-sec" data-page-node-id="AhxGhoXx0RRA3qVnlg2CRv">
+                <h4 data-page-node-id="7ScWenwNggNANYpFtJPA1c">招募要求</h4>
+                <p id="in-rules" data-page-node-id="2YcpqFnmJc5WSWyeZSGT0c"></p>
+              </div>
+
+              <div class="card rule-sec" data-page-node-id="dLX0IjtkhS64BBqxlrEglw">
+                <h4 data-page-node-id="HrIo3HEicLpDBCEGYQnYke">项目介绍</h4>
+                <div class="intro-rich" id="in-desc" data-page-node-id="UXk0fGwF3nBUaDemBDWmVT"></div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-fixed" data-page-node-id="ghUA01XC67QYevFhXKczTB">
+            <div class="inner" data-page-node-id="B1AJqXZuskePxmuQHYC5yB">
+              <button style="background:#fff;color:var(--ink-2);border:1px solid var(--line);" onclick="backHome()" data-page-node-id="1h0nFmKAa5tDKjZdaJATsD">返回</button>
+              <button id="in-apply" style="background:var(--brand);color:#fff;box-shadow:0 6px 16px rgba(11,163,96,.3);" onclick="introApply()" data-page-node-id="8uxFaEq2t0vNbBBYhmj1AL">立即报名</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== 页面：报名 ===== -->
+        <div class="page" id="pg-signup" data-page-node-id="LoUNVojHuffXnSlGF0Dc3l">
+          <div class="sbar" data-page-node-id="SRHkmctAwfSCcGXxu2xqPk"><span data-page-node-id="aBXb1DBOic5BFfQ3oiaVKC">9:41</span><span data-page-node-id="WomFtg0HSBDfPrshBkSdq2">●●● ⚡ ▮</span></div>
+          <div class="sub-nav" data-page-node-id="W1jsK6QFQtznRnMndFXutq"><span class="back" onclick="backHome()" data-page-node-id="zJn67EuiiVXzHdsafttuqc">‹</span><span class="t" data-page-node-id="2E7S5YBzOnzg2acCPoQtQc">填写报名信息</span></div>
+          <div class="draft-tip" id="draftTip" style="display:none;" data-page-node-id="AoDb25qSuxjCWhTrKo2UzL">📝 已为你恢复上次填写的草稿<span class="d-clear" onclick="clearDraft()" data-page-node-id="YvdW3FrGeMbggYESJIkv00">清除重填</span></div>
+          <div class="form" data-page-node-id="9CniG2BsyOX28ceuAuHQ89">
+            <div class="f-group" data-page-node-id="kECyqxJvLrIZAYLtgW7YnQ">
+              <div class="f-item" data-page-node-id="8XYTkuJbbvdVPTRIA0vEcW">
+                <label data-page-node-id="POMDvIdxpowu00RCQepysy">选择报名项目<span class="req" data-page-node-id="hMEF9wn84GdMqudKrHGUfR">*</span></label>
+                <select id="f-proj" onchange="updateSignupConfig();saveDraft()" data-page-node-id="tc09xRCP42jwJJM4PAM6pF">
+                  <option value="净颜焕亮产品体验" data-audience="store">净颜焕亮产品体验</option><option value="保湿精华28天测试" data-audience="store">保湿精华28天测试</option><option value="保湿洁面乳试用" data-audience="store">保湿洁面乳试用</option><option value="面霜长期测评" data-audience="store">面霜长期测评</option>
+                  <option value="总部到访体验·类型1" data-audience="hq">总部到访体验·类型1</option><option value="总部自取体验·类型2" data-audience="hq">总部自取体验·类型2</option>
+                </select>
+              </div>
+              <div class="f-item" data-page-node-id="jdM6Mq5r8jhe7tz2LkAIaK">
+                <label data-page-node-id="2CRJAJ2iPFf01ioGjAyBnl">姓名<span class="req" data-page-node-id="WsQsnmGULB511MYicnccpQ">*</span></label>
+                <div class="val" data-page-node-id="VbShG5kPUj95XFCREUHHcj">樊小花<span class="auto" data-page-node-id="OgbPnkT2AjBLjF07gjovrT">企微授权自动带出</span></div>
+              </div>
+              <div class="f-item" data-page-node-id="JnEw4iSMYnWSNcu7enQWjn">
+                <label data-page-node-id="lFw2IkdkdsapMpTW1HWGx8">联系电话<span class="req" data-page-node-id="QgkXSucC7lQgnZuZUH7puY">*</span></label>
+                <div class="val" data-page-node-id="GEyedLlkVWGlyTGQXvC0W5">138****6789<span class="auto" data-page-node-id="Xx2M26XPKTlC1WdiH9v7dB">企微授权自动带出</span></div>
+              </div>
+            </div>
+
+            <div class="f-group" data-page-node-id="VWFlQYXCsz6He6N0WrGBOl">
+              <div class="f-item" data-page-node-id="4VW3EbpBVzgUQFywnuTGXZ">
+                <label data-page-node-id="dnnQVCmltrdTPOMUG9mQbJ">美图手机号<span class="req" data-page-node-id="XFroldjxPpwXOPkm5rMZLE">*</span></label>
+                <input type="tel" id="f-mt" maxlength="11" placeholder="请输入美图账号绑定的手机号（用于匹配打卡照片）" oninput="saveDraft()" onblur="checkMt()" data-page-node-id="GEVPEbMCUkEBhLov4NEStM">
+                <div class="err-tip" id="mtErr" style="display:none;">请输入正确的11位手机号（1开头，第二位3-9）</div>
+              </div>
+              <div class="f-item" data-page-node-id="oSpGA6HNSZlci3Tz3MQhAs">
+                <label data-page-node-id="pYs4SmNrIcQGWBxy7wVmfm">自述肤质<span class="req" data-page-node-id="oqjBuClnbdR0O8K66C99yp">*</span></label>
+                <div class="skin-grid" id="skinGrid" data-page-node-id="FTBJSdz8n7kAP6EW4ugbqq">
+                  <span onclick="pickSkin(this)" data-page-node-id="1hXpBNiL4NCjckIZERe1Cz">中性</span><span onclick="pickSkin(this)" data-page-node-id="VrgkeU83eTcj2EIJozbw52">油性</span><span onclick="pickSkin(this)" data-page-node-id="lBz96cLjIrGvm0QEKRDZwV">干性</span>
+                  <span onclick="pickSkin(this)" data-page-node-id="FvrElbWa6ua66JRk3hvAKP">偏干</span><span onclick="pickSkin(this)" data-page-node-id="EVusK7YllTBVJQeFtVwAVe">偏油</span>
+                </div>
+              </div>
+              <div class="f-item" data-page-node-id="z9dqfaZ9SaayBCWKuKEtIG">
+                <label data-page-node-id="OmtgM0kFFdS4APjLsmrJxU">敏感类型<span class="req" data-page-node-id="t2tGjTsJ6jMZHXbpuNZXJm">*</span></label>
+                <div class="skin-grid" id="sensGrid" data-page-node-id="9lgmOLcKa0CJFCVtqpTnKF">
+                  <span onclick="pickSens(this)" data-page-node-id="Ld3nT3S6feAV7JEmlXbtw5">耐受</span><span onclick="pickSens(this)" data-page-node-id="TeOUWjCYNmx1eox0FWrb6e">较耐受</span><span onclick="pickSens(this)" data-page-node-id="x1mZZ0JgT400HDG9OeoiqO">敏感</span>
+                  <span onclick="pickSens(this)" data-page-node-id="srGMQIraxvyObNf46GJtE0">较敏感</span>
+                </div>
+              </div>
+              <div class="f-item">
+                <label>目前每日基础护肤步骤数<span style="float:right;font-weight:400;font-size:11px;color:var(--ink-3);">单选题 · 后台可配置</span></label>
+                <div class="skin-grid">
+                  <span onclick="pickSkin(this)">1-2步</span><span onclick="pickSkin(this)">3-4步</span><span onclick="pickSkin(this)">5步及以上</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="f-group" id="addressGroup" data-page-node-id="rvjz7EVZOTd3bk0KQTJQ6K">
+              <div class="f-item" data-page-node-id="q6FEQArDF68UZisgpaAwIK">
+                <label data-page-node-id="DFnHOf11ocJOkGHaKABWme">收货地址<span class="req" data-page-node-id="BUsG6JFUNwi1wJ4Q87Eojy">*</span>（用于接收试用产品）<span style="float:right;font-weight:400;font-size:11.5px;color:var(--brand);cursor:pointer;" onclick="showPage('pg-address')" data-page-node-id="LiwCcEQfOa1pdQo8M2MDs7">管理地址 ›</span></label>
+                <div class="picked-addr" onclick="openAddrSheet()" data-page-node-id="XeVjbxSNVZJiOPVL8QeVcP">
+                  <div class="txt" id="pickedAddr" data-page-node-id="uheeG8pZjjagGUahJW5QG5">家（默认）· 广东省 广州市 天河区 天河北路88号3栋502室</div>
+                  <span class="ar" data-page-node-id="TBSgyzhOqEhm9J2jrziCiZ">▾</span>
+                </div>
+                <div style="font-size:11px;color:var(--ink-3);margin-top:6px;" data-page-node-id="kxP3MeJEHAxbssVPEKfMU7">从地址库选择常用地址 · 也可在「管理地址」中新增保存</div>
+              </div>
+            </div>
+
+            <div class="f-group" id="consentGroup" data-page-node-id="kKlofyWCIZthf3eiMDQwMf">
+              <div class="f-item" data-page-node-id="2pDoAFRduM0gaosE1m9OUI">
+                <label data-page-node-id="EwMY98W88Cn0IGbwemFad5">知情同意书<span class="req" data-page-node-id="GTvEs8j2bFrrmdqmMkGtpv">*</span><span style="float:right;font-weight:400;font-size:11px;color:var(--ink-3);">按项目配置</span></label>
+                <div class="consent" data-page-node-id="q4jhiD81zV6OGDAF6xZVsW">
+                  <div class="doc" data-page-node-id="XusqCOiVygNpDYEyMDFeGp">点击阅读《净颜焕亮产品体验 · 志愿者知情同意书》并签署（每个项目的同意书内容不同，由运营在后台按项目配置链接）</div>
+                  <button class="sign" id="signBtn" onclick="doSign()" data-page-node-id="XCMAcpOO7ilegeKl4rlnmD">去签署</button>
+                </div>
+                <div class="st ok" id="signSt" style="display:none;margin-top:8px;" data-page-node-id="tKDdG5VZtygjgaCHJvLbcX">✓ 已签署</div>
+              </div>
+            </div>
+
+            <button class="btn-submit" id="submitBtn" onclick="submitSignup()" data-page-node-id="zeB0VZCGVAjDvAqi9fi7eR">提交报名</button>
+            <div class="form-tip" data-page-node-id="VZXXYdKLVZWcJg2Z1RlgOI">填写内容自动保存草稿 · 签署简道云跳转回来后无需重新填写<br data-page-node-id="phSPtsON41NrlQFiWOG1Qm">企微授权登录 · 姓名电话自动带出且不可修改</div>
+          </div>
+        </div>
+
+        <!-- ===== 页面：我的 ===== -->
+        <div class="page" id="pg-mine" data-page-node-id="XCetd4TuutaemVkAukaKGW">
+          <div class="sbar on-green" data-page-node-id="4AYiFzoRGbbaxL52ocZ3Pb"><span data-page-node-id="eE1dbrrWOrBrE7byzgoFKK">9:41</span><span data-page-node-id="lonDorw9vHyhPpy1wSaXww">●●● ⚡ ▮</span></div>
+          <div class="me-head" data-page-node-id="0cSPh72BbB1jjGs7xW9Luu">
+            <div class="ava" data-page-node-id="QMHZKLKNRaxebvNMfLYcBe">樊</div>
+            <div data-page-node-id="eUfAJHaydyhEiybYxwOI60">
+              <div class="nm" data-page-node-id="jxbfCtbpwmVarHcUqD4Q4S">樊小花</div>
+              <div class="ph" data-page-node-id="Os509d5V8EhncOdTsLQrsp">138****6789</div>
+            </div>
+            <div class="me-addr" onclick="showPage('pg-address')" data-page-node-id="l8w9qmg1EV4wJm6YMkkNTx">📍 地址</div>
+          </div>
+          <div class="me-body" data-page-node-id="dzs2uQv5FfFjms0NfDL6rV">
+            <div class="me-count" data-page-node-id="gf4loMfbFdSBlgu8kRttTf">共报名 7 个活动 · 其中 3 个已结束归档</div>
+
+            <!-- 活动1：测评进行中 -->
+            <div class="card act" id="act-1" onclick="openActDetail('act-1')" data-page-node-id="GieU9nvKGWHyPrXDNDlauk">
+              <div class="act-head" data-page-node-id="IzngmXLfqsavkLRQznWdcd">
+                <div class="a-ic" data-page-node-id="djKx1b1KxoeYlcsLDzZSTd">🌸</div>
+                <div class="a-tx" data-page-node-id="jAbEc4RfWdTI3IFfA1FBz7">
+                  <div class="a-name" data-page-node-id="fAPBaIIJwddqBuZve2Pi2G">净颜焕亮产品体验<span class="chip g" data-page-node-id="c3TbcQHm3d1devp0nOwRvn">测评进行中</span></div>
+                  <div class="a-sub" id="act1sub" data-page-node-id="eh4Agljzs7SohJoGB1h82V">D8/14 · 今日未打卡 · D3/D7问卷待填</div>
+                </div>
+                <div class="a-arrow" data-page-node-id="V8nPhY7gIe7dxLEBg0uW6e">›</div>
+              </div>
+            </div>
+
+            <!-- 活动2：已报名待入组 -->
+            <div class="card act" id="act-2" onclick="openActDetail('act-2')" data-page-node-id="M6DscDsIRJqV8zNsJPBYeg">
+              <div class="act-head" data-page-node-id="2XX5xuwNh8fmorCRTtjqpe">
+                <div class="a-ic" data-page-node-id="W30XFmCf3FBaFhc4YgCIOc">🧴</div>
+                <div class="a-tx" data-page-node-id="LF4VkTPHyxcSV0yUsxvxnu">
+                  <div class="a-name" data-page-node-id="74tXyKGETrNKKUokw1OXfO">面霜长期测评<span class="chip o" data-page-node-id="Fmu4FmnlIU1o3D8xwv7YSf">已报名 · 待入组</span></div>
+                  <div class="a-sub" data-page-node-id="PVVcpvYm1MeqqMwuXecMCO">07-15 报名成功 · 等待运营审核入组</div>
+                </div>
+                <div class="a-arrow" data-page-node-id="9T5eaCcSnbOmJ0HBQiSMEn">›</div>
+              </div>
+            </div>
+
+            <!-- 活动3：已入组待发货 -->
+            <div class="card act" id="act-3" onclick="openActDetail('act-3')" data-page-node-id="UbZD7jNwrRGELpDPoSn7rh">
+              <div class="act-head" data-page-node-id="nMQNeUlbohTWmibsmSnKlH">
+                <div class="a-ic" data-page-node-id="WCYqLRksBByi0GjAYtUhMv">🧴</div>
+                <div class="a-tx" data-page-node-id="PuGOgojVrIgqk2loj0DNEt">
+                  <div class="a-name" data-page-node-id="RhsENmJ1TlESVXmJXFJbon">舒缓修护面霜测评<span class="chip b" data-page-node-id="30CLyWzoH9GjtEOmCF9ewg">已入组 · 待发货</span></div>
+                  <div class="a-sub" data-page-node-id="2Z7rP9qH6Tl1tTZ0VAaB3v">07-19 入组成功 · 运营备货中</div>
+                </div>
+                <div class="a-arrow" data-page-node-id="Y5Le2noiAksdL5xOFX8TtE">›</div>
+              </div>
+            </div>
+
+            <!-- 活动4：已入组已发货待确认领取产品 -->
+            <div class="card act" id="act-4" onclick="openActDetail('act-4')" data-page-node-id="hiV74uvfXtMWCDYahGIrGN">
+              <div class="act-head" data-page-node-id="CaAD1kyGg13aY3u9tfVZbK">
+                <div class="a-ic" data-page-node-id="72pD52h6DvWjBGtWttTCDa">👁</div>
+                <div class="a-tx" data-page-node-id="B9c7wDXRorcY8fzZwLWlFc">
+                  <div class="a-name" data-page-node-id="sop4p0l0uQCY1gyZFXaBkU">眼周紧致精华测评<span id="act4-mine-status" class="chip o" data-page-node-id="oEfjNP6zuCVCjYEbOeBs8
