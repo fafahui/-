@@ -1,0 +1,229 @@
+o">已入组 · 已发货</span></div>
+                  <div class="a-sub" data-page-node-id="aD2P0FwWE9mgJAYXTVYnM3">07-20 已发货 · 运输中 · 领取产品后开始打卡</div>
+                </div>
+                <div class="a-arrow" data-page-node-id="hPHeNv0V2rBdpZZzvC9kHL">›</div>
+              </div>
+            </div>
+
+            <!-- 已结束超半年的项目：默认收起，点击弹窗查看 -->
+            <div class="card arch-fold" onclick="openArchSheet()">
+              <div class="a-ic">🗂</div>
+              <div class="a-tx">
+                <div class="a-name">已结束项目<span class="chip gray">3 个</span></div>
+              </div>
+              <span class="arch-btn">查看更多 ›</span>
+            </div>
+
+          </div>
+          <div class="tabbar" data-page-node-id="ggWum0ysJ4gsrnR9qRz0j2">
+            <div class="t" onclick="goTab('home')" data-page-node-id="MAPGosGueeckYydWdwTmJR"><span class="ic" data-page-node-id="PAcosX11znfqFx1Blc5nm1">🏠</span>首页</div>
+            <div class="t on" data-page-node-id="iBIcBFORqiEUs9ZPMm4UpO"><span class="ic" data-page-node-id="j9MQhK9qJeLY5tpeFynLSw">👤</span>我的</div>
+            
+          </div>
+        </div>
+
+        <!-- ===== 页面：活动参与详情（下钻页） ===== -->
+        <div class="page" id="pg-detail" data-page-node-id="De6Vv10CZx8lrEm4WvTFo6">
+          <div class="sbar" data-page-node-id="HVP9T8fzGHDfd3U65P0sRy"><span data-page-node-id="BMPuoSteHFd3DQWSmH4MFJ">9:41</span><span data-page-node-id="EgmAyHcfVMXwOsazOvsNFW">●●● ⚡ ▮</span></div>
+          <div class="sub-nav" data-page-node-id="wkHuJQCQwF45PHg8Be6eIG"><span class="back" onclick="goTab('mine')" data-page-node-id="imuGGi3I9Fp4nxS61eDWx7">‹</span><span class="t" id="detailTitle" data-page-node-id="cZDI2VaFsE8n0fscRZfSVm">活动详情</span></div>
+          <div class="page-scroll" data-page-node-id="54AakxuDkWZHDk0qzXZCRq">
+            <div class="detail-body" data-page-node-id="NAHQBTvDDyqUExMyUy2B4s">
+
+              <!-- 状态：测评进行中 -->
+              <div id="detail-ing" data-page-node-id="1Dv8xEb80hmybCputHaFWL">
+                <div class="card" id="ckCard" data-page-node-id="gG0kZFGQNT0AW6zw9V1XsC">
+                  <div class="ck-row" data-page-node-id="R4n54CrodG3OXh9hawdTG2">
+                    <div class="ck-stats" data-page-node-id="MHUgTG7sgK3WMTT0SQcibk">
+                      <div class="cs" data-page-node-id="XlHDugdqSZmV7xHwxbW4L9"><div class="n" id="cs-count" data-page-node-id="DKhkYD6DBXFY2FQYRGXPQ8">7</div><div class="l" data-page-node-id="wXH8MZ0xxO2wRWiyCx5yyx">已打卡天数</div></div>
+                      <div class="cs" data-page-node-id="FsgBs7yXpDaWG6t105D0SH"><div class="n gray" data-page-node-id="viVD0jOVvE8OsXRace2Y32">14</div><div class="l" data-page-node-id="a19DIUl0eZU4bWWTkhR81T">项目周期天数</div></div>
+                      <div class="cs" data-page-node-id="WGYfRFFBz15wHlXaFZ1qHg"><div class="n gray" id="cs-date" data-page-node-id="9PMvYCOdkMEQAM7jMkWGtg">07-20</div><div class="l" data-page-node-id="ee4IyQQnIi6H9UC3I3xqbO">今日日期</div></div>
+                    </div>
+                    <button class="ck-btn2" id="ck1" onclick="doCheckin('ck1','ck1t')" data-page-node-id="PCo1PcacbwaVPyClAPZwQ7"><span class="ck-ico" data-page-node-id="z0zwuQiaQjuJ8SbFxlQJDn">📷</span><span id="ck1t" data-page-node-id="r9Zey72XAq2mYTHuGm0j3N">打卡</span></button>
+                  </div>
+                  <div class="ck-toggle" onclick="toggleCkRecords()" data-page-node-id="fHX43SCXzRMq0hHHXURnZK">
+                    <span data-page-node-id="rzyxO2zMw4ZQMCP9G0cqF1">打卡记录 <i id="cr-sum-inline" data-page-node-id="D9ZTHolVJ1vqQ8bYNVaZBx">已打卡 7 天 · 漏打 0 天</i></span><b id="ck-toggle-arrow" data-page-node-id="30gwqctJbAxGCNQrXhwLYL">展开 ▾</b>
+                  </div>
+                  <div class="ck-records" id="ckRecords" style="display:none;" data-page-node-id="3OWIDua2bujGTuLLzPBw8F">
+                    <div class="cr-list" id="cr-list" data-page-node-id="0n7qBpO2dDqEFWhYHd1AkA"></div>
+                  </div>
+                </div>
+
+                <div class="ship-card" id="shipCard" data-page-node-id="g9CxiVZhkQF8AKLsbE1Tcz">
+                  <div class="sc-t" data-page-node-id="T6fD4tIi5SiZZMRPXCWP3v">产品物流<span class="st chip g" data-page-node-id="KD0QpC1M7gWjHSkuFUVEQA">已发货</span></div>
+                  <div class="ship-row" data-page-node-id="EHxkTFBnPRkOZWICr71BfB"><span class="sk" data-page-node-id="p9DHZLriTFChZB28lyCRwP">快递公司</span><span class="sv" data-page-node-id="zN3zL5HE2Qn374UiqOHuf4">顺丰速运</span></div>
+                  <div class="ship-row" data-page-node-id="Qr03sbJ66X5wfH7aDHBfGQ"><span class="sk" data-page-node-id="vwHGfJCK6IRXYAQT1aT41I">物流单号</span><span class="sv" id="track-no" data-page-node-id="bLgocsqKC2Sw5wHairedDp">SF1383227777888</span><button class="btn-copy" onclick="copyTrack()" data-page-node-id="3K2dhx27YrGIBfvO22GRKc">复制单号</button></div>
+                </div>
+
+                <div class="card" data-page-node-id="OwbNHHAMc5onli8r2hRPms">
+                  <div class="c-t" data-page-node-id="u435JLhg3NlP5ueWj2ypPG">项目追踪</div>
+                  <div class="steps steps-five" data-page-node-id="yXqR9qUpzzMTK2l4u2JTFx">
+                    <div class="step done" data-page-node-id="joBg56pUOA3X9vPpwcMC3j"><div class="dot" data-page-node-id="YBhSR77WqDcAexYkb2yqbm">✓</div><div class="lb" data-page-node-id="RA3T3yfTQTospdpQ3L3xTH">拍摄美图</div></div>
+                    <div class="step done" data-page-node-id="A2A0CkuZ8bYlnfSaEWNAfh"><div class="dot" data-page-node-id="cBRQwiEWW5S1VxILMFwrhu">✓</div><div class="lb" data-page-node-id="no77X6FJaUB3kkOtUDvk1a">报名</div></div>
+                    <div class="step done" data-page-node-id="mdPBp0vohndoMjN0UeUWmm"><div class="dot" data-page-node-id="YAVvtXn6ygWMF9DjPhHs7D">✓</div><div class="lb" data-page-node-id="uAwuiMcsuiSbTNpHhMYDb1">审核入组</div></div>
+                    <div class="step cur" data-page-node-id="OVlR1vceVGOVGeXvxDFFyv"><div class="dot" data-page-node-id="OtKnwFHTHUOYBopQiEbipT">4</div><div class="lb" data-page-node-id="AKr0vBApFPcHQDR0ZI2ABg">问卷</div></div>
+                    <div class="step" data-page-node-id="j1l2vhpLZYYMNV3kaQDPlV"><div class="dot" data-page-node-id="dVLzYSiVuEqB3qGuIOJbvU">5</div><div class="lb" data-page-node-id="XFS9ildTicg9nxnoldMbhm">拍摄美图</div></div>
+                  </div>
+                </div>
+
+                <div class="card" data-page-node-id="ZwR1SO2z9DEmRmejxI6yjN">
+                  <div class="c-t" data-page-node-id="5e3UARFLgLcJ2UXKZaonfY">问卷安排</div>
+                  <div class="task" data-page-node-id="eZh9hRbvto9toVFv5enige">
+                    <div class="ic" style="background:#E8F0FE;" data-page-node-id="aBt8S07HhS3PfkrSrossDF">📋</div>
+                    <div class="tx" data-page-node-id="V8VUOF4lJ0iPQFRDzbiObR"><div class="t1" data-page-node-id="dy9TTA2NhU7votelXowJzr">D3初体验问卷</div><div class="t2" data-page-node-id="hPIPAop8nTGg4nSf3epwsG">问卷 1/3 · D3 已开放（07-15）· <span class="q-link-tag">wj.qq.com/s2/16881234/d3-first</span></div></div>
+                    <span class="act wait" data-page-node-id="SAGi9rqAK6ARwwY3EMiYWl" onclick="fillQnaire(this,'D3初体验问卷')">去填写</span>
+                  </div>
+                  <div class="task" data-page-node-id="Ma8gfHEpWCNnGqKPG9VZld">
+                    <div class="ic" style="background:#E8F0FE;" data-page-node-id="lJGlGqCyPuaE0aPxAleE53">📋</div>
+                    <div class="tx" data-page-node-id="UoTIlATGK86Qp6yOefGDiV"><div class="t1" data-page-node-id="IQpVtFzdAcAsJZCKp8o5wE">D7中期反馈问卷</div><div class="t2" data-page-node-id="pod3it63z7OWrOOf8KTEXo">问卷 2/3 · D7 已开放（07-19）· <span class="q-link-tag">wj.qq.com/s2/16881234/d7-mid</span></div></div>
+                    <span class="act wait" data-page-node-id="leFQBh5Y2nlHzjnjKoTRpL" onclick="fillQnaire(this,'D7中期反馈问卷')">去填写</span>
+                  </div>
+                  <div class="task" data-page-node-id="auVI7s9acTdWH1oWy153N5">
+                    <div class="ic" style="background:#F1F2F4;" data-page-node-id="zUarS62voVdOOioiYxYJkd">📋</div>
+                    <div class="tx" data-page-node-id="DzCXkCtSytI36IvIWhDNHH"><div class="t1" data-page-node-id="x24H9wZizfnVlkgTQ9SAQx">结题综合评估问卷</div><div class="t2" data-page-node-id="UK7jBQgO64GNcsEZpU1ReT">问卷 3/3 · D14（07-26）开放 · 未到节点不可填写</div></div>
+                    <span class="act ok" data-page-node-id="jnywFmmV4QH8Dq427llWSh">未开始</span>
+                  </div>
+                </div>
+
+                <div class="card" data-page-node-id="fSQbPaM1Ak6ckPHHgeDllD">
+                  <div class="c-t" data-page-node-id="AhHxFxTuobu1nbOMSAKgHF">其他任务</div>
+                  <div class="task" data-page-node-id="P4OfGTDqdmdUScmh95BUMu">
+                    <div class="ic" style="background:#FFF4E5;" data-page-node-id="Xz911cgdx8ENOTmq0rgj2S">📷</div>
+                    <div class="tx" data-page-node-id="fHljq94iziDBidn5euCIAF"><div class="t1" data-page-node-id="0SvIG0kzBfu5iFcORBrHYB">拍摄美图（结题对比）</div><div class="t2" data-page-node-id="RCxGBPqd11vofn0OGs7lyp">结题前完成第二次美图拍摄</div></div>
+                    <span class="act wait" data-page-node-id="MHQvJVzfZrLeEnQrORXZ77">待拍摄</span>
+                  </div>
+                </div>
+
+                <div class="locked-tip" data-page-node-id="LPYrYoUtXj6hM4YkAGjNQq">📌 正式试用开始日：07-13 · 问卷节点按此推算</div>
+              </div>
+
+              <!-- 状态：已报名待入组 -->
+              <div id="detail-wait" style="display:none;" data-page-node-id="f7CeTqGgdhDjJSRlOK5dn3">
+                <div class="card" data-page-node-id="2b0CpBEqINjtCzR99mBQ5h">
+                  <div class="c-t" data-page-node-id="Yli8Nqhdxg4kvdVVYF1f94">项目追踪<span class="sub" data-page-node-id="pPZKrP7okkVjUNjfBEPscj">拍摄美图 → 报名 → 审核入组 → 问卷 → 拍摄美图</span></div>
+                  <div class="steps steps-five" data-page-node-id="8iKMVIjNpGeZthKCxRgm7M">
+                    <div class="step done" data-page-node-id="8hzrsG86XSGNkMuUkade70"><div class="dot" data-page-node-id="WmoUwPJqDzvHZnlndTHhbh">✓</div><div class="lb" data-page-node-id="7rfnDfgeBzqCD6By5OlCAj">拍摄美图</div></div>
+                    <div class="step done" data-page-node-id="GcLSJfos93G8FsWqbVUA8J"><div class="dot" data-page-node-id="gufJWlvatr38HMQPCNsNY7">✓</div><div class="lb" data-page-node-id="h7aRxiYK3n3x9CPXpscAVY">报名</div></div>
+                    <div class="step cur" data-page-node-id="9HSDWHPk4cczDHyg5j3F4V"><div class="dot" data-page-node-id="alBghH3vPYMqMKfX1o2zbi">3</div><div class="lb" data-page-node-id="ddLMYRa8AGfqLMdJa4pIpo">审核入组</div></div>
+                    <div class="step" data-page-node-id="FE27juGB5N64E7DFe804PZ"><div class="dot" data-page-node-id="PKnvi2kP1bjJbNWpkoF5Es">4</div><div class="lb" data-page-node-id="IMgKqHpCgaMWOZoBvFf2aD">问卷</div></div>
+                    <div class="step" data-page-node-id="tMACoJoBtwchfwBPqHHksG"><div class="dot" data-page-node-id="wD2mkNfFuNqsxcOCUYaCb0">5</div><div class="lb" data-page-node-id="wOs5A27Iqglrg6jHJVE7su">拍摄美图</div></div>
+                  </div>
+                </div>
+                <div class="locked-tip" data-page-node-id="8WYmqdmCJJ1rtErn9cGRFU">⏳ 项目筛选中：入组结果将通过企微应用消息通知你</div>
+              </div>
+
+              <!-- 状态：已入组 · 待发货 -->
+              <div id="detail-ship0" style="display:none;" data-page-node-id="QQVJ4ofXnbMdGil0yNgj1b">
+                <div class="card" data-page-node-id="kTdZODfVI53vt41211aXmJ">
+                  <div class="c-t" data-page-node-id="eMTCcnMK6RYz1XM2R4W63J">项目追踪</div>
+                  <div class="steps steps-five" data-page-node-id="Ogc8o9vDHnTirFZDcZG4oQ">
+                    <div class="step done" data-page-node-id="YAHsFHCY3xjG1kWMuCljT9"><div class="dot" data-page-node-id="G12037pqB8jNjL3p84L3Me">✓</div><div class="lb" data-page-node-id="wmFSbvBrMl4fiDFnpmqt5K">拍摄美图</div></div>
+                    <div class="step done" data-page-node-id="r8xy1XjjnDn7usSXbCIjBJ"><div class="dot" data-page-node-id="IlxUoVgHjcg3RKBwTHcKho">✓</div><div class="lb" data-page-node-id="vvwIdLio3ty2PERYvHz5UQ">报名</div></div>
+                    <div class="step done" data-page-node-id="9h6BGFkCNqHC9fCH7LUpxj"><div class="dot" data-page-node-id="8Ei9Ad7U8nZIZMR3y6Tzu9">✓</div><div class="lb" data-page-node-id="z7gk35KmBCA4lEJ3DjJ0E2">审核入组</div></div>
+                    <div class="step" data-page-node-id="k19Cz60fBDebhYUBeBR18X"><div class="dot" data-page-node-id="WubSHKThzqoW9jCA5fDlUV">4</div><div class="lb" data-page-node-id="khG5z8WNHKeWzph0UtuSr9">问卷</div></div>
+                    <div class="step" data-page-node-id="30RF9SNvMCHyBv6DLu7Rhe"><div class="dot" data-page-node-id="ObQoDrCoaRow4D70wNrYkf">5</div><div class="lb" data-page-node-id="HxXJmWedj7Awq2yg5JcqMI">拍摄美图</div></div>
+                  </div>
+                </div>
+                <div class="ship-card" data-page-node-id="McuDpysWhTVOrSbDDdHgL5">
+                  <div class="sc-t" data-page-node-id="FxAFOBQKMSOn6RSl2KmiFb">产品物流<span class="st chip gray" data-page-node-id="Dzlc3qvFO4WFQjgY5f4ToV">待发货</span></div>
+                  <div class="ship-row" data-page-node-id="21aJ3ra2AUofLKMERyQ088"><span class="sk" data-page-node-id="L1uBoPRVct4gfOmp5GbWmV">发货状态</span><span class="sv" style="color:var(--ink-3);" data-page-node-id="Q9TTeQ1vAeMr2XvI2K0VmY">运营备货中，发货后将推送通知</span></div>
+                  <div class="ship-row" data-page-node-id="ksI8jvx1BxWndJ5A1Yi3ox"><span class="sk" data-page-node-id="5c7zOr7jZoa4GkmzD9ECGO">收货地址</span><span class="sv" style="font-size:11.5px;color:var(--ink-2);line-height:1.6;" data-page-node-id="sUoV7hhBkayUvO7iYFDxiw">广东省 广州市 天河区 天河北路88号3栋502室 · 樊小花 138****6789</span></div>
+                </div>
+                <div class="locked-tip" data-page-node-id="kcH9IGOACwH5J2SAeDDT4q">📦 已入组成功：产品将陆续发货，发货后将通过「消息」通知你</div>
+              </div>
+
+              <!-- 状态：已入组 · 已发货待确认领取产品 -->
+              <div id="detail-ship1" style="display:none;" data-page-node-id="QxJ3Zo4dTDHITQN0AHtCA9">
+                <div class="card" data-page-node-id="HaGhTYTuWUv9NPxzC8TUT6">
+                  <div class="c-t" data-page-node-id="2zISKjt79ApAVLFXu499BD">项目追踪</div>
+                  <div class="steps steps-five" data-page-node-id="8pImr6EMht3E8cISJOLbLx">
+                    <div class="step done" data-page-node-id="I8dDK1oqjaAYjYVShFmbfJ"><div class="dot" data-page-node-id="ruyjHVCcYATQiEfv6SCQZr">✓</div><div class="lb" data-page-node-id="lDPChb7CEqymeol1rLC01B">拍摄美图</div></div>
+                    <div class="step done" data-page-node-id="xDHLHkHBE5AyL2v1bOlvFL"><div class="dot" data-page-node-id="3nXXUbjsBqfgrdINQb6ALv">✓</div><div class="lb" data-page-node-id="VDWwR2LKoMW9xRDfKQq3DJ">报名</div></div>
+                    <div class="step done" data-page-node-id="UVfbl2J0JK2wkeTnE7MoeI"><div class="dot" data-page-node-id="136F5LG6G71u0t1GasfbuW">✓</div><div class="lb" data-page-node-id="xsUfTgT6sGLIuu13H3QOrM">审核入组</div></div>
+                    <div class="step" data-page-node-id="ytQXyPg3zMD9pqNt59evf0"><div class="dot" data-page-node-id="xKtXJuK4OhKFvKJ5W3rpP6">4</div><div class="lb" data-page-node-id="K1ClBtApOD5YfOoa1EvOXP">问卷</div></div>
+                    <div class="step" data-page-node-id="kM1SGoCedspUhqYNEeB4jr"><div class="dot" data-page-node-id="mGnyaAHLmK6bGSbvxiCxId">5</div><div class="lb" data-page-node-id="nueiGmefKJmcDCpHheM0f3">拍摄美图</div></div>
+                  </div>
+                </div>
+                <div class="ship-card" data-page-node-id="WfRqmygAipRcb1OitQQg4T">
+                  <div class="sc-t" data-page-node-id="aegqdZkOzRyK9AvrfF9HK3">产品物流<span id="ship1-status" class="st chip b" data-page-node-id="HMf5tSGGI1jFC1xVxlamen">已发货 · 运输中</span></div>
+                  <div class="ship-row" data-page-node-id="0Fq8SxsyHxqZJcLDL0go9X"><span class="sk" data-page-node-id="PEqqfVxIGaPKVdfw48vd96">快递公司</span><span class="sv" data-page-node-id="lLt0SzBAGIAiKjynXDh6M3">顺丰速运</span></div>
+                  <div class="ship-row" data-page-node-id="KkUmaCENzLqXaypVfr91ow"><span class="sk" data-page-node-id="F3Tb2Dl1Llc5PvxorQ61gc">物流单号</span><span class="sv" id="track-no2" data-page-node-id="wRYmukmOLPK0PUM94BgepM">SF1399888777666</span><button class="btn-copy" onclick="copyTrack2()" data-page-node-id="H4lZf9X2v7gktdQHWrhaii">复制单号</button></div>
+                  <div class="ship-row" data-page-node-id="RoxhUcjUlzm5G3Y42b59ER"><span class="sk" data-page-node-id="meHrU2zFpeP0b6Q4hxTCuT">收货地址</span><span class="sv" style="font-size:11.5px;color:var(--ink-2);line-height:1.6;" data-page-node-id="6zIPut1U73aLnIH3CP9YL4">江苏省 南京市 鼓楼区中山北路100号 · 樊小花 138****6789</span></div>
+                </div>
+                <div class="locked-tip" id="ship1-tip" data-page-node-id="ilR4CZ8AOdkb2WD6UWoJNr">🚚 产品运输中：领取产品后，请点击下方「确认已领取产品」开启试用</div>
+                <div class="card" data-page-node-id="youllcHt470bJdo53A0TvE">
+                  <div class="ck-row" data-page-node-id="lyoE9HyZMTVMsiIKfbgDm8">
+                    <div class="ck-stats" data-page-node-id="LjWeJVgGWNcbjHjPCcvbqB">
+                      <div class="cs" data-page-node-id="WNxexTSBaqD8e0lafcWE0S"><div class="n gray" id="ship1-ckn">0</div><div class="l" data-page-node-id="J0RUlmx8FFKNpdcAV0xAWn">已打卡天数</div></div>
+                      <div class="cs" data-page-node-id="uIDJKOpY18GC1UZvJpCk4L"><div class="n gray" data-page-node-id="1DWxlcFtRmSH193J3k6trC">28</div><div class="l" data-page-node-id="8YX2jzY7YHVYMOYKveAc4H">项目周期天数</div></div>
+                      <div class="cs" data-page-node-id="py86LXLQAN38WsFE1RhDGK"><div class="n gray" data-page-node-id="c3dtfh24VgxnrmByqnRMdE">07-21</div><div class="l" data-page-node-id="sN1rCeGRfbIqr2hpdD1xEb">今日日期</div></div>
+                    </div>
+                    <button class="ck-btn2" id="ship1-btn" style="background:var(--brand);color:#fff;cursor:pointer;" onclick="confirmReceive()" data-page-node-id="4Va9mjZCEPFyIh1XNhopYD"><span class="ck-ico" data-page-node-id="ahOi95vh2v4EzDJKOP2XVu">📦</span>确认已领取产品</button>
+                  </div>
+                  <div style="font-size:11px;color:var(--ink-3);margin-top:8px;">确认领取产品后开启打卡 · 本项目为「拍照打卡」：每日上传产品使用照片（最多3张）完成打卡</div>
+                </div>
+                <div id="ship1-active" style="display:none;">
+                  <div class="locked-tip" style="margin-top:10px;">✅ 已领取产品 · 测评进行中，请按计划每日打卡</div>
+                  <div class="card">
+                    <div class="ck-row"><div class="ck-stats"><div class="cs"><div class="n" id="ship1-active-count">0</div><div class="l">已打卡天数</div></div><div class="cs"><div class="n gray">28</div><div class="l">项目周期天数</div></div><div class="cs"><div class="n gray">07-21</div><div class="l">今日日期</div></div></div>
+                    <button class="ck-btn2" id="ship1-active-btn" onclick="openPhotoCk()"><span class="ck-ico">📷</span>今日打卡</button></div>
+                    <div style="font-size:11px;color:var(--ink-3);margin-top:8px;">每日上传产品使用照片，最多3张；提交后完成当天打卡</div>
+                  </div>
+                  <div class="card" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;" onclick="openPhotoRecords()"><span>📷 查看已上传打卡图片</span><span class="link">按日期查看 ›</span></div>
+                  <div class="card"><div class="c-t">打卡安排</div><div class="meta">产品领取后开始连续28天测评；每天完成一次拍照打卡。</div></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== 页面：地址管理 ===== -->
+        <div class="page" id="pg-address" data-page-node-id="7eTRzzwEUxFg8giNGh14EO">
+          <div class="sbar" data-page-node-id="Gtdzs8yXCyYwl3gM37LBnm"><span data-page-node-id="Fh3gOTbZHnyamcQzxE1NV0">9:41</span><span data-page-node-id="R2CIlTrQaKQQrJ3FIvfY2v">●●● ⚡ ▮</span></div>
+          <div class="sub-nav" data-page-node-id="nEHqiRmBuE7YXxFY2t4jLI"><span class="back" onclick="goTab('mine')" data-page-node-id="LLCSeoDnQgN9ILtW8UoWQi">‹</span><span class="t" data-page-node-id="O64ZQFxr7mTCKnFRfii4bY">地址管理</span></div>
+          <div class="page-scroll" data-page-node-id="kxlkPG5vF2ttVy8FDM5Ws8">
+            <div class="detail-body" id="addrList" data-page-node-id="ECWFHS87MMM3vpWhlGg4oH">
+
+              <div class="card addr-card" data-page-node-id="NBRWZsIOc99EUfjXzxs1KI">
+                <div class="ad-ops" data-page-node-id="j8jeKU4qgk5ACFgVk0BTGq"><span onclick="editAddr()" data-page-node-id="GyTZg6ZggryaD7SyfGfFOT">编辑</span><span class="del" onclick="delAddr(this)" data-page-node-id="AvPwnZYecwgigUjrBf9L2q">删除</span></div>
+                <div class="ad-name" data-page-node-id="NoKa96kLld6D3VuKuuqhvn">家<span class="chip g" data-page-node-id="xYYIXHjuZnfNFtqwv29ACA">默认</span></div>
+                <div class="ad-tel" data-page-node-id="4xR66m92qtDb5BCqESSV1A">樊小花 · 138****6789</div>
+                <div class="ad-detail" data-page-node-id="3Fy2kGeK8Gja2EyVJPnCgK">广东省 广州市 天河区<br data-page-node-id="ghKu8X082scLmgxCEpKV23">天河北路88号3栋502室</div>
+              </div>
+
+              <div class="card addr-card" data-page-node-id="OySxaldFw4DJNjVfagYWCo">
+                <div class="ad-ops" data-page-node-id="A9yIEbAY0XOCmQdDqatVSO"><span onclick="editAddr()" data-page-node-id="skD0pnpY09QZ9qFqLDJVlq">编辑</span><span class="del" onclick="delAddr(this)" data-page-node-id="YtFQbd76FIlZPBaXJvb7Dq">删除</span></div>
+                <div class="ad-name" data-page-node-id="wEpMEAjbT7w0jCucaBeAPN">门店</div>
+                <div class="ad-tel" data-page-node-id="pIQmrnYeEBbAoBND6zMErk">樊小花 · 138****6789</div>
+                <div class="ad-detail" data-page-node-id="LlyOwSiMSt5IbQ1HSjQd0p">陕西省 西安市 雁塔区<br data-page-node-id="ZNPXTjmGGcVbHHD6JmTzVx">科技路10号 樊文花高新店</div>
+              </div>
+
+              <!-- 新增/编辑地址 -->
+              <div class="card addr-editor" id="addrEditor" data-page-node-id="OtKbWizcbgeNZ8gZoWNsrS">
+                <div class="c-t" id="addrEditorTitle" data-page-node-id="fWWj0eV29v3jEvx0KxS3Oa">新增地址<span class="sub" data-page-node-id="IBCzhPwY7q6zH4CfQIBthh">保存后进入地址库，报名时可直接选用</span></div>
+                <div class="f-item" style="border:0;padding:0 0 12px;" data-page-node-id="AvL2jIB7K04vPbsB2ITcf0">
+                  <label data-page-node-id="QKXQ8UqJLJKQCqExneimyp">地址名称<span class="req" data-page-node-id="ZrxvoSYRx61raM9SJ9DQls">*</span></label>
+                  <input type="text" id="ad-name" placeholder="如：家 / 门店（2-6字）" data-page-node-id="1WaSA0A5ohtF1BC8KMLPku">
+                </div>
+                <div class="f-item" style="border:0;padding:0 0 12px;" data-page-node-id="u0klKoxMLHfQhD5n3NRX0U">
+                  <label data-page-node-id="NiOBBkf7oAZCoV7q9TsIFW">联系电话<span class="req" data-page-node-id="52igClqT4VloZxXbrsCVqj">*</span></label>
+                  <input type="tel" id="ad-tel" value="138****6789" disabled data-page-node-id="gmk4ptrXO3mrzwNA8GEG8b">
+                </div>
+                <div class="f-item" style="border:0;padding:0 0 12px;" data-page-node-id="WINn75955gCecRNxKpWozL">
+                  <label data-page-node-id="AdahBUoOGrq8bSKKvRC3bR">所在地区<span class="req" data-page-node-id="09IcAtM4M5HcN9lENs5UO0">*</span></label>
+                  <div class="addr3" data-page-node-id="5yaSrykFzC0WIHmqM9oBK8">
+                    <select id="ad-p" data-page-node-id="JCXzL5urDyX37ntp7XsreX"><option data-page-node-id="j4UpE0vtNdKi9CqvJzMBHH">广东省</option><option data-page-node-id="89HSMAtLXnAvX4ZtGj1GrH">陕西省</option><option data-page-node-id="tLG1BcBVDohPH7s6EBbFVo">江苏省</option></select>
+                    <select id="ad-c" data-page-node-id="wSFFM7Q2KxHiCU7pOai1TY"><option data-page-node-id="zDm8JAM5mdV1bE2u9cTAyT">广州市</option><option data-page-node-id="V4lHwJ8iWizgCnxYq1PrAR">西安市</option><option data-page-node-id="SWF5CyHbbVvarq2hlJfExw">南京市</option></select>
+                    <select id="ad-d" data-page-node-id="MOUxiJ3dMcLEtDm96PmVcB"><option data-page-node-id="2NfIxGXNOjT40Lm3vPh1z6">天河区</option><option data-page-node-id="ajXqkclTzzJ7eAeTiBMz7d">雁塔区</option><option data-page-node-id="lCEhXOuI89xZvHuoB9GMm1">鼓楼区</option></select>
+                  </div>
+                </div>
+                <div class="f-item" style="border:0;padding:0 0 12px;" data-page-node-id="VZv5cb1QivN0DLxyga8BvD">
+                  <label data-page-node-id="zKiyVsKVTuV9KHFsqBEwh7">详细地址<span class="req" data-page-node-id="6rwCE8SmRHmMUP1sKkcBuN">*</span></label>
+                  <input type="text" id="ad-detail" placeholder="街道、门牌号等" data-page-node-id="o9jz9wvqB38Pl6BBgdBmbL">
+                </div>
+                <div class="f-item" style="border:0;padding:0 0 4px;" data-page-node-id="a7AIX7QVRr1MK19M59T3nI">
+                  <label style="cursor:pointer;" data-page-node-id="jJNoPZO0bg00jyP4sf8Pud"><input type="checkbox" id="ad-default" class="ck" style="margin-right:6px;" data-page-node-id="LyFZeSMQ9adwC2UpcRNGH1">设为默认地址</label>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:12px;" data-page-node-id="Xt1V96UO14aZn31LkMPcUv">
+                  <button style="flex:1;border:1px solid var(--line);background:#fff;color:var(--ink-2);border-radius:12px;padding:11px;font-size:13px;cursor:pointer;" onclick="cancelAddr()" data-page-node-id="ZUzmaKdIcKBDbMRmHyXAkJ">取消</button>
+                  <button style="flex:2;border:0;background:var(
