@@ -1,0 +1,157 @@
+roj(this)" data-page-node-id="XIF8FRFYqEzoy0ZIPK3ADs">净颜焕亮产品体验<span class="pp-sub" data-page-node-id="LtQTdiFrKtGMm4wAxYQDq2">D8 · 14天</span></span>
+                <span onclick="pickCkProj(this)" data-page-node-id="KWDxEiqy1tcDZtGDsFt2PK">水油平衡喷雾测评<span class="pp-sub" data-page-node-id="pEeafNDvNVwGoPBOb48G7d">D21 · 28天</span></span>
+                <span onclick="pickCkProj(this)" data-page-node-id="eKOkxltu9uG97ND7tXQxeL">面霜长期测评<span class="pp-sub" data-page-node-id="gxgFvDaaWO3h3OyDoCdvTO">D5 · 28天</span></span>
+              </div>
+              <div class="pp-search" data-page-node-id="WKsuYnGLcYPY7YZqsadpS2">
+                <input id="ckProjSearch" placeholder="🔍 搜索项目名称，查看历史项目打卡数据（含已完成/已归档项目）" onkeydown="if(event.key==='Enter')searchCkProj()" data-page-node-id="LnKAMzpgQxpG4zI2VjzrSb">
+                <button class="btn btn-p" onclick="searchCkProj()" data-page-node-id="gotjq7acyYX2KaZL9uaR75">搜索</button>
+              </div>
+            </div>
+            <div class="grid-stats" data-page-node-id="Hym5Gr0O08SmSIbkPg3Ato">
+              <div class="stat" data-page-node-id="thk0R1dq71GX9ZKmSpJvDx"><div class="lb" data-page-node-id="OxgcUNbjmQw5tPyEniITC2">应打卡（当前项目）</div><div class="v" data-page-node-id="VRZBTiTxi9CSbAZVWGINak">20</div></div>
+              <div class="stat" data-page-node-id="su36S5XT66O9ORLPQNGFAR"><div class="lb" data-page-node-id="EQ4taZHmZ9t8OGDssrd1kR">今日已打卡</div><div class="v green" data-page-node-id="RVBF37FH9gbtOdvoUZpV8v">18</div></div>
+              <div class="stat" data-page-node-id="X1ourqWgMAMcV86P35RuOk"><div class="lb" data-page-node-id="3kwDZicdS4CVxSL6Anyfbv">今日未打卡</div><div class="v red" data-page-node-id="HcO7LYYDRPwYzCxvXBzvlx">2</div></div>
+              <div class="stat" data-page-node-id="LjhCAmjfcWotGK6C7NBr6Y"><div class="lb" data-page-node-id="5mGeHtEVBCdn1oUutat6en">完成率</div><div class="v green" data-page-node-id="2hBw7lI42A5zVESuQeXSFC">90<small data-page-node-id="1WWxdKXNkGUQlkhlxfAZGn">%</small></div></div>
+            </div>
+            <div class="panel" data-page-node-id="GkTY47joTfzO3IBARJcD6L">
+              <h3 data-page-node-id="MVsZDMPH7NCFBQCsfVzYFA">今日打卡明细（D8）<span class="r" data-page-node-id="x0M71XmHUy95TqtNabTcB1">点击「详情」查看每位用户每日打卡状态与时间</span></h3>
+              <div class="tbl-wrap" data-page-node-id="dySHFjSGsc4FkwtSk05NC0">
+              <table data-page-node-id="GWvtIfYlCasLvwmsxJq9Tf">
+                <tr data-page-node-id="2W487bxgJE13KMidLxAjUe"><th data-page-node-id="AMXCPjXxSrYZm2eqOg3YhP">#</th><th data-page-node-id="0j6BAjjR04SRwy23GkywGt">姓名</th><th data-page-node-id="M1qkujK8uMBPZEBxqTmbdy">已打卡天数</th><th data-page-node-id="P6qZuTm1w8IdpK0VuAYtjC">漏打卡天数</th><th data-page-node-id="lFNA5ELj9ya1JpxFDcyZzV">今日打卡</th><th data-page-node-id="o0ELigHL8Sxt7XeReQfPfh">打卡时间</th><th data-page-node-id="yQhfTvwqzsca8c5zwXXwRs">状态</th><th data-page-node-id="1B3sOvbk0W3gT0CRR8zME4">操作</th></tr>
+                <tr data-page-node-id="BDPHgvuP7qRA0qjoCH0rqE"><td data-page-node-id="seJdFgRS50TFdsQSgH9dqP">1</td><td data-page-node-id="zwg1VICUyFg2KaeKbMpDOB">樊小花</td><td data-page-node-id="rDse7ntDL7T0tHQHVFaBvg"><b style="color:var(--brand)" data-page-node-id="IvUp5zL5xDabpeZJrvNvor">8</b> / 8</td><td data-page-node-id="HaZbs1vKzG4JFIQcevAoOf">0</td><td class="cks" data-page-node-id="Fo4MaCfzCuIa5BX4dzPCtx"><span class="ok" data-page-node-id="X2MSleTvAga0sKdl5eueGX">✓</span></td><td data-page-node-id="bv7RiNskKhWLwOsAvWXeKD">08:32</td><td data-page-node-id="VYpBCjuqRdD47db9kJI8k3"><span class="chip g" data-page-node-id="O5oI95HbHLIu2CEEG5I6NT">已完成</span></td><td data-page-node-id="bhjGpGsfrVyFG05y5aKKCb"><span class="link" onclick="openCkDetail('樊小花')" data-page-node-id="uOYGH9loQJJtwyKHKstOS7">详情</span></td></tr>
+                <tr data-page-node-id="aOd9eSsKIjdPHIOqbLpxTe"><td data-page-node-id="ACWnlzKQDvmfMKaaUskjBd">2</td><td data-page-node-id="eY7YRUIGB649FlRoD3ES6N">李美丽</td><td data-page-node-id="vYTVWK2mPe4PXGRmLAtU66"><b style="color:var(--brand)" data-page-node-id="21rUXfo5LiwmmpqZLJMtGH">8</b> / 8</td><td data-page-node-id="iLmJ4nQnoalTe3PsoJqX3P">0</td><td class="cks" data-page-node-id="wXzfdRBasgABnEzKqJHYTo"><span class="ok" data-page-node-id="XE2qoBxnmx3Wczxd0NZ4M8">✓</span></td><td data-page-node-id="x4NPfOPdRjowvzA0nLyzyj">09:15</td><td data-page-node-id="2spvQDwAzELHgyf88HKydM"><span class="chip g" data-page-node-id="oSHA3TYjWsF2H1XnEsjJKX">已完成</span></td><td data-page-node-id="NskIu5eHR2tF3p3J0zi2sV"><span class="link" onclick="openCkDetail('李美丽')" data-page-node-id="6khAxHBCq9gRBPpqtL7QGE">详情</span></td></tr>
+                <tr data-page-node-id="12HBq3vKDGiFedFomzj0Pt"><td data-page-node-id="tJlqa98gPyHImiQi7eZmyV">3</td><td data-page-node-id="v57cyCH3yUJmTLnN852FNu">张小草</td><td data-page-node-id="UmZTfTWM7wqSVDAVOMHyQt"><b style="color:var(--brand)" data-page-node-id="leWjmwRCMlMv7UHfEvq0oz">6</b> / 8</td><td style="color:var(--red)" data-page-node-id="bCyJeePDZR0Zk7S11jssJp">2</td><td class="cks" data-page-node-id="Ywdiu4JiNTimfDyYnoyWDU"><span class="no" data-page-node-id="N7HfHD32JvVUHRantDSJ0C">✗</span></td><td data-page-node-id="mrdgmW7KfcwW2cpAysJzpd">—</td><td data-page-node-id="cvV71YuqWEGHX9uNGJpRR7"><span class="chip r" data-page-node-id="tj7nyCSX0CnGXxrK7ipLjk">未打卡</span></td><td data-page-node-id="dPFTnAZlHTElg1Ue37lEl5"><span class="link" onclick="openCkDetail('张小草')" data-page-node-id="E3CXd6SM7GCmWddXhUjk6G">详情</span></td></tr>
+                <tr data-page-node-id="SxIXCdj9agfQSMgW0dvkJM"><td data-page-node-id="0EZpOWJwRefAr3ECDTlfLi">4</td><td data-page-node-id="jUviH1d3JyxOVI4XHEpB1C">王大花</td><td data-page-node-id="PiKuri7DhnmBYrYqVAUe6r"><b style="color:var(--brand)" data-page-node-id="4ysEoO9wCPDLLl4DaEhykC">8</b> / 8</td><td data-page-node-id="2bt8B9KJgzti9nUwImiliB">0</td><td class="cks" data-page-node-id="Gh6U1xX9D85MvBHDvsfrIY"><span class="ok" data-page-node-id="5ER7y4BEZ8GtJyIo8oMF4o">✓</span></td><td data-page-node-id="baKXVZBDGqr7UHeNfKZ1ZI">07:50</td><td data-page-node-id="Td5sZqUBdkvUrgd5r0jEGN"><span class="chip g" data-page-node-id="4WUkCGId9dvOKewgEDdARR">已完成</span></td><td data-page-node-id="WqK28Qm26pr9qAumhpwgoO"><span class="link" onclick="openCkDetail('王大花')" data-page-node-id="elAigfsluvyriMX45PoUAA">详情</span></td></tr>
+                <tr data-page-node-id="ToTibgGRoEvzUb1QggWMhA"><td data-page-node-id="QG3vWhrQAaGCi7m7rNylEm">5</td><td data-page-node-id="UJfAyVVcA28aXIfl4vMQNg">陈小美</td><td data-page-node-id="QH5c9Y35uXlRPliRCrO7LM"><b style="color:var(--brand)" data-page-node-id="GsGI3dZfrAhTkjBaHOHL6t">6</b> / 8</td><td style="color:var(--red)" data-page-node-id="BMuRmKidByUlm0PASCB7C4">2</td><td class="cks" data-page-node-id="7sOTCtUzQW77tt3sBigZtI"><span class="no" data-page-node-id="D4bEvJDRG52452X9GTDiFr">✗</span></td><td data-page-node-id="W1PgTmI3ZqurN3xsTeOM1C">—</td><td data-page-node-id="B4EKOXNlAGTa10idnYNJCJ"><span class="chip r" data-page-node-id="CmVXzr069UUr6MClCJu0mL">未打卡</span></td><td data-page-node-id="WVyLONuzy0i9GMBxNRYNd1"><span class="link" onclick="openCkDetail('陈小美')" data-page-node-id="7mlkVHYraN3ktgAdSHjtWg">详情</span></td></tr>
+              </table>
+              </div>
+              <div class="legend" data-page-node-id="jglZFHsYtJG7iEWvpGckiO"><span data-page-node-id="FZkKkJTq56pvBUKHHGlDfA">一键提醒未打卡 → 志愿者收到企微消息提醒；已打卡/漏打卡天数自动统计，支持导出报表</span></div>
+            </div>
+          </div>
+
+          <!-- 模块4 消息推送 -->
+          <div class="mod">
+            <div class="crumb"><h2>消息推送</h2><div class="ops"><button class="btn btn-p" onclick="openPushModal()">＋ 新建推送</button></div></div>
+            <div class="tmpl-note"><b>推送通道：</b>企业微信应用消息（单一通道）。<b>两类推送时机：</b>① 系统根据用户参与活动状态自动下推（入组/发货/打卡提醒等）；② 运营手动圈人、可定时下推（问卷提醒等业务消息）。</div>
+
+            <div class="tab-switch" style="margin-bottom:14px;" id="msgTabs">
+              <span class="on" onclick="switchMsgTab(this,0)">消息推送日志</span>
+              <span onclick="switchMsgTab(this,1)">消息推送管理</span>
+              <span onclick="switchMsgTab(this,2)">系统消息任务</span>
+            </div>
+
+            <!-- ① 消息推送日志 -->
+            <div class="msg-sub show" id="msgsub-0">
+              <div class="sel-filter">
+                <select><option>推送类型：全部</option><option>系统自动推</option><option>运营手动推</option></select>
+                <select><option>消息类型：全部</option><option>入组通知</option><option>发货通知</option><option>打卡提醒</option><option>问卷提醒</option><option>美图提醒</option></select>
+                <select><option>项目：全部</option><option>净颜焕亮产品体验</option><option>舒缓修护面霜测评</option><option>眼周紧致精华测评</option></select>
+                <select><option>时间：近7天</option><option>今天</option><option>近30天</option></select>
+              </div>
+              <div class="panel">
+                <h3>下推日志 <span class="r">自动推 + 手动推全量留存，支持筛选与导出</span></h3>
+                <div class="tbl-wrap">
+                <table>
+                  <tr><th>#</th><th>时间</th><th>推送类型</th><th>消息类型</th><th>消息模板</th><th>内容预览</th><th>所属项目</th><th>触达人数</th><th>操作人</th><th>状态</th></tr>
+                  <tr><td>1</td><td>10-21 09:00</td><td><span class="chip g">系统自动</span></td><td>打卡提醒</td><td>打卡提醒</td><td>别忘了今天的产品使用打卡</td><td>净颜焕亮产品体验</td><td>18</td><td>系统</td><td><span class="chip g">已送达</span></td></tr>
+                  <tr><td>2</td><td>10-20 16:42</td><td><span class="chip b">运营手动</span></td><td>问卷提醒</td><td>D3问卷催填（自建）</td><td>您的试用问卷已开放，请点击填写</td><td>净颜焕亮产品体验</td><td>12</td><td>余鹏</td><td><span class="chip g">已送达</span></td></tr>
+                  <tr><td>3</td><td>10-20 10:15</td><td><span class="chip g">系统自动</span></td><td>发货通知</td><td>发货通知</td><td>您的测评产品已发货，单号SF1399...</td><td>眼周紧致精华测评</td><td>36</td><td>系统</td><td><span class="chip g">已送达</span></td></tr>
+                  <tr><td>4</td><td>10-19 18:30</td><td><span class="chip g">系统自动</span></td><td>入组通知</td><td>入组恭喜</td><td>恭喜您已入选{项目名}项目</td><td>舒缓修护面霜测评</td><td>30</td><td>系统</td><td><span class="chip g">已送达</span></td></tr>
+                  <tr><td>5</td><td>10-18 09:00</td><td><span class="chip g">系统自动</span></td><td>打卡提醒</td><td>打卡提醒</td><td>别忘了今天的产品使用打卡</td><td>水油平衡喷雾测评</td><td>34</td><td>系统</td><td><span class="chip o">部分失败(2)</span></td></tr>
+                  <tr><td>6</td><td>10-17 15:00</td><td><span class="chip b">运营手动</span></td><td>问卷提醒</td><td>D7问卷催填（自建）</td><td>第7天问卷已开放，请及时填写反馈</td><td>水油平衡喷雾测评</td><td>10</td><td>张运营</td><td><span class="chip g">已送达</span></td></tr>
+                </table>
+                </div>
+                <div class="legend"><span>筛选维度：推送类型 / 消息类型 / 项目 / 时间；支持导出日志报表</span></div>
+              </div>
+            </div>
+
+            <!-- ② 消息推送管理 -->
+            <div class="msg-sub" id="msgsub-1">
+              <div class="panel">
+                <h3>运营推送任务 <span class="r">建模板定内容 · 导手机号 · 立即或定时推送</span></h3>
+                <div class="tmpl-note" style="margin-bottom:12px;">运营自建推送：① 选择/新建消息模板 → ② 导入手机号名单（或圈人）→ ③ 立即推送或设置定时下推。问卷提醒等业务消息均在此发起，不走系统自动推。</div>
+                <div class="tbl-wrap">
+                <table>
+                  <tr><th>#</th><th>任务名称</th><th>消息内容</th><th>推送对象</th><th>定时时间</th><th>创建人</th><th>状态</th><th>操作</th></tr>
+                  <tr><td>1</td><td>D3问卷催填（净颜焕亮）</td><td>您的试用问卷已开放，请点击填写</td><td>导入名单 12 人</td><td>10-20 16:42 已推</td><td>余鹏</td><td><span class="chip g">已推送</span></td><td><span class="link">查看</span><span class="link">再次推送</span></td></tr>
+                  <tr><td>2</td><td>D7问卷催填（水油喷雾）</td><td>第7天问卷已开放，请及时填写反馈</td><td>圈人：D7问卷未填 10 人</td><td>10-17 15:00 已推</td><td>张运营</td><td><span class="chip g">已推送</span></td><td><span class="link">查看</span><span class="link">再次推送</span></td></tr>
+                  <tr><td>3</td><td>结题问卷提醒（面霜测评）</td><td>结题问卷已开放，请完成最后反馈</td><td>圈人：入组且未填结题卷 30 人</td><td>10-25 09:00 待推</td><td>余鹏</td><td><span class="chip o">定时中</span></td><td><span class="link">编辑</span><span class="link warn">取消</span></td></tr>
+                </table>
+                </div>
+                <div class="legend">
+                  <span><i style="background:var(--brand)"></i>「新建推送」：选模板/自建内容 + 导手机号或按条件圈人 + 立即/定时推送</span>
+                  <span><i style="background:var(--blue)"></i>推送完成后自动写入「消息推送日志」，可追溯触达人数与失败明细</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ③ 系统消息任务 -->
+            <div class="msg-sub" id="msgsub-2">
+              <div class="panel">
+                <h3>系统定时推送任务 <span class="r">开发维护 · 运营只读</span></h3>
+                <div class="tmpl-note" style="margin-bottom:12px;">此处展示系统自动下推的任务清单：消息内容模板与下推时间由<b>开发维护</b>，触发条件（用户参与活动状态变化，如入组/发货/漏打卡）在业务代码中实现，<b>不在此配置</b>。运营可查看执行情况，不可编辑规则。</div>
+                <div class="tbl-wrap">
+                <table>
+                  <tr><th>#</th><th>任务名称</th><th>消息内容模板</th><th>下推时间</th><th>触发说明</th><th>最近执行</th><th>状态</th></tr>
+                  <tr><td>1</td><td>打卡提醒</td><td>别忘了今天的产品使用打卡</td><td>每日 09:00</td><td>进行中项目当日未打卡用户（系统判定）</td><td>10-21 09:00</td><td><span class="chip g">运行中</span></td></tr>
+                  <tr><td>2</td><td>入组恭喜</td><td>恭喜您已入选{项目名}项目</td><td>确认入组后即时</td><td>运营批量审核入组成功时（系统判定）</td><td>10-19 18:30</td><td><span class="chip g">运行中</span></td></tr>
+                  <tr><td>3</td><td>发货通知</td><td>您的测评产品已发货，单号{快递号}</td><td>导入发货信息后即时</td><td>后台导入快递单号成功时（系统判定）</td><td>10-20 10:15</td><td><span class="chip g">运行中</span></td></tr>
+                  <tr><td>4</td><td>美图提醒</td><td>项目开始前5天，请尽快完成入组美图拍摄</td><td>每日 10:00（项目开始前5天至前1天）</td><td>项目开始前5天至前1天仍未完成入组美图的用户（系统判定）</td><td>10-21 10:00</td><td><span class="chip g">运行中</span></td></tr>
+                  <tr><td>4.1</td><td>问卷开放提醒</td><td>您的「{问卷名}」已开放，请到活动详情页点击「去填写」完成填写</td><td>试用第N天到点（按Day 0推算）</td><td>问卷节点到点自动向该项目用户下推（系统判定）</td><td>07-15 09:00</td><td><span class="chip g">运行中</span></td></tr>
+                  <tr><td>5</td><td>报名即将截止提醒</td><td>您报名的项目将于{截止时间}截止</td><td>截止前24小时</td><td>用户已报名且项目临近截止（系统判定）</td><td>—</td><td><span class="chip gray">开发中</span></td></tr>
+                </table>
+                </div>
+                <div class="legend"><span>模板内容与下推时间变更需求 → 提交开发处理；本页对运营只读，保证系统任务不被误改</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 模块5 志愿者库 -->
+          <div class="mod" data-page-node-id="Bd8AFbN2LO486P9vVgfTZw">
+            <div class="crumb" data-page-node-id="1G0VTAiXXOS5MFgRFEwXNe"><h2 data-page-node-id="oczY902R15c2jylDcXNPqa">志愿者库</h2></div>
+            <div class="searchbar" data-page-node-id="Pg3c0gwNP7vdT5fUZuGJG2"><input placeholder="🔍 搜索姓名 / 电话 / 美图号 / 肤质" data-page-node-id="DmsgXRx1NHUJgKBNuDHVEJ"></div>
+            <div class="tab-switch" id="libEmpTabs" style="margin-bottom:12px;">
+              <span class="on" onclick="switchLibTab(this,'all')">全部 <i>6</i></span>
+              <span onclick="switchLibTab(this,'in')">在职 <i>5</i></span>
+              <span onclick="switchLibTab(this,'out')">离职 <i>1</i></span>
+            </div>
+            <div class="filter-bar" data-page-node-id="Ch27DdqyGvnYztInFTj24W">
+              <span class="on" data-page-node-id="UyPD748KmapLDvl4FpaLck">全部</span><span data-page-node-id="aQxfvUjrMgfoA7hTL8ajFj">中性</span><span data-page-node-id="ZiF5btTa7yMk9MCeLqmj8x">油性</span><span data-page-node-id="8uAzsYMkgGx5kMC1PF2arA">干性</span><span data-page-node-id="LGNEikPFLFkFxbEbuSg3JQ">偏干</span><span data-page-node-id="ia2yQN9tmAtjrlU51fcnfp">偏油</span><span data-page-node-id="vO0EfjNF7pB24nKruRGgyI">黑名单</span>
+            </div>
+            <div class="sel-filter" style="margin-bottom:0;" data-page-node-id="VwYBAvRv8mxVFTqotFh2zM">
+              <div class="batch-bar" style="margin-left:0;" data-page-node-id="oQB349d98nLCPHZV3BG9q6">
+                已选 <b id="selCount-2" data-page-node-id="Ug908O9z83uaqhykYWOkQ5">0</b> 项
+                <button class="btn btn-r" onclick="batchBlackSet('是')" data-page-node-id="ODxQpTPfEJZx8lSXjBgCVE">设为黑名单</button>
+                <button class="btn btn-o" onclick="batchBlackSet('否')" data-page-node-id="yJNyjZlcqg0Cm1bXTBZnFB">移出黑名单</button>
+                <button class="btn btn-p" onclick="batchAllergy()" data-page-node-id="fvWpM6bnVA05Xc6U1n1nJJ">批量更新过敏史</button>
+              </div>
+            </div>
+            <div class="panel" data-page-node-id="a0OflccFRdPcqu2K6y5mSO">
+              <h3 data-page-node-id="ORd6OGbWeefcx7Dm49zAif">志愿者档案列表 <span class="r" data-page-node-id="hD25FqoOHkXBxscYSMyHl7">黑名单（是/否）与过敏史（单行文本）支持批量维护</span></h3>
+              <div class="tbl-wrap" data-page-node-id="GTeDOEXMnd7PMdfY5nGD3R">
+              <table id="lib-tb" data-page-node-id="O8C8t9uE07LIR3TRXJ3OoA">
+                <tr data-page-node-id="n757MWGnrC5BFyqHNy6iFP"><th data-page-node-id="vJyRzg65ATnq5kXpbUzSZC"><input type="checkbox" class="ck" onclick="toggleAll(this,'lib-tb')" data-page-node-id="vHGgpG3k6QiYXFZwwtrdfW"></th><th data-page-node-id="neisUxRXmeBCGZwHqo7fvg">#</th><th data-page-node-id="jkybhaFYo89N6XSyXMbmJu">姓名</th><th data-page-node-id="sdTY7CvheDt54Yc04DExBS">电话</th><th data-page-node-id="Sx3GKCu3sWXHkqtlE4qtMh">美图号</th><th data-page-node-id="WxkHeOAYvlST0thq2vw3DN">自述肤质</th><th data-page-node-id="tN6KKXHvvgpvK1J137XJ9R">敏感类型</th><th data-page-node-id="XzFPF1iRibml3v4cWadyIn">过敏史（单行文本）</th><th data-page-node-id="d9A0m4RBboPZkacWCRDche">黑名单</th><th>在职状态</th><th data-page-node-id="jILMcVXjtBgCbZBSLAg9fp">参与项目</th><th data-page-node-id="JzlRiM7raLNnFEz6falMHk">状态</th></tr>
+                <tr data-emp="in" data-page-node-id="D7HpXfTYFmh6yZGfmREbvC"><td data-page-node-id="SaCbLUNkb1NgU78ShB0FTd"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="GGaxQ6m8ax3RtyLyNyxXH5"></td><td data-page-node-id="XhBaZu1feDfXN0BM6mr002">1</td><td data-page-node-id="E8juXLgV0g627ld3TjnW4B">樊小花</td><td data-page-node-id="CQqCRDCl1XgoBAb4HBrQpf">138****6789</td><td data-page-node-id="RKW0AhrFLiNkuAglitv8si">MT001</td><td data-page-node-id="eFl1INJd9KkJD9V8Gnuacg">偏干</td><td data-page-node-id="9YDWyFCYqZYL51PUClTsTU">较耐受</td><td data-page-node-id="45WwWdQYxOKRYA9lkqmN4F"><input class="allergy-input" value="无" data-page-node-id="HlTK3XKP6PZd8aOehEFOfs"></td><td class="bl-cell" data-page-node-id="5NbG6zYee0nUg4cjUic8py"><span class="chip gray" data-page-node-id="3tNqYGtqMRBmPRpMNCPLGj">否</span></td><td><span class="chip g">在职</span></td><td data-page-node-id="szRgDclQFEMP9DiVqNAm3c">3个</td><td data-page-node-id="OUsOqfFSJXAMgMCYdHOg1T"><span class="chip g" data-page-node-id="AdnGQX369UGNmYfPemUHs6">活跃</span></td></tr>
+                <tr data-emp="in" data-page-node-id="W83jFHIggBJuVqFsmGD30n"><td data-page-node-id="sFq6rK0W8psZLPRniVCDtS"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="qkgcfMJw67o0oeDlf1TJjD"></td><td data-page-node-id="7rbHzBcowqda3ZqesIRRbp">2</td><td data-page-node-id="7sZrsVw9DLISBFbIbNvCat">李美丽</td><td data-page-node-id="g7dCsqEUVCHMGBK1tlgRMO">139****1234</td><td data-page-node-id="DMxaLb4GF5ijk64mXnPzLg">MT002</td><td data-page-node-id="wxh9fQXEscSUZzpnsgQGU0">油性</td><td data-page-node-id="AgL5BFpDa3BD85KqZJLVBI">耐受</td><td data-page-node-id="lnWEv8ObBGhRz2nA8uDMzd"><input class="allergy-input" value="无" data-page-node-id="zenYhAbNoG9oQw95YADeGy"></td><td class="bl-cell" data-page-node-id="rWPso66zUE182kLLxqSiBu"><span class="chip gray" data-page-node-id="aKHwJjj5yYIk75yv0XuNID">否</span></td><td><span class="chip g">在职</span></td><td data-page-node-id="ObQmqYExbgF71ip1w6yU7r">2个</td><td data-page-node-id="GQguCJ5xhDutbS2DOJhP0V"><span class="chip g" data-page-node-id="hM3XgljYwsEvWYwwBFgE4W">活跃</span></td></tr>
+                <tr data-emp="in" data-page-node-id="00EnkKjg0UoqedcdwYwDYl"><td data-page-node-id="hxJT59qvfK4gKDu0nRwakg"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="wa7cDaFcKjSVB6sJDGD7ZD"></td><td data-page-node-id="28TY43FBFM1mDQYVYoqhO1">3</td><td data-page-node-id="kbHL2mRS6RV5F6AwULeBhE">张小草</td><td data-page-node-id="kLos55UTAWjPrMnvsJfeWR">137****5678</td><td data-page-node-id="7O41dDkEezKvEus2QrseCP">MT003</td><td data-page-node-id="gorvTFC36hM6KiYZMabYwU">干性</td><td data-page-node-id="h3baGBhs5eTyYdOKFAuQ69">敏感</td><td data-page-node-id="yt5v8hphFToZBwsNgkqpOc"><input class="allergy-input" value="花粉过敏" data-page-node-id="us4jcpuUvD6R2H5K6ZOqkK"></td><td class="bl-cell" data-page-node-id="dJHQASV0AGTAHIF380yt4R"><span class="chip gray" data-page-node-id="eNRLjquGDFpxmVuaUCYjJQ">否</span></td><td><span class="chip g">在职</span></td><td data-page-node-id="uzkLcHeU8bYaoKqyTUWuyR">1个</td><td data-page-node-id="nDCM0FCQvoXP2A3ISSQpeU"><span class="chip g" data-page-node-id="hikwwhRjKaiwTBfkCyzTpf">活跃</span></td></tr>
+                <tr data-emp="in" data-page-node-id="rA06oSyCLkGKKfnnq4OFaJ"><td data-page-node-id="dU7UILdtzeI3vae1SZKyEq"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="pgrL4Xh7hjqAE6rXDC6vjJ"></td><td data-page-node-id="w3AUseJR7umrlPcQ4iysUs">4</td><td data-page-node-id="0iPON8LxpS0DJCalftOV6O">王大花</td><td data-page-node-id="vs2Wgs0jkq2A1nbZ9KEoyZ">135****9012</td><td data-page-node-id="q0zdnwOj1gEWdWDqs5rdgI">MT004</td><td data-page-node-id="lmGttfMik3n5w9Xd1Lam4S">偏干</td><td data-page-node-id="9GZyG6NuEVlIbeIyHDqcQp">较敏感</td><td data-page-node-id="bOjsEqCZREcw6yS42bBZET"><input class="allergy-input" value="酒精不耐受" data-page-node-id="G76LL42ekDWK7xgi4Q4Fla"></td><td class="bl-cell" data-page-node-id="lzxjFehbThToMDjGvWPZeR"><span class="chip gray" data-page-node-id="cFJtLB0mjo1Ak87Qby0wyj">否</span></td><td><span class="chip g">在职</span></td><td data-page-node-id="LLXkHAKSGghB089TdY80Xl">5个</td><td data-page-node-id="8Ak2oLLwF6SZlgBdXg0EOb"><span class="chip g" data-page-node-id="CieA8o4XKCDAbhiuCA8Yus">活跃</span></td></tr>
+                <tr data-emp="out" data-page-node-id="FI9H1Le6R28vQrEU2ivudc"><td data-page-node-id="INyks2gymfERc8kNYGPvDS"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="vOrrCBelC0SEBsTtq7ZKzC"></td><td data-page-node-id="eM9EjwI8s1v0FX7Ir9gqWO">5</td><td data-page-node-id="oqTeMBR1DIdO6nzlwZ2iaU">赵小花</td><td data-page-node-id="uXghGfRJocvea6dqEDqPz8">136****3456</td><td data-page-node-id="HcPmq7rDiblpeO56vUD1uY">MT006</td><td data-page-node-id="oDA4kZHvWmMf7TKC6Q1qjB">中性</td><td data-page-node-id="TGJ6pQVDm51AlDORMO9U5L">耐受</td><td data-page-node-id="0cyPeP2vsB7yHKumEEYBCl"><input class="allergy-input" value="" data-page-node-id="E5Yc5swSCCBT5iEvq97Epr"></td><td class="bl-cell" data-page-node-id="WbUMJRxMnoUxlCbNfVbGTl"><span class="chip gray" data-page-node-id="RCA8GYZM9gbGsrXqC2HdDZ">否</span></td><td><span class="chip r">离职</span></td><td data-page-node-id="EQ2R63WBOtprwLpiI5QEaS">0个</td><td data-page-node-id="B8BYOBgFtitaJNZ2zROjz8"><span class="chip gray" data-page-node-id="o4RFe1EiCwRFRDfAaYDaQx">休眠</span></td></tr>
+                <tr data-emp="in" data-page-node-id="S2HVlPXYzwHnM3UiZkQhN1"><td data-page-node-id="B1CX23JFAZYXbbPwVJ8AOW"><input type="checkbox" class="ck rowck" onchange="updateSelCount('lib-tb','selCount-2')" data-page-node-id="FwxcOtcM0xeMjrRKfPMr0y"></td><td data-page-node-id="pbBesOaBpEtrFdDWiODLsF">6</td><td data-page-node-id="pIYMTD2423Ws0fDVIONacp">钱小草</td><td data-page-node-id="EVMG4mUEFRW40u1ktL13Wn">134****7890</td><td data-page-node-id="Zf9vrEAXLyBS177JkEeJiC">—</td><td data-page-node-id="xD2EPpAi7oEkDK3S8qtBts">油性</td><td data-page-node-id="GJzddhvbAonbvwoISlCT4l">敏感</td><td data-page-node-id="vRONme8BpN8Hr0qn97Cs61"><input class="allergy-input" value="严重过敏史" data-page-node-id="TbvqV0s1An5MoJh8vtP1J8"></td><td class="bl-cell" data-page-node-id="j8jxpUZHi2TfMK3yaJmmOH"><span class="chip r" data-page-node-id="TWPBZM5POlBhD5K8IoXmFg">是</span></td><td><span class="chip g">在职</span></td><td data-page-node-id="6ynB1pVH3sy2Tje6m2P93n">0个</td><td data-page-node-id="sqJIQSdIpMoeHPDPoykbvQ"><span class="chip r" data-page-node-id="CUYGFUTHZSaafkJLaviTbE">黑名单</span></td></tr>
+              </table>
+              </div>
+              <div class="legend" data-page-node-id="c6fYl0Fu97D8GPXARV1kYz">
+                <span data-page-node-id="YrKLGF1ARS1dRJ6heNHlRs"><i style="background:var(--red)" data-page-node-id="z6ZmeGZ8R1LF5M1XQmrXuQ"></i>勾选后可批量「设为/移出黑名单」「批量更新过敏史」，黑名单=是的用户前端不可报名</span>
+                <span data-page-node-id="JJDuHS9HQbiIxwBgOvRfcW"><i style="background:#fff;border:1px solid var(--line)" data-page-node-id="U5cLhCck5bE1jbHWSFWoq1"></i>过敏史为运营维护字段（单行文本），志愿者报名时无需填写</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 模块6 Banner广告配置 -->
+          <div class="mod">
+            <div class="crumb"><h2>Banner广告配置</h2><div class="ops"><button class="btn btn-p" onclick="openBannerModal('新建Banner')">＋ 新建Banner</button></div></div>
+            <div class="tmpl-note"><b>对应位置：</b>移动端 H5 首页顶部 Banner 广告位（轮播）。运营在此配置图片、标题、跳转与排序，保存后前端轮播<b>实时生效</b>；投放到期或下架后自动从轮播移除。</div>
+            <div class="panel">
+              <h3>Banner列表 <span class="r">按「排序」字段决定轮播顺序 · 仅「上架中」的Banner在前端展示</span></h3>
+              <div class="tbl-wrap">
+              <table>
+                <tr><th>#</th><th>Banner图（示意）</th><th>主标题 / 
