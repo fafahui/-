@@ -1,0 +1,192 @@
+:40'],null,['07-19','08:18'],null]},
+  '王大花':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','07:50'],['07-14','07:50'],['07-15','08:20'],['07-16','07:50'],['07-17','07:50'],['07-18','08:05'],['07-19','07:50'],['07-20','07:50']]},
+  '陈小美':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','09:30'],['07-14','08:44'],['07-15','09:30'],['07-16','08:15'],['07-17','09:30'],['07-18','09:02'],null,null]},
+  '周小燕':{sub:'净颜焕亮产品体验 · D1–D14 · 正式试用开始日 07-13',days:[['07-13','08:00'],['07-14','08:30'],['07-15','08:00'],['07-16','08:00'],['07-17','08:10'],['07-18','08:00'],['07-19','08:00'],['07-20','08:00']]}
+};
+function openCkDetail(name){
+  const d=ckMock[name]||{sub:'净颜焕亮产品体验 · D1–D14',days:[]};
+  document.getElementById('ckd-name').textContent=name+' · 打卡记录';
+  document.getElementById('ckd-sub').textContent=d.sub;
+  let html='';
+  d.days.forEach((day,i)=>{
+    if(day){
+      html+='<div class="ck-day ok"><div class="dd">D'+(i+1)+' · '+day[0]+'</div><div class="st">✓ 已打卡</div><div class="tm">'+day[1]+'</div></div>';
+    }else{
+      html+='<div class="ck-day miss"><div class="dd">D'+(i+1)+'</div><div class="st">✗ 漏打卡</div><div class="tm">—</div></div>';
+    }
+  });
+  for(let i=d.days.length;i<14;i++){
+    html+='<div class="ck-day future"><div class="dd">D'+(i+1)+'</div><div class="st">—</div><div class="tm">未到日期</div></div>';
+  }
+  document.getElementById('ckd-grid').innerHTML=html;
+  document.getElementById('ckMask').classList.add('show');
+}
+function closeCkDetail(){ document.getElementById('ckMask').classList.remove('show'); }
+/* ===== 志愿者库：在职 / 离职页签 ===== */
+function switchLibTab(el,f){
+  document.querySelectorAll('#libEmpTabs span').forEach(s=>s.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#lib-tb tr[data-emp]').forEach(tr=>{
+    const show=(f==='all')||(f==='in'&&tr.dataset.emp==='in')||(f==='out'&&tr.dataset.emp==='out');
+    tr.style.display=show?'':'none';
+  });
+}
+function batchBlackSet(v){
+  const sel=getChecked('lib-tb');
+  if(!sel.length){ alert('请先勾选志愿者'); return; }
+  sel.forEach(c=>{
+    const cell=c.closest('tr').querySelector('.bl-cell');
+    cell.innerHTML = v==='是' ? '<span class="chip r">是</span>' : '<span class="chip gray">否</span>';
+  });
+  alert('已批量设置黑名单='+v+' 共 '+sel.length+' 位（演示）：黑名单用户前端报名将被拦截');
+  sel.forEach(c=>c.checked=false); updateSelCount('lib-tb','selCount-2');
+}
+function batchAllergy(){
+  const sel=getChecked('lib-tb');
+  if(!sel.length){ alert('请先勾选志愿者'); return; }
+  const t=prompt('请输入过敏史内容（将批量应用到已勾选志愿者）：');
+  if(t===null) return;
+  sel.forEach(c=>{ c.closest('tr').querySelector('.allergy-input').value=t; });
+  alert('已批量更新 '+sel.length+' 位志愿者的过敏史');
+  sel.forEach(c=>c.checked=false); updateSelCount('lib-tb','selCount-2');
+}
+
+/* ===== 招募管理：招募项目切换（筛选区） ===== */
+const recProjs=['净颜焕亮产品体验','水油平衡喷雾测评','磨砂膏产品评估','面霜长期测评'];
+let recProjIdx=0;
+function switchRecProj(){
+  recProjIdx=(recProjIdx+1)%recProjs.length;
+  document.getElementById('curProj-1').textContent=recProjs[recProjIdx]+' ▾';
+  alert('已切换至「'+recProjs[recProjIdx]+'」（演示）：统计卡片与志愿者名单将按该项目刷新');
+}
+
+/* ===== 报名填写项配置：排序 / 删除 / 加单选题 ===== */
+function moveField(btn,dir){
+  const row=btn.closest('.q-node');
+  const list=document.getElementById('signFieldList');
+  const rows=Array.from(list.querySelectorAll('.q-node'));
+  const i=rows.indexOf(row);
+  const j=i+dir;
+  if(j<0||j>=rows.length) return;
+  dir>0?list.insertBefore(row,rows[j].nextSibling):list.insertBefore(row,rows[j]);
+}
+function delField(btn){ btn.closest('.q-node').remove(); }
+function addField(btn){
+  const row=document.createElement('div');
+  row.className='q-node';
+  row.style.gridTemplateColumns='1fr 120px 110px';
+  row.innerHTML='<input placeholder="如：您目前的护肤频率" value="">'
+    +'<input value="单选题" readonly>'
+    +'<span style="display:flex;gap:6px;"><button class="q-del" onclick="moveField(this,-1)" title="上移">↑</button><button class="q-del" onclick="moveField(this,1)" title="下移">↓</button><button class="q-del" onclick="delField(this)" title="删除">✕</button></span>';
+  document.getElementById('signFieldList').insertBefore(row, btn);
+}
+
+
+/* ===== 问卷计划：节点 + 腾讯问卷链接维护 ===== */
+function addQNode(btn){
+  const row=document.createElement('div');
+  row.className='q-node';
+  row.innerHTML='<select><option>第3天</option><option>第7天</option><option>第14天</option><option>结题</option><option>自定义天数…</option></select>'
+    +'<input placeholder="如：D14中期问卷">'
+    +'<input placeholder="https://wj.qq.com/s2/…">'
+    +'<button class="q-del" onclick="delQNode(this)" title="删除该节点">✕</button>';
+  document.getElementById('qPlanList').insertBefore(row, btn);
+}
+function delQNode(btn){
+  const list=document.getElementById('qPlanList');
+  if(list.querySelectorAll('.q-node').length<=1){ alert('至少保留 1 个问卷节点'); return; }
+  btn.closest('.q-node').remove();
+}
+
+/* ===== 前端H5：问卷到点开放，点击跳转腾讯问卷填写 ===== */
+function fillQnaire(btn,name){
+  window.open('https://wj.qq.com/s2/16881234/'+(name.indexOf('D3')>-1?'d3-first':'d7-mid'),'_blank');
+  btn.textContent='已填写';
+  btn.className='act ok';
+  btn.onclick=null;
+  const sub=document.getElementById('act1sub');
+  if(sub&&sub.textContent.indexOf('问卷待填')>-1){ sub.textContent=sub.textContent.replace('第3天问卷待填','D3问卷已填').replace('D1问卷待填','D3问卷已填'); }
+  alert('已跳转腾讯问卷「'+name+'」填写（演示）：填写完成后按钮标记为「已填写」，后台可统计填写状态');
+}
+
+
+/* ===== 项目推广：链接 + 二维码 ===== */
+let promoCur='';
+function openPromoModal(name){
+  promoCur=name;
+  document.getElementById('promo-title').textContent='项目推广 · '+name;
+  document.getElementById('promo-link').value='https://volunteer.fanwenhua.cn/h5/intro?proj='+encodeURIComponent(name)+'&src=promote';
+  renderQR(name);
+  document.getElementById('promoMask').classList.add('show');
+}
+function closePromoModal(){ document.getElementById('promoMask').classList.remove('show'); }
+function copyPromoLink(){
+  const v=document.getElementById('promo-link').value;
+  if(navigator.clipboard){ navigator.clipboard.writeText(v); }
+  alert('已复制推广链接：'+v);
+}
+/* 演示用二维码：按项目名生成稳定的伪二维码图案（真实环境由服务端生成） */
+function renderQR(seedStr){
+  let seed=0; for(let i=0;i<seedStr.length;i++){ seed=(seed*31+seedStr.charCodeAt(i))>>>0; }
+  const rnd=()=>{ seed=(seed*1664525+1013904223)>>>0; return seed/4294967296; };
+  const N=25, cell=100/N;
+  let rects='';
+  const finder=(x,y)=>{
+    rects+='<rect x="'+x*cell+'" y="'+y*cell+'" width="'+cell*7+'" height="'+cell*7+'" fill="#111"/>';
+    rects+='<rect x="'+(x+1)*cell+'" y="'+(y+1)*cell+'" width="'+cell*5+'" height="'+cell*5+'" fill="#fff"/>';
+    rects+='<rect x="'+(x+2)*cell+'" y="'+(y+2)*cell+'" width="'+cell*3+'" height="'+cell*3+'" fill="#111"/>';
+  };
+  for(let y=0;y<N;y++){
+    for(let x=0;x<N;x++){
+      const inFinder=(x<8&&y<8)||(x>N-9&&y<8)||(x<8&&y>N-9);
+      if(!inFinder&&rnd()>0.52){ rects+='<rect x="'+x*cell+'" y="'+y*cell+'" width="'+cell+'" height="'+cell+'" fill="#111"/>'; }
+    }
+  }
+  finder(0,0); finder(N-7,0); finder(0,N-7);
+  document.getElementById('promo-qr').innerHTML='<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="#fff"/>'+rects+'</svg>';
+}
+function downloadQR(){
+  const svg=document.querySelector('#promo-qr svg');
+  if(!svg) return;
+  const blob=new Blob([svg.outerHTML],{type:'image/svg+xml'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='推广二维码_'+promoCur+'.svg';
+  a.click();
+  URL.revokeObjectURL(a.href);
+  alert('二维码已下载（演示，SVG格式）：'+promoCur);
+}
+
+/* ===== Banner广告配置（对应H5首页顶部轮播位） ===== */
+function openBannerModal(title){
+  document.getElementById('bm-title').textContent=title||'新建Banner';
+  document.getElementById('bannerMask').classList.add('show');
+}
+function closeBannerModal(){ document.getElementById('bannerMask').classList.remove('show'); }
+function saveBanner(){
+  closeBannerModal();
+  alert('Banner已保存（演示）：按面向人群仅向总部或门店对应用户展示；投放期内自动展示，到期或下架后从轮播移除');
+}
+function toggleShelf(el){
+  const chip=el.closest('tr').querySelector('.shelf-chip');
+  const up=chip.classList.contains('g');
+  if(up){
+    chip.className='shelf-chip chip gray'; chip.textContent='已下架';
+    el.textContent='上架';
+  }else{
+    chip.className='shelf-chip chip g'; chip.textContent='上架中';
+    el.textContent='下架';
+  }
+}
+function delBanner(el){
+  if(confirm('确认删除该Banner？删除后前端轮播立即移除。')) el.closest('tr').remove();
+}
+
+/* 设计说明开关 */
+function toggleNotes(){
+  const on=document.getElementById('noteChk').checked;
+  document.getElementById('notesH5').style.display=(on&&document.getElementById('h5Wrap').offsetParent!==null)?'':'none';
+}
+</script>
+</body>
+</html>
